@@ -1,0 +1,35 @@
+# Binaries
+/bin/
+/dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+/vendor/
+*.test
+*.out
+coverage.out
+coverage.html
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.local
+*.pem
+*.key
+
+# Build artifacts
+/deploy/terraform/.terraform/
+/deploy/terraform/*.tfstate
+/deploy/terraform/*.tfstate.*
+
+# Logs
+*.log
