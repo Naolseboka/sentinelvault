@@ -1,0 +1,6 @@
+apiVersion: v2
+name: behavior-service
+description: Helm chart for behavior-service
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
