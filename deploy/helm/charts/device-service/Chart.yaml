@@ -1,0 +1,6 @@
+apiVersion: v2
+name: device-service
+description: Helm chart for device-service
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
