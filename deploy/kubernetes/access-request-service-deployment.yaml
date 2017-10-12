@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: access-request-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: access-request-service
+  template:
+    metadata:
+      labels:
+        app: access-request-service
+    spec:
+      containers:
+        - name: access-request-service
+          image: sentinelvault/access-request-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: access-request-service
+spec:
+  selector:
+    app: access-request-service
+  ports:
+    - port: 8080
