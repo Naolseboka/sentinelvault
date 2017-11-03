@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attachment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attachment-service
+  template:
+    metadata:
+      labels:
+        app: attachment-service
+    spec:
+      containers:
+        - name: attachment-service
+          image: sentinelvault/attachment-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: attachment-service
+spec:
+  selector:
+    app: attachment-service
+  ports:
+    - port: 8080
