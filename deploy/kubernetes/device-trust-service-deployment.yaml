@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-trust-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: device-trust-service
+  template:
+    metadata:
+      labels:
+        app: device-trust-service
+    spec:
+      containers:
+        - name: device-trust-service
+          image: sentinelvault/device-trust-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: device-trust-service
+spec:
+  selector:
+    app: device-trust-service
+  ports:
+    - port: 8080

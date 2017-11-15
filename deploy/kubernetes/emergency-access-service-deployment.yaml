@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emergency-access-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emergency-access-service
+  template:
+    metadata:
+      labels:
+        app: emergency-access-service
+    spec:
+      containers:
+        - name: emergency-access-service
+          image: sentinelvault/emergency-access-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: emergency-access-service
+spec:
+  selector:
+    app: emergency-access-service
+  ports:
+    - port: 8080

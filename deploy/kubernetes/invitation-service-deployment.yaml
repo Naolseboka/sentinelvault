@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invitation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invitation-service
+  template:
+    metadata:
+      labels:
+        app: invitation-service
+    spec:
+      containers:
+        - name: invitation-service
+          image: sentinelvault/invitation-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: invitation-service
+spec:
+  selector:
+    app: invitation-service
+  ports:
+    - port: 8080

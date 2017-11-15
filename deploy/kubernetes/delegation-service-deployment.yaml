@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: delegation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: delegation-service
+  template:
+    metadata:
+      labels:
+        app: delegation-service
+    spec:
+      containers:
+        - name: delegation-service
+          image: sentinelvault/delegation-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: delegation-service
+spec:
+  selector:
+    app: delegation-service
+  ports:
+    - port: 8080

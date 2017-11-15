@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kms-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kms-service
+  template:
+    metadata:
+      labels:
+        app: kms-service
+    spec:
+      containers:
+        - name: kms-service
+          image: sentinelvault/kms-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kms-service
+spec:
+  selector:
+    app: kms-service
+  ports:
+    - port: 8080
