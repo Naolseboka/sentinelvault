@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: policy-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: policy-service
+  template:
+    metadata:
+      labels:
+        app: policy-service
+    spec:
+      containers:
+        - name: policy-service
+          image: sentinelvault/policy-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: policy-service
+spec:
+  selector:
+    app: policy-service
+  ports:
+    - port: 8080

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssh-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssh-service
+  template:
+    metadata:
+      labels:
+        app: ssh-service
+    spec:
+      containers:
+        - name: ssh-service
+          image: sentinelvault/ssh-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ssh-service
+spec:
+  selector:
+    app: ssh-service
+  ports:
+    - port: 8080

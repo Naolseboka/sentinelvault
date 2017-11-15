@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scim-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scim-service
+  template:
+    metadata:
+      labels:
+        app: scim-service
+    spec:
+      containers:
+        - name: scim-service
+          image: sentinelvault/scim-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scim-service
+spec:
+  selector:
+    app: scim-service
+  ports:
+    - port: 8080

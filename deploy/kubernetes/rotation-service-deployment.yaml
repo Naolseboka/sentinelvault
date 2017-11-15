@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rotation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rotation-service
+  template:
+    metadata:
+      labels:
+        app: rotation-service
+    spec:
+      containers:
+        - name: rotation-service
+          image: sentinelvault/rotation-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rotation-service
+spec:
+  selector:
+    app: rotation-service
+  ports:
+    - port: 8080
