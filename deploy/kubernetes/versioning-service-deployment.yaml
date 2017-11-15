@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: versioning-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: versioning-service
+  template:
+    metadata:
+      labels:
+        app: versioning-service
+    spec:
+      containers:
+        - name: versioning-service
+          image: sentinelvault/versioning-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: versioning-service
+spec:
+  selector:
+    app: versioning-service
+  ports:
+    - port: 8080
