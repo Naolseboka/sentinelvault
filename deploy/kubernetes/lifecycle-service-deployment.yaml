@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lifecycle-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lifecycle-service
+  template:
+    metadata:
+      labels:
+        app: lifecycle-service
+    spec:
+      containers:
+        - name: lifecycle-service
+          image: sentinelvault/lifecycle-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lifecycle-service
+spec:
+  selector:
+    app: lifecycle-service
+  ports:
+    - port: 8080

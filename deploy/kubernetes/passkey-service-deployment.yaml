@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: passkey-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: passkey-service
+  template:
+    metadata:
+      labels:
+        app: passkey-service
+    spec:
+      containers:
+        - name: passkey-service
+          image: sentinelvault/passkey-service:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: passkey-service
+spec:
+  selector:
+    app: passkey-service
+  ports:
+    - port: 8080
