@@ -105,3 +105,4 @@ services:
 volumes:
   pgdata:
   minio:
+# maintenance note 10
