@@ -27,3 +27,4 @@ spec:
     app: attachment-service
   ports:
     - port: 8080
+# maintenance note 54
