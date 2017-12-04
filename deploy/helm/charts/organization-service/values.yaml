@@ -7,3 +7,4 @@ service:
   type: ClusterIP
   port: 8080
 resources: {}
+# maintenance note 29
