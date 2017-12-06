@@ -8,3 +8,4 @@ All notable changes to this project are documented here.
 - 2017-11-23: Make configs/audit more consistent
 - 2017-11-24: Tidy configs/audit
 - 2017-12-04: Cleanup in audit-service.yaml
+- 2017-12-06: Adjust configs/auth defaults
