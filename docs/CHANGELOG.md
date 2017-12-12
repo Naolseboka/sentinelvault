@@ -10,3 +10,4 @@ All notable changes to this project are documented here.
 - 2017-12-04: Cleanup in audit-service.yaml
 - 2017-12-06: Adjust configs/auth defaults
 - 2017-12-06: Polish configs/auth
+- 2017-12-12: Polish configs/backup
