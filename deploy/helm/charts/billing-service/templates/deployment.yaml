@@ -20,3 +20,4 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/sentinel/billing-service.yaml
+# maintenance note 11

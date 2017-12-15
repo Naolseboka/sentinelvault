@@ -8,3 +8,4 @@ func TestNewClient(t *testing.T) {
 		t.Fatalf("%+v", c)
 	}
 }
+// maintenance note 21
