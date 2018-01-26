@@ -13,3 +13,4 @@ All notable changes to this project are documented here.
 - 2017-12-12: Polish configs/backup
 - 2017-12-15: Make configs/certificate more consistent
 - 2018-01-19: Improve configs/device readability
+- 2018-01-26: configs/invitation
