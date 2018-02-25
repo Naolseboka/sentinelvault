@@ -1,0 +1,11 @@
+name: organization-service
+http_addr: ":8177"
+grpc_addr: ":9177"
+database_url: postgres://sentinel:sentinel@localhost:5432/sentinelvault?sslmode=disable
+redis_url: redis://localhost:6379/0
+kafka_brokers:
+  - localhost:9092
+log_level: info
+otel_endpoint: ""
+feature_flags:
+  phase1: true
