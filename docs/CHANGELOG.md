@@ -15,3 +15,5 @@ All notable changes to this project are documented here.
 - 2018-01-19: Improve configs/device readability
 - 2018-01-26: configs/invitation
 - 2018-02-14: Sync configs/organization with latest conventions
+<!-- touch 8450 -->
+- 2018-02-27: Minor fix for configs/reporting
