@@ -10,3 +10,4 @@ otel_endpoint: ""
 feature_flags:
   envelope_encryption: true
   audit_all_writes: true
+# maintenance note 28
