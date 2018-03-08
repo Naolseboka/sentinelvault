@@ -18,3 +18,4 @@ All notable changes to this project are documented here.
 <!-- touch 8450 -->
 - 2018-02-27: Minor fix for configs/reporting
 - 2018-03-07: Fix edge case in configs/scim
+- 2018-03-08: configs/scim
