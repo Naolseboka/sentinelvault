@@ -20,3 +20,4 @@ All notable changes to this project are documented here.
 - 2018-03-07: Fix edge case in configs/scim
 - 2018-03-08: configs/scim
 - 2018-03-29: Small cleanup in ssh-service.yaml
+- 2018-04-26: Minor fix for configs/user
