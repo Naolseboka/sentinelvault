@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.identity.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/identity/v1;identityv1";
+
+message OTPCode {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListOTPCodesRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListOTPCodesResponse {
+  repeated OTPCode items = 1;
+}
+
+service OtpService {
+  rpc ListOTPCodes(ListOTPCodesRequest) returns (ListOTPCodesResponse);
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.operations.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/operations/v1;operationsv1";
+
+message SCIMResource {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListSCIMResourcesRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListSCIMResourcesResponse {
+  repeated SCIMResource items = 1;
+}
+
+service ScimService {
+  rpc ListSCIMResources(ListSCIMResourcesRequest) returns (ListSCIMResourcesResponse);
+}
