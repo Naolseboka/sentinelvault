@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.identity.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/identity/v1;identityv1";
+
+message Credential {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListCredentialsRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListCredentialsResponse {
+  repeated Credential items = 1;
+}
+
+service AuthService {
+  rpc ListCredentials(ListCredentialsRequest) returns (ListCredentialsResponse);
+}

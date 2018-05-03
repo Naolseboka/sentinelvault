@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.audit.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/audit/v1;auditv1";
+
+message AuditEvent {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListAuditEventsRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListAuditEventsResponse {
+  repeated AuditEvent items = 1;
+}
+
+service AuditService {
+  rpc ListAuditEvents(ListAuditEventsRequest) returns (ListAuditEventsResponse);
+}
