@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.security.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/security/v1;securityv1";
+
+message ThreatSignal {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListThreatSignalsRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListThreatSignalsResponse {
+  repeated ThreatSignal items = 1;
+}
+
+service ThreatService {
+  rpc ListThreatSignals(ListThreatSignalsRequest) returns (ListThreatSignalsResponse);
+}

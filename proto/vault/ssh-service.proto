@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package sentinelvault.vault.v1;
+
+option go_package = "github.com/sentinelvault/sentinelvault/gen/vault/v1;vaultv1";
+
+message SSHKey {
+  string id = 1;
+  string org_id = 2;
+  string name = 3;
+  string status = 4;
+}
+
+message ListSSHKeysRequest {
+  string org_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message ListSSHKeysResponse {
+  repeated SSHKey items = 1;
+}
+
+service SshService {
+  rpc ListSSHKeys(ListSSHKeysRequest) returns (ListSSHKeysResponse);
+}
