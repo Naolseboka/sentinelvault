@@ -20,4 +20,4 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/sentinel/certificate-service.yaml
-# maintenance note 40
+# maintenance note 58

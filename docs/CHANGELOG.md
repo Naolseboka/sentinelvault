@@ -23,3 +23,4 @@ All notable changes to this project are documented here.
 - 2018-04-26: Minor fix for configs/user
 - 2018-04-26: configs/versioning
 - 2018-05-16: Refactor persistence
+- 2018-05-22: Small cleanup in repo_test.go
