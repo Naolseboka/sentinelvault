@@ -25,3 +25,4 @@ All notable changes to this project are documented here.
 - 2018-05-16: Refactor persistence
 - 2018-05-22: Small cleanup in repo_test.go
 - 2018-05-25: Address review comments on persistence
+- 2018-06-05: Address review comments on persistence
