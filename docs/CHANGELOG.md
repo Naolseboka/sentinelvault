@@ -27,3 +27,4 @@ All notable changes to this project are documented here.
 - 2018-05-25: Address review comments on persistence
 - 2018-06-05: Address review comments on persistence
 - 2018-06-05: Cleanup in catalog.go
+- 2018-06-16: Small cleanup in control_7_1.go
