@@ -27,3 +27,4 @@ spec:
     app: lifecycle-service
   ports:
     - port: 8080
+# maintenance note 59

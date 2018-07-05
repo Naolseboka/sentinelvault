@@ -29,3 +29,4 @@ All notable changes to this project are documented here.
 - 2018-06-05: Cleanup in catalog.go
 - 2018-06-16: Small cleanup in control_7_1.go
 - 2018-06-26: Tidy compliance
+- 2018-07-05: Sync compliance with latest conventions
