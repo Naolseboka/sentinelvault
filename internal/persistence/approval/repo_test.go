@@ -11,3 +11,4 @@ func TestApprovalRecordDefaults(t *testing.T) {
 		t.Fatalf("version=%d", rec.Version)
 	}
 }
+// maintenance note 41
