@@ -33,3 +33,4 @@ All notable changes to this project are documented here.
 - 2018-07-10: compliance
 - 2018-09-05: compliance
 - 2018-09-13: Small cleanup in control_164_308a8_test.go
+- 2018-10-25: Make compliance more consistent
