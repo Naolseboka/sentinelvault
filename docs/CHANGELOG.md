@@ -36,3 +36,4 @@ All notable changes to this project are documented here.
 - 2018-10-25: Make compliance more consistent
 - 2018-11-02: Adjust compliance defaults
 - 2018-11-22: Fix edge case in compliance
+- 2018-11-24: compliance
