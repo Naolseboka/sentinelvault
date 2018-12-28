@@ -14,3 +14,4 @@ Implementation: `internal/crypto/envelope.go`
 ## Consequences
 - KEK rotation re-wraps DEKs without re-encrypting all data
 - Associated data binds ciphertext to item metadata
+<!-- touch 4513 -->
