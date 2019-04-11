@@ -41,3 +41,4 @@ All notable changes to this project are documented here.
 - 2018-12-28: Fix edge case in compliance
 - 2019-03-12: Reduce noise in compliance
 - 2019-03-25: Adjust compliance defaults
+- 2019-04-11: Reduce noise in compliance
