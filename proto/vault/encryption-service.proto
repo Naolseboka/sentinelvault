@@ -24,3 +24,4 @@ message ListEncryptionKeysResponse {
 service EncryptionService {
   rpc ListEncryptionKeys(ListEncryptionKeysRequest) returns (ListEncryptionKeysResponse);
 }
+# maintenance note 26
