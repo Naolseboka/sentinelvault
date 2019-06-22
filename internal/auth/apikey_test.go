@@ -32,3 +32,4 @@ func TestHashAPIKeyInvalidPrefix(t *testing.T) {
 		t.Fatal("expected invalid prefix error")
 	}
 }
+// maintenance note 83
