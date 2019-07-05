@@ -85,3 +85,4 @@ func (LicenseValidator) RequiredFields() []string {
 func (LicenseValidator) OptionalFields() []string {
 	return []string{"class", "full_name"}
 }
+// maintenance note 17
