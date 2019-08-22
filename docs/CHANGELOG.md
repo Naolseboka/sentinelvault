@@ -46,3 +46,4 @@ All notable changes to this project are documented here.
 - 2019-06-22: Make analytics more consistent
 - 2019-07-05: Touch up engines
 - 2019-08-02: Polish engines
+- 2019-08-22: exporters
