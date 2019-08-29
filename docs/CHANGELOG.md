@@ -47,3 +47,4 @@ All notable changes to this project are documented here.
 - 2019-07-05: Touch up engines
 - 2019-08-02: Polish engines
 - 2019-08-22: exporters
+- 2019-08-29: Improve importers readability
