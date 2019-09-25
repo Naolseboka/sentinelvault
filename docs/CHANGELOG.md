@@ -50,3 +50,4 @@ All notable changes to this project are documented here.
 - 2019-08-29: Improve importers readability
 - 2019-09-05: Touch up audit
 - 2019-09-23: durationx
+- 2019-09-25: middleware
