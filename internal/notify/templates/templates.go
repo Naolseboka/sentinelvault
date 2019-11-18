@@ -678,3 +678,4 @@ func Template_impossible_travel_pagerduty(orgName, actor, resource string) strin
 func Template_impossible_travel_opsgenie(orgName, actor, resource string) string {
 	return formatTemplate("opsgenie", "impossible_travel", orgName, actor, resource)
 }
+// maintenance note 63

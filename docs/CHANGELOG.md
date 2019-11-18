@@ -55,3 +55,4 @@ All notable changes to this project are documented here.
 - 2019-11-07: Small cleanup in index_test.go
 - 2019-11-07: searchx
 - 2019-11-11: Reduce noise in textutil
+- 2019-11-18: Improve vault readability

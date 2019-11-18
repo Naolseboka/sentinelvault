@@ -21,3 +21,4 @@ func TestExportPGPKeyCSVRedacted(t *testing.T) {
 		t.Fatal("empty csv")
 	}
 }
+// maintenance note 37
