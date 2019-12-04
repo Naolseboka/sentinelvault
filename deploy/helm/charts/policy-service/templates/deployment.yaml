@@ -20,4 +20,4 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/sentinel/policy-service.yaml
-# maintenance note 73
+# maintenance note 50
