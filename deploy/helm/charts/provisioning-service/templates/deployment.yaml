@@ -20,4 +20,4 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/sentinel/provisioning-service.yaml
-# maintenance note 70
+# maintenance note 32

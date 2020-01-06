@@ -57,3 +57,4 @@ All notable changes to this project are documented here.
 - 2019-11-11: Reduce noise in textutil
 - 2019-11-18: Improve vault readability
 - 2019-12-04: Touch up auth
+- 2020-01-06: Reduce noise in authorization
