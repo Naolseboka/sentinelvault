@@ -60,3 +60,4 @@ All notable changes to this project are documented here.
 - 2020-01-06: Reduce noise in authorization
 - 2020-01-22: Polish authorization
 - 2020-02-07: Address review comments on device
+- 2020-02-20: device trust
