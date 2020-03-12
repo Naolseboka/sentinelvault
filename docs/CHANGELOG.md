@@ -62,3 +62,4 @@ All notable changes to this project are documented here.
 - 2020-02-07: Address review comments on device
 - 2020-02-20: device trust
 - 2020-03-05: Small cleanup in retry.go
+- 2020-03-12: Refactor device trust
