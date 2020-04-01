@@ -64,3 +64,4 @@ All notable changes to this project are documented here.
 - 2020-03-05: Small cleanup in retry.go
 - 2020-03-12: Refactor device trust
 - 2020-03-16: Touch up directory sync
+- 2020-04-01: Cleanup in format_test.go
