@@ -67,3 +67,4 @@ All notable changes to this project are documented here.
 - 2020-04-01: Cleanup in format_test.go
 - 2020-04-21: invitation
 - 2020-04-22: invitation
+- 2020-05-20: Address review comments on invitation
