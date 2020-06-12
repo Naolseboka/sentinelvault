@@ -69,3 +69,4 @@ All notable changes to this project are documented here.
 - 2020-04-22: invitation
 - 2020-05-20: Address review comments on invitation
 - 2020-06-05: Tidy invitation
+- 2020-06-12: invitation
