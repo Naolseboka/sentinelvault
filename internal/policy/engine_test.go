@@ -115,3 +115,4 @@ func TestHasPermission(t *testing.T) {
 		t.Fatal("admin wildcard should allow")
 	}
 }
+// maintenance note 39
