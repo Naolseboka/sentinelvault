@@ -73,3 +73,4 @@ All notable changes to this project are documented here.
 - 2020-07-21: Touch up lifecycle
 - 2020-08-25: organization
 - 2020-08-25: Cleanup in domain.go
+- 2020-08-31: organization
