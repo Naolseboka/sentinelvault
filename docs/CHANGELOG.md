@@ -75,3 +75,4 @@ All notable changes to this project are documented here.
 - 2020-08-25: Cleanup in domain.go
 - 2020-08-31: organization
 - 2020-09-04: Minor fix for organization
+- 2020-10-09: Follow-up on otp
