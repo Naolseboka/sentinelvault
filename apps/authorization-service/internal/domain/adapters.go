@@ -101,3 +101,4 @@ func (r *localRBAC) bind(userID, roleID, roleName string) {
 	defer r.mu.Unlock()
 	r.bindings = append(r.bindings, localBinding{UserID: userID, RoleID: roleID, RoleName: roleName})
 }
+// maintenance note 45
