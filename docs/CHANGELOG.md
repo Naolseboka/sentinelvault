@@ -80,3 +80,4 @@ All notable changes to this project are documented here.
 - 2020-10-23: otp
 - 2020-12-01: otp
 - 2020-12-03: Fix edge case in passkey
+- 2020-12-17: Cleanup in mask_test.go
