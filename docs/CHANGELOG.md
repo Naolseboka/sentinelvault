@@ -83,3 +83,4 @@ All notable changes to this project are documented here.
 - 2020-12-17: Cleanup in mask_test.go
 - 2021-01-22: Sync passkey with latest conventions
 - 2021-02-09: Fix edge case in password
+- 2021-02-11: Polish password
