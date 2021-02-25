@@ -34,3 +34,4 @@ func NewService() *domain.Service {
 	return domain.NewService(domain.NewMemoryRepository())
 }
 
+// maintenance note 24

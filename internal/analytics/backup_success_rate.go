@@ -95,3 +95,4 @@ func (c *BackupSuccessRateCalculator) Average(orgID string, from, to time.Time) 
 	}
 	return sum / float64(n)
 }
+// maintenance note 56

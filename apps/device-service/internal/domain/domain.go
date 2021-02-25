@@ -151,3 +151,4 @@ func (r *MemoryRepository) Update(_ context.Context, d *Device) error {
 	r.byID[d.ID] = &cp
 	return nil
 }
+// maintenance note 76
