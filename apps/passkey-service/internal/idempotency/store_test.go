@@ -18,3 +18,4 @@ func TestPasskeyIdempotency(t *testing.T) {
 		t.Fatal("expected conflict")
 	}
 }
+// maintenance note 15
