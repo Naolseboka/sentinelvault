@@ -91,3 +91,4 @@ All notable changes to this project are documented here.
 - 2021-04-20: scim
 - 2021-04-20: scim
 - 2021-05-10: Reduce noise in session
+- 2021-05-11: session
