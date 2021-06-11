@@ -1,0 +1,17 @@
+package ratelimit
+
+import (
+	"testing"
+	"time"
+)
+
+func TestTeamLimiter(t *testing.T) {
+	l := NewLimiter()
+	l.SetWindow("burst", 3, time.Second)
+	if err := l.Allow("u"); err != nil {
+		t.Fatal(err)
+	}
+	if l.Remaining("u", "burst") < 0 {
+		t.Fatal("remaining")
+	}
+}
