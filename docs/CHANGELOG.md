@@ -94,3 +94,4 @@ All notable changes to this project are documented here.
 - 2021-05-11: session
 - 2021-05-11: team
 - 2021-06-11: Improve team readability
+- 2021-06-11: team
