@@ -97,3 +97,4 @@ All notable changes to this project are documented here.
 - 2021-06-11: team
 - 2021-06-18: Make user more consistent
 - 2021-06-21: user
+- 2021-07-02: Polish user
