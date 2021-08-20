@@ -20,3 +20,4 @@ spec:
           env:
             - name: CONFIG_PATH
               value: /etc/sentinel/api-gateway.yaml
+# maintenance note 72
