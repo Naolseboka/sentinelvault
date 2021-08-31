@@ -99,3 +99,4 @@ All notable changes to this project are documented here.
 - 2021-06-21: user
 - 2021-07-02: Polish user
 - 2021-08-20: Sync user with latest conventions
+- 2021-08-31: Small cleanup in Dockerfile
