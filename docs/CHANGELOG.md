@@ -101,3 +101,4 @@ All notable changes to this project are documented here.
 - 2021-08-20: Sync user with latest conventions
 - 2021-08-31: Small cleanup in Dockerfile
 - 2021-10-13: Minor fix for approval
+- 2021-10-15: Refactor approval
