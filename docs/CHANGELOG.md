@@ -102,3 +102,4 @@ All notable changes to this project are documented here.
 - 2021-08-31: Small cleanup in Dockerfile
 - 2021-10-13: Minor fix for approval
 - 2021-10-15: Refactor approval
+- 2021-11-17: Cleanup in history_test.go
