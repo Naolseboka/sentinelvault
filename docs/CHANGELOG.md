@@ -104,3 +104,4 @@ All notable changes to this project are documented here.
 - 2021-10-15: Refactor approval
 - 2021-11-17: Cleanup in history_test.go
 - 2022-01-13: Reduce noise in behavior
+- 2022-01-21: Minor fix for behavior
