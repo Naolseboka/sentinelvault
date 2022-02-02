@@ -106,3 +106,4 @@ All notable changes to this project are documented here.
 - 2022-01-13: Reduce noise in behavior
 - 2022-01-21: Minor fix for behavior
 - 2022-01-21: behavior
+- 2022-02-02: Reduce noise in certificate
