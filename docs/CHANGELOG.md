@@ -109,3 +109,4 @@ All notable changes to this project are documented here.
 - 2022-02-02: Reduce noise in certificate
 - 2022-02-22: certificate
 - 2022-02-23: Follow-up on certificate
+- 2022-02-28: certificate
