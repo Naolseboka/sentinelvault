@@ -17,3 +17,4 @@ func TestEvaluatorCache(t *testing.T) {
     _ = UpsertPercentage(reg, PercentageFlag{Key: "rollout", Enabled: true, Percentage: 50})
     _ = UpsertOrgTargeted(reg, OrgTargetedFlag{Key: "orgfeat", Enabled: true, OrgAllow: map[string]bool{"o1": true}})
 }
+// maintenance note 77
