@@ -111,3 +111,4 @@ All notable changes to this project are documented here.
 - 2022-02-23: Follow-up on certificate
 - 2022-02-28: certificate
 - 2022-04-05: Cleanup in history.go
+- 2022-04-05: compliance
