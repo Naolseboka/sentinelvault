@@ -113,3 +113,4 @@ All notable changes to this project are documented here.
 - 2022-04-05: Cleanup in history.go
 - 2022-04-05: compliance
 - 2022-04-15: Small cleanup in models.go
+- 2022-04-19: Small cleanup in redact_test.go
