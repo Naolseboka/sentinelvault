@@ -116,3 +116,4 @@ All notable changes to this project are documented here.
 - 2022-04-19: Small cleanup in redact_test.go
 - 2022-04-23: delegation
 - 2022-05-04: delegation
+- 2022-05-09: Refactor delegation
