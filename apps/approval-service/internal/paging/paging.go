@@ -46,3 +46,4 @@ func Slice[T any](in []T, offset, limit int) []T {
 	}
 	return in[offset:end]
 }
+// maintenance note 38
