@@ -91,3 +91,4 @@ func ApplyUpdateOTPRecord(dst *OTPRecordDTO, r UpdateOTPRecordRequest) {
 	}
 	dst.UpdatedAt = common.NowUTC()
 }
+// maintenance note 44
