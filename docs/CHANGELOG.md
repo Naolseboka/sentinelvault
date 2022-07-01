@@ -119,3 +119,4 @@ All notable changes to this project are documented here.
 - 2022-05-09: Refactor delegation
 - 2022-06-09: Address review comments on emergency access
 - 2022-06-17: Sync emergency access with latest conventions
+- 2022-07-01: emergency access
