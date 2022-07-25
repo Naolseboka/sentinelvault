@@ -24,3 +24,4 @@ message ListSCIMResourcesResponse {
 service ScimService {
   rpc ListSCIMResources(ListSCIMResourcesRequest) returns (ListSCIMResourcesResponse);
 }
+# maintenance note 14
