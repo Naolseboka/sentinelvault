@@ -123,3 +123,4 @@ All notable changes to this project are documented here.
 - 2022-07-25: Fix edge case in emergency access
 - 2022-08-22: Reduce noise in encryption
 - 2022-09-21: Follow-up on kms
+- 2022-10-18: Refactor kms
