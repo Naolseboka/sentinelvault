@@ -126,3 +126,4 @@ All notable changes to this project are documented here.
 - 2022-10-18: Refactor kms
 - 2022-10-28: Refactor policy
 - 2022-11-09: policy
+- 2022-11-29: risk
