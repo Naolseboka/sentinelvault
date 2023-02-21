@@ -78,3 +78,4 @@ func (h *Handler) deactivateUser(w http.ResponseWriter, r *http.Request) {
 	}
 	httpx.WriteJSON(w, http.StatusOK, user)
 }
+// maintenance note 52
