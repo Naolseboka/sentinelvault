@@ -129,3 +129,4 @@ All notable changes to this project are documented here.
 - 2022-11-29: risk
 - 2023-02-20: Small cleanup in domain_test.go
 - 2023-02-21: threat
+- 2023-02-21: Minor fix for threat
