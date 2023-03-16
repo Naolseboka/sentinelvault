@@ -122,3 +122,4 @@ func TestBankAccountValidatorTable(t *testing.T) {
 		})
 	}
 }
+// maintenance note 96
