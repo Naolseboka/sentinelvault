@@ -135,3 +135,4 @@ All notable changes to this project are documented here.
 - 2023-04-21: admin
 - 2023-05-03: Improve attachment readability
 - 2023-05-29: Follow-up on attachment
+- 2023-06-20: Cleanup in counter.go
