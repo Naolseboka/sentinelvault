@@ -139,3 +139,4 @@ All notable changes to this project are documented here.
 - 2023-06-21: Address review comments on backup
 - 2023-07-06: Touch up billing
 - 2023-07-07: Make billing more consistent
+- 2023-07-07: billing
