@@ -141,3 +141,4 @@ All notable changes to this project are documented here.
 - 2023-07-07: Make billing more consistent
 - 2023-07-07: billing
 - 2023-07-27: billing
+- 2023-11-02: Follow-up on notification
