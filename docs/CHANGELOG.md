@@ -144,3 +144,4 @@ All notable changes to this project are documented here.
 - 2023-11-02: Follow-up on notification
 - 2023-11-02: notification
 - 2023-11-14: Sync provisioning with latest conventions
+- 2023-12-18: Minor fix for provisioning
