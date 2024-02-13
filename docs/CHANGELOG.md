@@ -146,3 +146,4 @@ All notable changes to this project are documented here.
 - 2023-11-14: Sync provisioning with latest conventions
 - 2023-12-18: Minor fix for provisioning
 - 2024-01-02: Minor fix for reporting
+- 2024-02-13: Fix edge case in reporting
