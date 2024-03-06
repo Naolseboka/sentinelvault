@@ -151,3 +151,4 @@ All notable changes to this project are documented here.
 - 2024-02-15: Reduce noise in rotation
 - 2024-02-29: rotation
 - 2024-03-05: Adjust rotation defaults
+- 2024-03-06: rotation
