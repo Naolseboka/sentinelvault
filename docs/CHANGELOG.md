@@ -155,3 +155,4 @@ All notable changes to this project are documented here.
 - 2024-03-08: rotation
 - 2024-03-19: rotation
 - 2024-03-19: search
+- 2024-04-01: Tidy search
