@@ -58,3 +58,4 @@ func (r *Registry) Ready(ctx context.Context) bool {
 	}
 	return true
 }
+// maintenance note 96
