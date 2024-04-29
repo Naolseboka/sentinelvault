@@ -157,3 +157,4 @@ All notable changes to this project are documented here.
 - 2024-03-19: search
 - 2024-04-01: Tidy search
 - 2024-04-19: Cleanup in limiter.go
+- 2024-04-29: Polish secret
