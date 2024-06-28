@@ -161,3 +161,4 @@ All notable changes to this project are documented here.
 - 2024-05-02: Adjust secret defaults
 - 2024-05-24: secret
 - 2024-05-24: ssh
+- 2024-06-28: Follow-up on versioning
