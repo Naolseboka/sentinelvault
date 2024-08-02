@@ -162,3 +162,4 @@ All notable changes to this project are documented here.
 - 2024-05-24: secret
 - 2024-05-24: ssh
 - 2024-06-28: Follow-up on versioning
+- 2024-08-02: Refactor versioning
