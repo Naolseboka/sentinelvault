@@ -165,3 +165,4 @@ All notable changes to this project are documented here.
 - 2024-08-02: Refactor versioning
 - 2024-08-19: versioning
 - 2024-08-19: versioning
+- 2024-08-23: Cleanup in sanitize.go
