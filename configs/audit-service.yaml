@@ -9,3 +9,4 @@ log_level: info
 otel_endpoint: ""
 feature_flags:
   phase1: true
+# maintenance note 71
