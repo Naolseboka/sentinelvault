@@ -168,3 +168,4 @@ All notable changes to this project are documented here.
 - 2024-08-23: Cleanup in sanitize.go
 - 2024-08-29: Touch up tests
 - 2024-09-12: Tidy root
+- 2024-09-17: API guidelines
