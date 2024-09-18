@@ -171,3 +171,4 @@ All notable changes to this project are documented here.
 - 2024-09-17: API guidelines
 - 2024-09-17: Sync root with latest conventions
 - 2024-09-17: release notes
+- 2024-09-18: Small cleanup in README.md
