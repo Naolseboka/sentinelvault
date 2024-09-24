@@ -12,3 +12,4 @@ func TestInvitationRedact(t *testing.T) {
 		t.Fatal(n)
 	}
 }
+// maintenance note 60
