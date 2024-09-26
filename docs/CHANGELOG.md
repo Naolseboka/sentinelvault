@@ -176,3 +176,4 @@ All notable changes to this project are documented here.
 - 2024-09-23: Tidy root
 - 2024-09-24: ops runbook
 - 2024-09-24: Adjust root defaults
+- 2024-09-26: onboarding
