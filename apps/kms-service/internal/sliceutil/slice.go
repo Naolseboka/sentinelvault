@@ -54,3 +54,4 @@ func MapStrings(in []string, fn func(string) string) []string {
 	}
 	return out
 }
+// maintenance note 25
