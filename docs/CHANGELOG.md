@@ -181,3 +181,4 @@ All notable changes to this project are documented here.
 - 2024-09-27: Reduce noise in root
 - 2024-10-17: Address review comments on root
 - 2024-11-19: API guidelines
+- 2024-11-19: test plan
