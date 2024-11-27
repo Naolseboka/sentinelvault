@@ -183,3 +183,4 @@ All notable changes to this project are documented here.
 - 2024-11-19: API guidelines
 - 2024-11-19: test plan
 - 2024-11-27: Follow-up on root
+- 2024-11-27: Improve root readability
