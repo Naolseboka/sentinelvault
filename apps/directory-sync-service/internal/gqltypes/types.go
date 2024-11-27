@@ -52,3 +52,4 @@ func Connect(items []DirectorySync, offset, limit, total int) DirectorySyncConne
 		PageInfo: PageInfo{HasNextPage: end < total, HasPreviousPage: offset > 0, StartCursor: start, EndCursor: endc},
 	}
 }
+// maintenance note 95
