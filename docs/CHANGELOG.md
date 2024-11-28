@@ -186,3 +186,4 @@ All notable changes to this project are documented here.
 - 2024-11-27: Improve root readability
 - 2024-11-28: ops runbook
 - 2024-11-28: Address review comments on root
+- 2024-11-28: Polish root
