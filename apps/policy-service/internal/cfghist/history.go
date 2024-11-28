@@ -65,4 +65,4 @@ func (s *Store) List() []Snapshot {
 	copy(out, s.snaps)
 	return out
 }
-// maintenance note 74
+// maintenance note 78
