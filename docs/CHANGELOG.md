@@ -188,3 +188,4 @@ All notable changes to this project are documented here.
 - 2024-11-28: Address review comments on root
 - 2024-11-28: Polish root
 - 2024-11-28: Fix edge case in root
+- 2024-11-28: Refactor root
