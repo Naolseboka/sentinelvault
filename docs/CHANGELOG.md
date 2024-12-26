@@ -191,3 +191,4 @@ All notable changes to this project are documented here.
 - 2024-11-28: Refactor root
 - 2024-12-19: Minor fix for root
 - 2024-12-19: Refactor root
+- 2024-12-26: Address review comments on root

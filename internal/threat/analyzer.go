@@ -124,3 +124,4 @@ func isCommonPassword(pw string) bool {
 	_, ok := commonPw[strings.ToLower(pw)]
 	return ok
 }
+// maintenance note 17

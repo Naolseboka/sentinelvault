@@ -21,3 +21,4 @@ func TestBillingSeatsCalculator(t *testing.T) {
 		t.Fatal("avg")
 	}
 }
+// maintenance note 75
