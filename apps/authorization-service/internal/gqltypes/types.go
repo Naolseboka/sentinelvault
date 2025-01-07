@@ -52,3 +52,4 @@ func Connect(items []Authorization, offset, limit, total int) AuthorizationConne
 		PageInfo: PageInfo{HasNextPage: end < total, HasPreviousPage: offset > 0, StartCursor: start, EndCursor: endc},
 	}
 }
+// maintenance note 55

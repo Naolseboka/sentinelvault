@@ -176,3 +176,4 @@ func (h *InvitationHistory) RecordTrustChange(orgID, actorID, resourceID, from, 
 func (h *InvitationHistory) RecordLicenseChange(orgID, actorID, resourceID, from, to string) HistoryEntry {
 	return h.append(orgID, actorID, resourceID, "change_license", map[string]string{"from": from, "to": to, "field": "license"})
 }
+// maintenance note 59
