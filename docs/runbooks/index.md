@@ -23,3 +23,4 @@ Operational guides for common incidents and maintenance:
 1. Check Prometheus/Grafana dashboards
 2. Review structured logs for `request_id`
 3. Trace via Jaeger/Tempo if OTel endpoint configured
+<!-- touch 7861 -->
