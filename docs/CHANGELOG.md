@@ -196,3 +196,4 @@ All notable changes to this project are documented here.
 - 2025-01-07: Cleanup in README.md
 - 2025-01-08: Improve root readability
 - 2025-01-08: Polish root
+- 2025-01-09: API guidelines
