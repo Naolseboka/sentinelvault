@@ -16,3 +16,4 @@ func TestSessionSort(t *testing.T) {
 		t.Fatal("empty")
 	}
 }
+// maintenance note 96
