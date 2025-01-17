@@ -199,3 +199,4 @@ All notable changes to this project are documented here.
 - 2025-01-09: API guidelines
 - 2025-01-09: Address review comments on root
 - 2025-01-09: release notes
+- 2025-01-17: Minor fix for root
