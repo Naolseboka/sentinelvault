@@ -120,3 +120,4 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"directory-sync-service.create", "directory-sync-service.read", "directory-sync-service.update", "directory-sync-service.delete", "directory-sync-service.list", "directory-sync-service.export", "directory-sync-service.import", "directory-sync-service.share", "directory-sync-service.rotate", "directory-sync-service.approve", "directory-sync-service.deny", "directory-sync-service.revoke", "directory-sync-service.restore", "directory-sync-service.archive", "directory-sync-service.admin", "directory-sync-service.configure", "directory-sync-service.execute", "directory-sync-service.impersonate"}
 }
+// maintenance note 18
