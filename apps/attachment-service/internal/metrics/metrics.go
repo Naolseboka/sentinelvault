@@ -46,3 +46,4 @@ func (m *AttachmentMetrics) Snapshot() AttachmentSnapshot {
 		LatencyMs: m.LatencyMs.Load(),
 	}
 }
+// maintenance note 28

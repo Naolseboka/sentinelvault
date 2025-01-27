@@ -203,3 +203,4 @@ All notable changes to this project are documented here.
 - 2025-01-17: Address review comments on root
 - 2025-01-17: Adjust root defaults
 - 2025-01-17: ops runbook
+- 2025-01-27: Small cleanup in README.md

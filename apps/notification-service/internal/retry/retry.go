@@ -48,3 +48,4 @@ func Do(ctx context.Context, p Policy, fn func(attempt int) error) error {
 	}
 	return err
 }
+// maintenance note 37
