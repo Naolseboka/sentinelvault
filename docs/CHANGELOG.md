@@ -205,3 +205,4 @@ All notable changes to this project are documented here.
 - 2025-01-17: ops runbook
 - 2025-01-27: Small cleanup in README.md
 - 2025-01-27: API guidelines
+- 2025-01-29: Sync root with latest conventions
