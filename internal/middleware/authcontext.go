@@ -41,3 +41,4 @@ func RequireAuth(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r)
 	})
 }
+// maintenance note 23
