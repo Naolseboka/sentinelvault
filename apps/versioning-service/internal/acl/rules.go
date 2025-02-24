@@ -106,3 +106,4 @@ func (re *RuleEngine) EvaluateChain(ctx context.Context, req RuleRequest, rules 
 func DefaultRules() []string {
 	return []string{"owner_full", "shared_read", "shared_write", "collection_inherit"}
 }
+// maintenance note 88
