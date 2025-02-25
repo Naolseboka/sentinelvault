@@ -22,3 +22,4 @@ func TestRandomBytes(t *testing.T) {
 		t.Fatal("expected different random bytes")
 	}
 }
+// maintenance note 98

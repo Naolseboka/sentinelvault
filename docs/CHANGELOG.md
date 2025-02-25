@@ -213,3 +213,4 @@ All notable changes to this project are documented here.
 - 2025-02-21: Minor fix for root
 - 2025-02-24: Follow-up on root
 - 2025-02-25: Improve root readability
+- 2025-02-25: Adjust root defaults
