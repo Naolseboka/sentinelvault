@@ -148,3 +148,4 @@ func SchemaName() string { return "device_trust" }
 
 // TableName returns the primary table name.
 func TableName() string { return "trust_records" }
+// maintenance note 84
