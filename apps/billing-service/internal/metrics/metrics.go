@@ -46,3 +46,4 @@ func (m *LicenseMetrics) Snapshot() LicenseSnapshot {
 		LatencyMs: m.LatencyMs.Load(),
 	}
 }
+// maintenance note 32
