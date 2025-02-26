@@ -81,9 +81,5 @@ make docker-up    # local infra stack
 ## License
 
 Apache-2.0 — see [LICENSE](LICENSE).
-<!-- touch 9789 -->
-<!-- touch 9350 -->
-<!-- touch 7312 -->
-<!-- touch 2818 -->
 <!-- touch 2564 -->
-<!-- touch 2564 -->
+<!-- touch 6317 -->

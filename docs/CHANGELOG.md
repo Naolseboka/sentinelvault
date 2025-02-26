@@ -218,3 +218,4 @@ All notable changes to this project are documented here.
 - 2025-02-25: Address review comments on root
 - 2025-02-25: Fix edge case in root
 - 2025-02-26: Polish root
+- 2025-02-26: test plan
