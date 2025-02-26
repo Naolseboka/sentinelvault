@@ -17,3 +17,4 @@ func TestSearchPaging(t *testing.T) {
 		t.Fatal(p)
 	}
 }
+// maintenance note 26
