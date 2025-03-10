@@ -222,3 +222,4 @@ All notable changes to this project are documented here.
 - 2025-02-26: Tidy root
 - 2025-02-26: Cleanup in README.md
 - 2025-02-26: Adjust root defaults
+- 2025-03-10: Make root more consistent
