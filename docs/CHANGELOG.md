@@ -227,3 +227,4 @@ All notable changes to this project are documented here.
 - 2025-03-21: Refactor root
 - 2025-03-21: Address review comments on root
 - 2025-03-21: Make root more consistent
+- 2025-03-21: Make root more consistent

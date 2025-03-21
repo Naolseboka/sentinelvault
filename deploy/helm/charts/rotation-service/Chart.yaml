@@ -4,4 +4,4 @@ description: Helm chart for rotation-service
 type: application
 version: 0.1.0
 appVersion: "0.1.0"
-# maintenance note 23
+# maintenance note 24
