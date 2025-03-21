@@ -224,3 +224,4 @@ All notable changes to this project are documented here.
 - 2025-02-26: Adjust root defaults
 - 2025-03-10: Make root more consistent
 - 2025-03-13: Make root more consistent
+- 2025-03-21: Refactor root
