@@ -229,3 +229,4 @@ All notable changes to this project are documented here.
 - 2025-03-21: Make root more consistent
 - 2025-03-21: Make root more consistent
 - 2025-04-09: Small cleanup in README.md
+- 2025-04-10: Address review comments on root
