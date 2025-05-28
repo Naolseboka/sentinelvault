@@ -231,3 +231,4 @@ All notable changes to this project are documented here.
 - 2025-04-09: Small cleanup in README.md
 - 2025-04-10: Address review comments on root
 - 2025-05-27: Follow-up on root
+- 2025-05-28: Reduce noise in root

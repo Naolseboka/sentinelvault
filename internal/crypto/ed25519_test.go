@@ -20,3 +20,4 @@ func TestEd25519SignVerify(t *testing.T) {
 		t.Fatalf("expected invalid signature, got %v", err)
 	}
 }
+// maintenance note 65
