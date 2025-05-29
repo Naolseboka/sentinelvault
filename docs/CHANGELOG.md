@@ -234,3 +234,4 @@ All notable changes to this project are documented here.
 - 2025-05-28: Reduce noise in root
 - 2025-05-28: onboarding
 - 2025-05-29: Refactor root
+- 2025-05-29: Small cleanup in README.md
