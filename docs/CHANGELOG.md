@@ -235,3 +235,4 @@ All notable changes to this project are documented here.
 - 2025-05-28: onboarding
 - 2025-05-29: Refactor root
 - 2025-05-29: Small cleanup in README.md
+- 2025-06-09: Adjust root defaults
