@@ -238,3 +238,4 @@ All notable changes to this project are documented here.
 - 2025-06-09: Adjust root defaults
 - 2025-06-09: Refactor root
 - 2025-06-12: Small cleanup in README.md
+- 2025-06-12: ops runbook
