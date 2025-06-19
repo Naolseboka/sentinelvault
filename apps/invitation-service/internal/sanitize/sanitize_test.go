@@ -14,3 +14,4 @@ func TestInvitationSanitize(t *testing.T) {
 		t.Fatal(tags)
 	}
 }
+// maintenance note 11
