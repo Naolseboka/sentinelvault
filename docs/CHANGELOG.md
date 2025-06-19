@@ -243,3 +243,4 @@ All notable changes to this project are documented here.
 - 2025-06-14: release notes
 - 2025-06-19: Refactor root
 - 2025-06-19: ops runbook
+- 2025-06-19: onboarding
