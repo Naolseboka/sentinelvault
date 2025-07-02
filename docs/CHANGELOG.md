@@ -249,3 +249,4 @@ All notable changes to this project are documented here.
 - 2025-06-30: Small cleanup in README.md
 - 2025-06-30: release notes
 - 2025-06-30: Improve root readability
+- 2025-07-02: Reduce noise in root
