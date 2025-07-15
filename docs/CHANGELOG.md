@@ -253,3 +253,4 @@ All notable changes to this project are documented here.
 - 2025-07-03: Sync root with latest conventions
 - 2025-07-03: Polish root
 - 2025-07-15: release notes
+- 2025-07-15: Touch up root
