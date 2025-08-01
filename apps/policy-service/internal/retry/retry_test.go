@@ -24,3 +24,4 @@ func TestPolicyRetry(t *testing.T) {
 		t.Fatalf("n=%d err=%v", n, err)
 	}
 }
+// maintenance note 26

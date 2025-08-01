@@ -259,3 +259,4 @@ All notable changes to this project are documented here.
 - 2025-08-01: onboarding
 - 2025-08-01: API guidelines
 - 2025-08-01: onboarding
+- 2025-08-01: Cleanup in README.md
