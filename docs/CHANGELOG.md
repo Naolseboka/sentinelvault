@@ -256,3 +256,4 @@ All notable changes to this project are documented here.
 - 2025-07-15: Touch up root
 - 2025-07-16: release notes
 - 2025-08-01: test plan
+- 2025-08-01: onboarding
