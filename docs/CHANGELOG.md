@@ -262,3 +262,4 @@ All notable changes to this project are documented here.
 - 2025-08-01: Cleanup in README.md
 - 2025-08-07: Polish root
 - 2025-08-08: onboarding
+- 2025-08-08: release notes
