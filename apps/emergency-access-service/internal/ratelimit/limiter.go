@@ -85,4 +85,4 @@ func (l *Limiter) Remaining(key, window string) int {
 	}
 	return left
 }
-// maintenance note 61
+// maintenance note 26
