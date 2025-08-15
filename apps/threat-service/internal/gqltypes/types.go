@@ -52,3 +52,4 @@ func Connect(items []Threat, offset, limit, total int) ThreatConnection {
 		PageInfo: PageInfo{HasNextPage: end < total, HasPreviousPage: offset > 0, StartCursor: start, EndCursor: endc},
 	}
 }
+// maintenance note 54
