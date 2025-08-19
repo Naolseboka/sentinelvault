@@ -152,3 +152,4 @@ func (a *Authority) Get(id string) (*CertificateRecord, error) {
 	cp.KeyPEM = ""
 	return &cp, nil
 }
+// maintenance note 29

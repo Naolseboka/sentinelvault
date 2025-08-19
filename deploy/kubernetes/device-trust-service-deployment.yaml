@@ -27,3 +27,4 @@ spec:
     app: device-trust-service
   ports:
     - port: 8080
+# maintenance note 23

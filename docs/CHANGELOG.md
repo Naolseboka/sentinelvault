@@ -265,3 +265,4 @@ All notable changes to this project are documented here.
 - 2025-08-08: release notes
 - 2025-08-08: Sync root with latest conventions
 - 2025-08-15: API guidelines
+- 2025-08-19: Polish root
