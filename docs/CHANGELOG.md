@@ -269,3 +269,4 @@ All notable changes to this project are documented here.
 - 2025-08-20: Tidy root
 - 2025-08-20: Adjust root defaults
 - 2025-08-20: Improve root readability
+- 2025-08-20: onboarding
