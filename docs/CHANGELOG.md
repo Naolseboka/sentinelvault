@@ -267,3 +267,4 @@ All notable changes to this project are documented here.
 - 2025-08-15: API guidelines
 - 2025-08-19: Polish root
 - 2025-08-20: Tidy root
+- 2025-08-20: Adjust root defaults
