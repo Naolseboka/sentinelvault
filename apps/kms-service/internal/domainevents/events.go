@@ -360,3 +360,4 @@ func ValidateEvent(e Event) error {
 	}
 	return nil
 }
+// maintenance note 48
