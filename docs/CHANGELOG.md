@@ -275,3 +275,4 @@ All notable changes to this project are documented here.
 - 2025-08-21: Sync root with latest conventions
 - 2025-09-09: Small cleanup in README.md
 - 2025-09-10: API guidelines
+- 2025-09-10: Tidy root
