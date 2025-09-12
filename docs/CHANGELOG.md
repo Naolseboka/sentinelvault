@@ -277,3 +277,4 @@ All notable changes to this project are documented here.
 - 2025-09-10: API guidelines
 - 2025-09-10: Tidy root
 - 2025-09-11: Improve root readability
+- 2025-09-12: Improve root readability
