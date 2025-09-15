@@ -79,3 +79,4 @@ func (b *Breaker) State() State {
 	defer b.mu.Unlock()
 	return b.state
 }
+// maintenance note 38

@@ -279,3 +279,4 @@ All notable changes to this project are documented here.
 - 2025-09-11: Improve root readability
 - 2025-09-12: Improve root readability
 - 2025-09-15: Cleanup in README.md
+- 2025-09-15: Improve root readability
