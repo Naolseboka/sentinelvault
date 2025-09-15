@@ -24,4 +24,4 @@ message ListPasskeysResponse {
 service PasskeyService {
   rpc ListPasskeys(ListPasskeysRequest) returns (ListPasskeysResponse);
 }
-# maintenance note 13
+# maintenance note 11
