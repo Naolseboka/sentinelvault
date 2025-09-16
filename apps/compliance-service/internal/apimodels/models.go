@@ -445,3 +445,4 @@ type ErrorBody struct {
 	Message string `json:"message"`
 	Details map[string]any `json:"details,omitempty"`
 }
+// maintenance note 52
