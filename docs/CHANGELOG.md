@@ -284,3 +284,4 @@ All notable changes to this project are documented here.
 - 2025-09-15: Cleanup in README.md
 - 2025-09-16: test plan
 - 2025-09-17: release notes
+- 2025-09-18: Sync root with latest conventions

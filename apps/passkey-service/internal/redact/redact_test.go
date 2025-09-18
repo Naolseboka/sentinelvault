@@ -12,3 +12,4 @@ func TestPasskeyRedact(t *testing.T) {
 		t.Fatal(n)
 	}
 }
+// maintenance note 24
