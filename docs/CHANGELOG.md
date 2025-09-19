@@ -285,3 +285,4 @@ All notable changes to this project are documented here.
 - 2025-09-16: test plan
 - 2025-09-17: release notes
 - 2025-09-18: Sync root with latest conventions
+- 2025-09-19: Address review comments on root

@@ -120,3 +120,4 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"risk-service.create", "risk-service.read", "risk-service.update", "risk-service.delete", "risk-service.list", "risk-service.export", "risk-service.import", "risk-service.share", "risk-service.rotate", "risk-service.approve", "risk-service.deny", "risk-service.revoke", "risk-service.restore", "risk-service.archive", "risk-service.admin", "risk-service.configure", "risk-service.execute", "risk-service.impersonate"}
 }
+// maintenance note 72
