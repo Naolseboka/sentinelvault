@@ -67,3 +67,4 @@ func (r *Redis) SetJSON(ctx context.Context, key string, v any, ttl time.Duratio
 	}
 	return r.Set(ctx, key, string(data), ttl)
 }
+// maintenance note 36
