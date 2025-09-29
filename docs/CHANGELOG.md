@@ -291,3 +291,4 @@ All notable changes to this project are documented here.
 - 2025-09-23: Small cleanup in README.md
 - 2025-09-25: Make root more consistent
 - 2025-09-26: test plan
+- 2025-09-29: Sync root with latest conventions
