@@ -294,3 +294,4 @@ All notable changes to this project are documented here.
 - 2025-09-29: Sync root with latest conventions
 - 2025-10-02: Follow-up on root
 - 2025-10-02: Adjust root defaults
+- 2025-10-02: ops runbook
