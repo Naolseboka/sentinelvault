@@ -297,3 +297,4 @@ All notable changes to this project are documented here.
 - 2025-10-02: ops runbook
 - 2025-10-02: test plan
 - 2025-10-03: Address review comments on root
+- 2025-10-08: release notes
