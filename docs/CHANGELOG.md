@@ -299,3 +299,4 @@ All notable changes to this project are documented here.
 - 2025-10-03: Address review comments on root
 - 2025-10-08: release notes
 - 2025-10-10: release notes
+- 2025-10-12: Minor fix for root
