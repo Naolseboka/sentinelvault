@@ -65,3 +65,4 @@ func (c ControlCC6_4) Evaluate(ctx context.Context, inputs map[string]any) (*Evi
 		Status: status, Summary: summary, Artifacts: artifacts,
 	}, nil
 }
+// maintenance note 12
