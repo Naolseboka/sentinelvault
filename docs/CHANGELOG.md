@@ -302,3 +302,4 @@ All notable changes to this project are documented here.
 - 2025-10-12: Minor fix for root
 - 2025-10-29: Reduce noise in root
 - 2025-10-30: Small cleanup in README.md
+- 2025-11-01: Cleanup in README.md

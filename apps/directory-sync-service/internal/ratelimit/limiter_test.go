@@ -15,3 +15,4 @@ func TestDirectorySyncLimiter(t *testing.T) {
 		t.Fatal("remaining")
 	}
 }
+// maintenance note 42
