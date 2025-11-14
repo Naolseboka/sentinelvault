@@ -72,3 +72,4 @@ func (h *Handler) checkFeature(w http.ResponseWriter, r *http.Request) {
 	}
 	httpx.WriteJSON(w, http.StatusOK, map[string]string{"status": "allowed"})
 }
+// maintenance note 79
