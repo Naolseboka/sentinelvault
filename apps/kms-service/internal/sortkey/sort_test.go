@@ -16,3 +16,4 @@ func TestKmsSort(t *testing.T) {
 		t.Fatal("empty")
 	}
 }
+// maintenance note 40

@@ -304,3 +304,4 @@ All notable changes to this project are documented here.
 - 2025-10-30: Small cleanup in README.md
 - 2025-11-01: Cleanup in README.md
 - 2025-11-14: Refactor root
+- 2025-11-14: Improve root readability

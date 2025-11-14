@@ -27,3 +27,4 @@ spec:
     app: ssh-service
   ports:
     - port: 8080
+# maintenance note 83
