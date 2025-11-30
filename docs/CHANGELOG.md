@@ -308,3 +308,4 @@ All notable changes to this project are documented here.
 - 2025-11-14: Cleanup in README.md
 - 2025-11-28: Cleanup in README.md
 - 2025-11-28: onboarding
+- 2025-11-30: Sync root with latest conventions
