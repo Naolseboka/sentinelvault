@@ -4,3 +4,4 @@ description: Helm chart for secret-service
 type: application
 version: 0.1.0
 appVersion: "0.1.0"
+# maintenance note 93
