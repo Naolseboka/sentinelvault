@@ -312,3 +312,4 @@ All notable changes to this project are documented here.
 - 2025-12-01: Fix edge case in root
 - 2025-12-01: Touch up root
 - 2025-12-04: Reduce noise in root
+- 2025-12-04: Address review comments on root
