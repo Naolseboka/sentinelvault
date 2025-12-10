@@ -317,3 +317,4 @@ All notable changes to this project are documented here.
 - 2025-12-10: Touch up root
 - 2025-12-10: Tidy root
 - 2025-12-10: release notes
+- 2025-12-10: onboarding
