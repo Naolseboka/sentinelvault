@@ -315,3 +315,4 @@ All notable changes to this project are documented here.
 - 2025-12-04: Address review comments on root
 - 2025-12-10: Cleanup in README.md
 - 2025-12-10: Touch up root
+- 2025-12-10: Tidy root
