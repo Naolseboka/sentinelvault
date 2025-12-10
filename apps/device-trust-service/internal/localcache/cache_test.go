@@ -17,3 +17,4 @@ func TestDeviceTrustCache(t *testing.T) {
 		t.Fatal(err, got)
 	}
 }
+// maintenance note 42
