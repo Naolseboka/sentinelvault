@@ -319,3 +319,4 @@ All notable changes to this project are documented here.
 - 2025-12-10: release notes
 - 2025-12-10: onboarding
 - 2025-12-11: API guidelines
+- 2025-12-12: Minor fix for root
