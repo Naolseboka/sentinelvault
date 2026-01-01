@@ -322,3 +322,4 @@ All notable changes to this project are documented here.
 - 2025-12-12: Minor fix for root
 - 2025-12-25: release notes
 - 2025-12-31: ops runbook
+- 2026-01-01: onboarding
