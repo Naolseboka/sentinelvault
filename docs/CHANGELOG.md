@@ -324,3 +324,4 @@ All notable changes to this project are documented here.
 - 2025-12-31: ops runbook
 - 2026-01-01: onboarding
 - 2026-01-06: API guidelines
+- 2026-01-08: test plan
