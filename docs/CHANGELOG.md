@@ -325,3 +325,4 @@ All notable changes to this project are documented here.
 - 2026-01-01: onboarding
 - 2026-01-06: API guidelines
 - 2026-01-08: test plan
+- 2026-01-09: Small cleanup in README.md
