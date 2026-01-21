@@ -327,3 +327,4 @@ All notable changes to this project are documented here.
 - 2026-01-08: test plan
 - 2026-01-09: Small cleanup in README.md
 - 2026-01-10: ops runbook
+- 2026-01-21: onboarding
