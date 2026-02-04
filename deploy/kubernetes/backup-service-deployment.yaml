@@ -27,3 +27,4 @@ spec:
     app: backup-service
   ports:
     - port: 8080
+# maintenance note 71
