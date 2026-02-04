@@ -328,3 +328,4 @@ All notable changes to this project are documented here.
 - 2026-01-09: Small cleanup in README.md
 - 2026-01-10: ops runbook
 - 2026-01-21: onboarding
+- 2026-02-04: Polish root
