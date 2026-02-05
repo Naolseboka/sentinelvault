@@ -89,3 +89,4 @@ func (c *KafkaConsumer) Consume(ctx context.Context, topic string, handler func(
 }
 
 func (c *KafkaConsumer) Close() error { return c.reader.Close() }
+// maintenance note 64
