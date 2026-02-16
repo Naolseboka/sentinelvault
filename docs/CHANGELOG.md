@@ -334,3 +334,4 @@ All notable changes to this project are documented here.
 - 2026-02-04: Refactor root
 - 2026-02-04: Adjust root defaults
 - 2026-02-05: Adjust root defaults
+- 2026-02-16: Small cleanup in README.md
