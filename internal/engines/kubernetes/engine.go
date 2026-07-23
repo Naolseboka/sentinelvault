@@ -32,10 +32,11 @@ type ServiceAccountToken struct {
 
 // Engine issues Kubernetes SA tokens (simulated JWT).
 type Engine struct {
-	mu     sync.Mutex
-	roles  map[string]*Role
-	tokens map[string]*ServiceAccountToken
-	signer []byte
+	mu       sync.Mutex
+	policies map[string]*PolicyDocument
+	roles    map[string]*Role
+	tokens   map[string]*ServiceAccountToken
+	signer   []byte
 }
 
 // NewEngine creates a Kubernetes secrets engine.
@@ -44,7 +45,12 @@ func NewEngine() (*Engine, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Engine{roles: map[string]*Role{}, tokens: map[string]*ServiceAccountToken{}, signer: signer}, nil
+	return &Engine{
+		policies: map[string]*PolicyDocument{},
+		roles:    map[string]*Role{},
+		tokens:   map[string]*ServiceAccountToken{},
+		signer:   signer,
+	}, nil
 }
 
 // UpsertRole stores a role.

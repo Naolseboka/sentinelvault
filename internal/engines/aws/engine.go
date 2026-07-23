@@ -34,10 +34,11 @@ type Credentials struct {
 
 // Engine issues temporary AWS-style credentials (software simulation).
 type Engine struct {
-	mu    sync.Mutex
-	roles map[string]*Role
-	creds map[string]*Credentials
-	root  []byte
+	mu       sync.Mutex
+	policies map[string]*PolicyDocument
+	roles    map[string]*Role
+	creds    map[string]*Credentials
+	root     []byte
 }
 
 // NewEngine creates an AWS secrets engine.
@@ -45,7 +46,12 @@ func NewEngine(rootSecret []byte) *Engine {
 	if len(rootSecret) < 32 {
 		rootSecret = sha256.New().Sum([]byte("sentinelvault-aws-engine"))
 	}
-	return &Engine{roles: map[string]*Role{}, creds: map[string]*Credentials{}, root: rootSecret}
+	return &Engine{
+		policies: map[string]*PolicyDocument{},
+		roles:    map[string]*Role{},
+		creds:    map[string]*Credentials{},
+		root:     rootSecret,
+	}
 }
 
 // UpsertRole stores a role.

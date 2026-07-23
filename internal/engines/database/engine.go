@@ -36,14 +36,19 @@ type Lease struct {
 
 // Engine issues dynamic database credentials.
 type Engine struct {
-	mu     sync.Mutex
-	roles  map[string]*Role
-	leases map[string]*Lease
+	mu       sync.Mutex
+	policies map[string]*PolicyDocument
+	roles    map[string]*Role
+	leases   map[string]*Lease
 }
 
 // NewEngine creates a database secrets engine.
 func NewEngine() *Engine {
-	return &Engine{roles: map[string]*Role{}, leases: map[string]*Lease{}}
+	return &Engine{
+		policies: map[string]*PolicyDocument{},
+		roles:    map[string]*Role{},
+		leases:   map[string]*Lease{},
+	}
 }
 
 // UpsertRole registers a role.

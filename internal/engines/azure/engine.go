@@ -32,14 +32,19 @@ type Credentials struct {
 
 // Engine issues Azure-style temporary credentials.
 type Engine struct {
-	mu    sync.Mutex
-	roles map[string]*Role
-	creds map[string]*Credentials
+	mu       sync.Mutex
+	policies map[string]*PolicyDocument
+	roles    map[string]*Role
+	creds    map[string]*Credentials
 }
 
 // NewEngine creates an Azure secrets engine.
 func NewEngine() *Engine {
-	return &Engine{roles: map[string]*Role{}, creds: map[string]*Credentials{}}
+	return &Engine{
+		policies: map[string]*PolicyDocument{},
+		roles:    map[string]*Role{},
+		creds:    map[string]*Credentials{},
+	}
 }
 
 // UpsertRole stores a role.

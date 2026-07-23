@@ -31,14 +31,19 @@ type AccessToken struct {
 
 // Engine issues GCP-style access tokens.
 type Engine struct {
-	mu     sync.Mutex
-	roles  map[string]*Role
-	tokens map[string]*AccessToken
+	mu       sync.Mutex
+	policies map[string]*PolicyDocument
+	roles    map[string]*Role
+	tokens   map[string]*AccessToken
 }
 
 // NewEngine creates a GCP secrets engine.
 func NewEngine() *Engine {
-	return &Engine{roles: map[string]*Role{}, tokens: map[string]*AccessToken{}}
+	return &Engine{
+		policies: map[string]*PolicyDocument{},
+		roles:    map[string]*Role{},
+		tokens:   map[string]*AccessToken{},
+	}
 }
 
 // UpsertRole stores a role.
