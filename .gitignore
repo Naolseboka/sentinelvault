@@ -33,3 +33,7 @@ coverage.html
 
 # Logs
 *.log
+
+# local build artifacts
+/cmd
+/bin/
