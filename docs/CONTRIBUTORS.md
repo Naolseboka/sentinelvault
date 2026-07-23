@@ -4,3 +4,4 @@ Thanks to everyone who has contributed to SentinelVault.
 
 - Naol Seboka
 - Fayera Dilgasa
+- Birhanu Abera
