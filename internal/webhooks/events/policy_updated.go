@@ -9,12 +9,12 @@ import (
 
 // PolicyUpdatedPayload is the webhook body for policy.updated.
 type PolicyUpdatedPayload struct {
-	Event     string            `json:"event"`
-	OrgID     string            `json:"org_id"`
-	ActorID   string            `json:"actor_id"`
-	ResourceID string           `json:"resource_id"`
-	OccurredAt time.Time        `json:"occurred_at"`
-	Metadata  map[string]string `json:"metadata,omitempty"`
+	Event      string            `json:"event"`
+	OrgID      string            `json:"org_id"`
+	ActorID    string            `json:"actor_id"`
+	ResourceID string            `json:"resource_id"`
+	OccurredAt time.Time         `json:"occurred_at"`
+	Metadata   map[string]string `json:"metadata,omitempty"`
 }
 
 func NewPolicyUpdatedPayload(orgID, actorID, resourceID string, meta map[string]string) (*PolicyUpdatedPayload, error) {

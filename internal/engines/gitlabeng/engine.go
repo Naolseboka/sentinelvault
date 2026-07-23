@@ -31,9 +31,9 @@ type Token struct {
 // Engine issues GitLab tokens (simulated).
 type Engine struct {
 	policies map[string]*PolicyDocument
-	mu     sync.Mutex
-	roles  map[string]*Role
-	tokens map[string]*Token
+	mu       sync.Mutex
+	roles    map[string]*Role
+	tokens   map[string]*Token
 }
 
 // NewEngine creates a GitLab secrets engine.

@@ -95,4 +95,5 @@ func (c *EmergencyAccessUsageCalculator) Average(orgID string, from, to time.Tim
 	}
 	return sum / float64(n)
 }
+
 // maintenance note 81

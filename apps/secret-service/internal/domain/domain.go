@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"sync"
 
-	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/common"
+	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/vault"
 )
 
@@ -355,4 +355,5 @@ func (r *MemoryRepository) SaveVersion(_ context.Context, snap *vault.VersionSna
 	r.versions[snap.ID] = &cp
 	return nil
 }
+
 // maintenance note 51

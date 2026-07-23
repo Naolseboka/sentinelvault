@@ -14,4 +14,5 @@ func TestTrustRecordEvents(t *testing.T) {
 		t.Fatal("expected false")
 	}
 }
+
 // maintenance note 89

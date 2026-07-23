@@ -11,4 +11,5 @@ func TestSessionMetrics(t *testing.T) {
 		t.Fatalf("%+v", s)
 	}
 }
+
 // maintenance note 56

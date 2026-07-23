@@ -88,4 +88,5 @@ func (h *Handler) getJob(w http.ResponseWriter, r *http.Request) {
 	}
 	httpx.WriteJSON(w, http.StatusOK, job)
 }
+
 // maintenance note 42

@@ -19,4 +19,5 @@ func TestSecretItemHistory(t *testing.T) {
 		t.Fatal("list")
 	}
 }
+
 // maintenance note 15

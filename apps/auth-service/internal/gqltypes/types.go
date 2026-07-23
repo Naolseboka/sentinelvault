@@ -3,32 +3,32 @@ package gqltypes
 import "time"
 
 type Auth struct {
-	ID string `json:"id"`
-	OrgID string `json:"orgId"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	Tags []string `json:"tags"`
-	Metadata map[string]string `json:"metadata"`
+	ID        string            `json:"id"`
+	OrgID     string            `json:"orgId"`
+	Name      string            `json:"name"`
+	Status    string            `json:"status"`
+	CreatedAt time.Time         `json:"createdAt"`
+	UpdatedAt time.Time         `json:"updatedAt"`
+	Tags      []string          `json:"tags"`
+	Metadata  map[string]string `json:"metadata"`
 }
 
 type AuthConnection struct {
-	Nodes []Auth `json:"nodes"`
-	TotalCount int `json:"totalCount"`
-	PageInfo PageInfo `json:"pageInfo"`
+	Nodes      []Auth   `json:"nodes"`
+	TotalCount int      `json:"totalCount"`
+	PageInfo   PageInfo `json:"pageInfo"`
 }
 
 type PageInfo struct {
-	HasNextPage bool `json:"hasNextPage"`
-	HasPreviousPage bool `json:"hasPreviousPage"`
-	StartCursor string `json:"startCursor"`
-	EndCursor string `json:"endCursor"`
+	HasNextPage     bool   `json:"hasNextPage"`
+	HasPreviousPage bool   `json:"hasPreviousPage"`
+	StartCursor     string `json:"startCursor"`
+	EndCursor       string `json:"endCursor"`
 }
 
 type AuthEdge struct {
 	Cursor string `json:"cursor"`
-	Node Auth `json:"node"`
+	Node   Auth   `json:"node"`
 }
 
 func Connect(items []Auth, offset, limit, total int) AuthConnection {
@@ -40,7 +40,7 @@ func Connect(items []Auth, offset, limit, total int) AuthConnection {
 		end = len(items)
 	}
 	if offset > len(items) {
-	offset = len(items)
+		offset = len(items)
 	}
 	nodes := items[offset:end]
 	start, endc := "", ""

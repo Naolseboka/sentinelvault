@@ -8,25 +8,25 @@ import (
 
 // Event types for rbac-service.
 const (
-	EventRoleBindingCreated = "rbac.created"
-	EventRoleBindingUpdated = "rbac.updated"
-	EventRoleBindingDeleted = "rbac.deleted"
-	EventRoleBindingArchived = "rbac.archived"
-	EventRoleBindingRestored = "rbac.restored"
-	EventRoleBindingShared = "rbac.shared"
-	EventRoleBindingUnshared = "rbac.unshared"
-	EventRoleBindingExported = "rbac.exported"
-	EventRoleBindingImported = "rbac.imported"
-	EventRoleBindingRotated = "rbac.rotated"
-	EventRoleBindingAccessed = "rbac.accessed"
-	EventRoleBindingDenied = "rbac.denied"
-	EventRoleBindingApproved = "rbac.approved"
-	EventRoleBindingRevoked = "rbac.revoked"
-	EventRoleBindingExpired = "rbac.expired"
-	EventRoleBindingLocked = "rbac.locked"
-	EventRoleBindingUnlocked = "rbac.unlocked"
-	EventRoleBindingVerified = "rbac.verified"
-	EventRoleBindingFailed = "rbac.failed"
+	EventRoleBindingCreated   = "rbac.created"
+	EventRoleBindingUpdated   = "rbac.updated"
+	EventRoleBindingDeleted   = "rbac.deleted"
+	EventRoleBindingArchived  = "rbac.archived"
+	EventRoleBindingRestored  = "rbac.restored"
+	EventRoleBindingShared    = "rbac.shared"
+	EventRoleBindingUnshared  = "rbac.unshared"
+	EventRoleBindingExported  = "rbac.exported"
+	EventRoleBindingImported  = "rbac.imported"
+	EventRoleBindingRotated   = "rbac.rotated"
+	EventRoleBindingAccessed  = "rbac.accessed"
+	EventRoleBindingDenied    = "rbac.denied"
+	EventRoleBindingApproved  = "rbac.approved"
+	EventRoleBindingRevoked   = "rbac.revoked"
+	EventRoleBindingExpired   = "rbac.expired"
+	EventRoleBindingLocked    = "rbac.locked"
+	EventRoleBindingUnlocked  = "rbac.unlocked"
+	EventRoleBindingVerified  = "rbac.verified"
+	EventRoleBindingFailed    = "rbac.failed"
 	EventRoleBindingSucceeded = "rbac.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownRoleBindingEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewRoleBindingCreatedEvent builds a domain event.
 func NewRoleBindingCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

@@ -12,12 +12,12 @@ import (
 
 // Role defines a Kubernetes service account token role.
 type Role struct {
-	ID        string        `json:"id"`
-	OrgID     string        `json:"org_id"`
-	Name      string        `json:"name"`
-	Namespace string        `json:"namespace"`
-	SAName    string        `json:"service_account"`
-	Audiences []string      `json:"audiences"`
+	ID         string        `json:"id"`
+	OrgID      string        `json:"org_id"`
+	Name       string        `json:"name"`
+	Namespace  string        `json:"namespace"`
+	SAName     string        `json:"service_account"`
+	Audiences  []string      `json:"audiences"`
 	DefaultTTL time.Duration `json:"default_ttl"`
 }
 
@@ -90,7 +90,7 @@ func (e *Engine) IssueToken(roleID string, ttl time.Duration) (*ServiceAccountTo
 		"exp": time.Now().Add(ttl).Unix(),
 		"iat": time.Now().Unix(),
 		"kubernetes.io": map[string]any{
-			"namespace": role.Namespace,
+			"namespace":      role.Namespace,
 			"serviceaccount": map[string]string{"name": role.SAName},
 		},
 	})

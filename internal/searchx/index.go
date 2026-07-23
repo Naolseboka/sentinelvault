@@ -7,13 +7,13 @@ import (
 
 // Document is a searchable record.
 type Document struct {
-	ID       string            `json:"id"`
-	OrgID    string            `json:"org_id"`
-	Index    string            `json:"index"`
-	Title    string            `json:"title"`
-	Body     string            `json:"body"`
-	Tags     []string          `json:"tags"`
-	Fields   map[string]string `json:"fields,omitempty"`
+	ID     string            `json:"id"`
+	OrgID  string            `json:"org_id"`
+	Index  string            `json:"index"`
+	Title  string            `json:"title"`
+	Body   string            `json:"body"`
+	Tags   []string          `json:"tags"`
+	Fields map[string]string `json:"fields,omitempty"`
 }
 
 // Hit is a search result with score.

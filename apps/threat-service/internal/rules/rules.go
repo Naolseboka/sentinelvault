@@ -340,7 +340,6 @@ func RuleResourceRequired(in map[string]any) error {
 	return nil
 }
 
-
 func ValidateCreate(in map[string]any) error {
 	for _, fn := range []func(map[string]any) error{RuleRequiredOrg, RuleRequiredName, RuleNameMaxLen, RuleStatusKnown, RuleTagsMax, RuleMetadataMax} {
 		if err := fn(in); err != nil {
@@ -358,4 +357,5 @@ func ValidateMutation(in map[string]any) error {
 	}
 	return nil
 }
+
 // maintenance note 64

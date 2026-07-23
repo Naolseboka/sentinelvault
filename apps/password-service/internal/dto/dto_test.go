@@ -16,4 +16,5 @@ func TestValidateCreateVaultItem(t *testing.T) {
 		t.Fatal(dst.Name)
 	}
 }
+
 // maintenance note 99

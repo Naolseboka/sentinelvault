@@ -8,17 +8,17 @@ import (
 
 // PolicyStatement is one allow/deny rule.
 type PolicyStatement struct {
-	Effect   string   `json:"effect"`
-	Actions  []string `json:"actions"`
+	Effect    string   `json:"effect"`
+	Actions   []string `json:"actions"`
 	Resources []string `json:"resources"`
 }
 
 // PolicyDocument groups statements for GitLab.
 type PolicyDocument struct {
-	ID          string            `json:"id"`
-	OrgID       string            `json:"org_id"`
-	Name        string            `json:"name"`
-	Statements  []PolicyStatement `json:"statements"`
+	ID         string            `json:"id"`
+	OrgID      string            `json:"org_id"`
+	Name       string            `json:"name"`
+	Statements []PolicyStatement `json:"statements"`
 }
 
 func (e *Engine) UpsertPolicy(p PolicyDocument) (*PolicyDocument, error) {

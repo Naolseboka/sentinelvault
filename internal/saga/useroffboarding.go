@@ -6,7 +6,6 @@ import (
 	"github.com/sentinelvault/sentinelvault/internal/common"
 )
 
-
 type UserOffboardingStep1 struct{ fail bool }
 
 func (s UserOffboardingStep1) Name() string { return "useroffboarding_step_1" }
@@ -66,7 +65,6 @@ func (s UserOffboardingStep4) Compensate(ctx context.Context, st map[string]any)
 	st["useroffboarding_step_4"] = false
 	return nil
 }
-
 
 // RegisterUserOffboarding wires UserOffboarding saga with compensation hooks.
 func RegisterUserOffboarding(e *Engine) error {

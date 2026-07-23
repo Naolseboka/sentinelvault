@@ -18,16 +18,16 @@ const (
 
 // EmergencyAccess is a break-glass access workflow.
 type EmergencyAccess struct {
-	ID          string     `json:"id"`
-	OrgID       string     `json:"org_id"`
-	RequesterID string     `json:"requester_id"`
-	TargetOrgID string     `json:"target_org_id"`
-	Reason      string     `json:"reason"`
-	Status      string     `json:"status"`
+	ID          string        `json:"id"`
+	OrgID       string        `json:"org_id"`
+	RequesterID string        `json:"requester_id"`
+	TargetOrgID string        `json:"target_org_id"`
+	Reason      string        `json:"reason"`
+	Status      string        `json:"status"`
 	WaitPeriod  time.Duration `json:"wait_period"`
-	ActiveUntil time.Time  `json:"active_until,omitempty"`
-	ApprovedBy  string     `json:"approved_by,omitempty"`
-	CreatedAt   time.Time  `json:"created_at"`
+	ActiveUntil time.Time     `json:"active_until,omitempty"`
+	ApprovedBy  string        `json:"approved_by,omitempty"`
+	CreatedAt   time.Time     `json:"created_at"`
 }
 
 // CreateEmergencyInput holds break-glass request fields.

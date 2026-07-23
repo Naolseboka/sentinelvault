@@ -7,10 +7,10 @@ import (
 )
 
 type Limits struct {
-	MaxResources int
+	MaxResources      int
 	MaxCreatesPerHour int
-	MaxExportsPerDay int
-	MaxShares int
+	MaxExportsPerDay  int
+	MaxShares         int
 }
 
 func DefaultLimits() Limits {
@@ -18,16 +18,16 @@ func DefaultLimits() Limits {
 }
 
 type Usage struct {
-	Resources int
+	Resources   int
 	CreatesHour int
-	ExportsDay int
-	Shares int
+	ExportsDay  int
+	Shares      int
 }
 
 type Tracker struct {
-	mu sync.Mutex
+	mu     sync.Mutex
 	limits map[string]Limits
-	usage map[string]*Usage
+	usage  map[string]*Usage
 }
 
 func NewTracker() *Tracker {

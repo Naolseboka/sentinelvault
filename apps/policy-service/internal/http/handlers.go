@@ -55,7 +55,7 @@ func (h *Handler) get(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) evaluate(w http.ResponseWriter, r *http.Request) {
 	var req struct {
-		OrgID string                  `json:"org_id"`
+		OrgID string                   `json:"org_id"`
 		Req   policy.EvaluationRequest `json:"request"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {

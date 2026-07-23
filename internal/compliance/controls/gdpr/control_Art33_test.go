@@ -18,4 +18,5 @@ func TestControlArt33Evaluate(t *testing.T) {
 		t.Fatal("id mismatch")
 	}
 }
+
 // maintenance note 40

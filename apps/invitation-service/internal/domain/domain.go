@@ -12,16 +12,16 @@ import (
 const defaultInviteTTL = 7 * 24 * time.Hour
 
 type Invitation struct {
-	ID        string     `json:"id"`
-	OrgID     string     `json:"org_id"`
-	Email     string     `json:"email"`
-	Role      string     `json:"role"`
-	Token     string     `json:"token"`
-	Status    string     `json:"status"`
-	ExpiresAt time.Time  `json:"expires_at"`
+	ID         string     `json:"id"`
+	OrgID      string     `json:"org_id"`
+	Email      string     `json:"email"`
+	Role       string     `json:"role"`
+	Token      string     `json:"token"`
+	Status     string     `json:"status"`
+	ExpiresAt  time.Time  `json:"expires_at"`
 	AcceptedAt *time.Time `json:"accepted_at,omitempty"`
 	RejectedAt *time.Time `json:"rejected_at,omitempty"`
-	CreatedAt time.Time  `json:"created_at"`
+	CreatedAt  time.Time  `json:"created_at"`
 }
 
 type Repository interface {
@@ -113,9 +113,9 @@ func SchemaName() string { return "invitations" }
 func TableName() string  { return "invitations" }
 
 type MemoryRepository struct {
-	mu       sync.RWMutex
-	byID     map[string]*Invitation
-	byToken  map[string]string
+	mu      sync.RWMutex
+	byID    map[string]*Invitation
+	byToken map[string]string
 }
 
 func NewMemoryRepository() *MemoryRepository {

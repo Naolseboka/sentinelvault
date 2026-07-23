@@ -21,4 +21,5 @@ func TestBackupSuccessRateCalculator(t *testing.T) {
 		t.Fatal("avg")
 	}
 }
+
 // maintenance note 52

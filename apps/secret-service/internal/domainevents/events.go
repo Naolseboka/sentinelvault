@@ -8,25 +8,25 @@ import (
 
 // Event types for secret-service.
 const (
-	EventSecretItemCreated = "secret.created"
-	EventSecretItemUpdated = "secret.updated"
-	EventSecretItemDeleted = "secret.deleted"
-	EventSecretItemArchived = "secret.archived"
-	EventSecretItemRestored = "secret.restored"
-	EventSecretItemShared = "secret.shared"
-	EventSecretItemUnshared = "secret.unshared"
-	EventSecretItemExported = "secret.exported"
-	EventSecretItemImported = "secret.imported"
-	EventSecretItemRotated = "secret.rotated"
-	EventSecretItemAccessed = "secret.accessed"
-	EventSecretItemDenied = "secret.denied"
-	EventSecretItemApproved = "secret.approved"
-	EventSecretItemRevoked = "secret.revoked"
-	EventSecretItemExpired = "secret.expired"
-	EventSecretItemLocked = "secret.locked"
-	EventSecretItemUnlocked = "secret.unlocked"
-	EventSecretItemVerified = "secret.verified"
-	EventSecretItemFailed = "secret.failed"
+	EventSecretItemCreated   = "secret.created"
+	EventSecretItemUpdated   = "secret.updated"
+	EventSecretItemDeleted   = "secret.deleted"
+	EventSecretItemArchived  = "secret.archived"
+	EventSecretItemRestored  = "secret.restored"
+	EventSecretItemShared    = "secret.shared"
+	EventSecretItemUnshared  = "secret.unshared"
+	EventSecretItemExported  = "secret.exported"
+	EventSecretItemImported  = "secret.imported"
+	EventSecretItemRotated   = "secret.rotated"
+	EventSecretItemAccessed  = "secret.accessed"
+	EventSecretItemDenied    = "secret.denied"
+	EventSecretItemApproved  = "secret.approved"
+	EventSecretItemRevoked   = "secret.revoked"
+	EventSecretItemExpired   = "secret.expired"
+	EventSecretItemLocked    = "secret.locked"
+	EventSecretItemUnlocked  = "secret.unlocked"
+	EventSecretItemVerified  = "secret.verified"
+	EventSecretItemFailed    = "secret.failed"
 	EventSecretItemSucceeded = "secret.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSecretItemEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSecretItemCreatedEvent builds a domain event.
 func NewSecretItemCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

@@ -11,26 +11,26 @@ import (
 type Status string
 
 const (
-	StatusPending Status = "pending"
+	StatusPending   Status = "pending"
 	StatusPublished Status = "published"
-	StatusFailed Status = "failed"
+	StatusFailed    Status = "failed"
 )
 
 type Message struct {
-	ID string `json:"id"`
-	Topic string `json:"topic"`
-	Key string `json:"key"`
-	Payload json.RawMessage `json:"payload"`
-	Headers map[string]string `json:"headers,omitempty"`
-	Status Status `json:"status"`
-	Attempts int `json:"attempts"`
-	LastError string `json:"last_error,omitempty"`
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
+	ID        string            `json:"id"`
+	Topic     string            `json:"topic"`
+	Key       string            `json:"key"`
+	Payload   json.RawMessage   `json:"payload"`
+	Headers   map[string]string `json:"headers,omitempty"`
+	Status    Status            `json:"status"`
+	Attempts  int               `json:"attempts"`
+	LastError string            `json:"last_error,omitempty"`
+	CreatedAt time.Time         `json:"created_at"`
+	UpdatedAt time.Time         `json:"updated_at"`
 }
 
 type Store struct {
-	mu sync.Mutex
+	mu   sync.Mutex
 	msgs map[string]*Message
 }
 

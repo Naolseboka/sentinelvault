@@ -8,25 +8,25 @@ import (
 
 // Event types for emergency-access-service.
 const (
-	EventEmergencyGrantCreated = "emergency.created"
-	EventEmergencyGrantUpdated = "emergency.updated"
-	EventEmergencyGrantDeleted = "emergency.deleted"
-	EventEmergencyGrantArchived = "emergency.archived"
-	EventEmergencyGrantRestored = "emergency.restored"
-	EventEmergencyGrantShared = "emergency.shared"
-	EventEmergencyGrantUnshared = "emergency.unshared"
-	EventEmergencyGrantExported = "emergency.exported"
-	EventEmergencyGrantImported = "emergency.imported"
-	EventEmergencyGrantRotated = "emergency.rotated"
-	EventEmergencyGrantAccessed = "emergency.accessed"
-	EventEmergencyGrantDenied = "emergency.denied"
-	EventEmergencyGrantApproved = "emergency.approved"
-	EventEmergencyGrantRevoked = "emergency.revoked"
-	EventEmergencyGrantExpired = "emergency.expired"
-	EventEmergencyGrantLocked = "emergency.locked"
-	EventEmergencyGrantUnlocked = "emergency.unlocked"
-	EventEmergencyGrantVerified = "emergency.verified"
-	EventEmergencyGrantFailed = "emergency.failed"
+	EventEmergencyGrantCreated   = "emergency.created"
+	EventEmergencyGrantUpdated   = "emergency.updated"
+	EventEmergencyGrantDeleted   = "emergency.deleted"
+	EventEmergencyGrantArchived  = "emergency.archived"
+	EventEmergencyGrantRestored  = "emergency.restored"
+	EventEmergencyGrantShared    = "emergency.shared"
+	EventEmergencyGrantUnshared  = "emergency.unshared"
+	EventEmergencyGrantExported  = "emergency.exported"
+	EventEmergencyGrantImported  = "emergency.imported"
+	EventEmergencyGrantRotated   = "emergency.rotated"
+	EventEmergencyGrantAccessed  = "emergency.accessed"
+	EventEmergencyGrantDenied    = "emergency.denied"
+	EventEmergencyGrantApproved  = "emergency.approved"
+	EventEmergencyGrantRevoked   = "emergency.revoked"
+	EventEmergencyGrantExpired   = "emergency.expired"
+	EventEmergencyGrantLocked    = "emergency.locked"
+	EventEmergencyGrantUnlocked  = "emergency.unlocked"
+	EventEmergencyGrantVerified  = "emergency.verified"
+	EventEmergencyGrantFailed    = "emergency.failed"
 	EventEmergencyGrantSucceeded = "emergency.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownEmergencyGrantEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewEmergencyGrantCreatedEvent builds a domain event.
 func NewEmergencyGrantCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

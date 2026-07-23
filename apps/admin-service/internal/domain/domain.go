@@ -23,8 +23,8 @@ type OrgState struct {
 
 // Service provides in-memory platform admin operations.
 type Service struct {
-	mu      sync.RWMutex
-	flags   map[string]*FeatureFlag
+	mu        sync.RWMutex
+	flags     map[string]*FeatureFlag
 	orgStates map[string]*OrgState
 }
 
@@ -32,10 +32,10 @@ type Service struct {
 func NewService() *Service {
 	s := &Service{
 		flags: map[string]*FeatureFlag{
-			"advanced_risk": {Name: "advanced_risk", Enabled: true, Description: "Adaptive risk scoring"},
+			"advanced_risk":     {Name: "advanced_risk", Enabled: true, Description: "Adaptive risk scoring"},
 			"scim_provisioning": {Name: "scim_provisioning", Enabled: false, Description: "SCIM user sync"},
-			"break_glass": {Name: "break_glass", Enabled: true, Description: "Emergency access workflows"},
-			"audit_export": {Name: "audit_export", Enabled: true, Description: "Audit log export API"},
+			"break_glass":       {Name: "break_glass", Enabled: true, Description: "Emergency access workflows"},
+			"audit_export":      {Name: "audit_export", Enabled: true, Description: "Audit log export API"},
 		},
 		orgStates: map[string]*OrgState{},
 	}

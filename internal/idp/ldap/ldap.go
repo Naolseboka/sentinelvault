@@ -53,12 +53,12 @@ func MapAttributes(dn string, attrs map[string][]string, mapping map[string]stri
 		return vals[0]
 	}
 	u := UserAttributes{
-		DN: dn,
-		Username: get("username"),
-		Email: get("email"),
+		DN:          dn,
+		Username:    get("username"),
+		Email:       get("email"),
 		DisplayName: get("display_name"),
-		Groups: append([]string(nil), attrs[mappingOr(mapping, "groups", "memberOf")]...),
-		Active: true,
+		Groups:      append([]string(nil), attrs[mappingOr(mapping, "groups", "memberOf")]...),
+		Active:      true,
 	}
 	if v := get("active"); v == "false" || v == "FALSE" || v == "0" {
 		u.Active = false

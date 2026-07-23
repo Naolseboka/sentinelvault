@@ -30,25 +30,25 @@ type Control struct {
 
 // Evidence is collected proof for a control.
 type Evidence struct {
-	ID         string    `json:"id"`
-	ControlID  string    `json:"control_id"`
-	OrgID      string    `json:"org_id"`
-	Source     string    `json:"source"`
-	Summary    string    `json:"summary"`
+	ID          string    `json:"id"`
+	ControlID   string    `json:"control_id"`
+	OrgID       string    `json:"org_id"`
+	Source      string    `json:"source"`
+	Summary     string    `json:"summary"`
 	CollectedAt time.Time `json:"collected_at"`
 }
 
 // Report summarizes framework compliance posture.
 type Report struct {
-	ID            string     `json:"id"`
-	OrgID         string     `json:"org_id"`
-	Framework     string     `json:"framework"`
-	GeneratedAt   time.Time  `json:"generated_at"`
-	TotalControls int        `json:"total_controls"`
-	Covered       int        `json:"covered"`
-	CoveragePct   float64    `json:"coverage_pct"`
-	Gaps          []string   `json:"gaps"`
-	EvidenceIDs   []string   `json:"evidence_ids"`
+	ID            string    `json:"id"`
+	OrgID         string    `json:"org_id"`
+	Framework     string    `json:"framework"`
+	GeneratedAt   time.Time `json:"generated_at"`
+	TotalControls int       `json:"total_controls"`
+	Covered       int       `json:"covered"`
+	CoveragePct   float64   `json:"coverage_pct"`
+	Gaps          []string  `json:"gaps"`
+	EvidenceIDs   []string  `json:"evidence_ids"`
 }
 
 // Catalog returns built-in controls for supported frameworks.

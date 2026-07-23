@@ -11,16 +11,16 @@ import (
 
 // ServiceConfig holds runtime configuration for a microservice.
 type ServiceConfig struct {
-	Name          string            `yaml:"name" json:"name"`
-	HTTPAddr      string            `yaml:"http_addr" json:"http_addr"`
-	GRPCAddr      string            `yaml:"grpc_addr" json:"grpc_addr"`
-	DatabaseURL   string            `yaml:"database_url" json:"database_url"`
-	RedisURL      string            `yaml:"redis_url" json:"redis_url"`
-	KafkaBrokers  []string          `yaml:"kafka_brokers" json:"kafka_brokers"`
-	LogLevel      string            `yaml:"log_level" json:"log_level"`
-	OTelEndpoint  string            `yaml:"otel_endpoint" json:"otel_endpoint"`
-	FeatureFlags  map[string]bool   `yaml:"feature_flags" json:"feature_flags"`
-	Extra         map[string]string `yaml:"extra" json:"extra"`
+	Name         string            `yaml:"name" json:"name"`
+	HTTPAddr     string            `yaml:"http_addr" json:"http_addr"`
+	GRPCAddr     string            `yaml:"grpc_addr" json:"grpc_addr"`
+	DatabaseURL  string            `yaml:"database_url" json:"database_url"`
+	RedisURL     string            `yaml:"redis_url" json:"redis_url"`
+	KafkaBrokers []string          `yaml:"kafka_brokers" json:"kafka_brokers"`
+	LogLevel     string            `yaml:"log_level" json:"log_level"`
+	OTelEndpoint string            `yaml:"otel_endpoint" json:"otel_endpoint"`
+	FeatureFlags map[string]bool   `yaml:"feature_flags" json:"feature_flags"`
+	Extra        map[string]string `yaml:"extra" json:"extra"`
 }
 
 // Load reads configuration from optional YAML path and environment overrides.

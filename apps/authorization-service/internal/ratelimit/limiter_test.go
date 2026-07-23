@@ -15,4 +15,5 @@ func TestAuthorizationLimiter(t *testing.T) {
 		t.Fatal("remaining")
 	}
 }
+
 // maintenance note 17

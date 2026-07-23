@@ -13,11 +13,11 @@ import (
 
 // DatabaseCredentialImportResult is one imported row.
 type DatabaseCredentialImportResult struct {
-	Row     int            `json:"row"`
-	Name    string         `json:"name"`
-	Payload map[string]any `json:"payload"`
-	Warnings []string      `json:"warnings,omitempty"`
-	Error   string         `json:"error,omitempty"`
+	Row      int            `json:"row"`
+	Name     string         `json:"name"`
+	Payload  map[string]any `json:"payload"`
+	Warnings []string       `json:"warnings,omitempty"`
+	Error    string         `json:"error,omitempty"`
 }
 
 // ImportDatabaseCredentialCSV parses CSV rows into validated database_credential payloads.

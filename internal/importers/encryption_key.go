@@ -13,11 +13,11 @@ import (
 
 // EncryptionKeyImportResult is one imported row.
 type EncryptionKeyImportResult struct {
-	Row     int            `json:"row"`
-	Name    string         `json:"name"`
-	Payload map[string]any `json:"payload"`
-	Warnings []string      `json:"warnings,omitempty"`
-	Error   string         `json:"error,omitempty"`
+	Row      int            `json:"row"`
+	Name     string         `json:"name"`
+	Payload  map[string]any `json:"payload"`
+	Warnings []string       `json:"warnings,omitempty"`
+	Error    string         `json:"error,omitempty"`
 }
 
 // ImportEncryptionKeyCSV parses CSV rows into validated encryption_key payloads.

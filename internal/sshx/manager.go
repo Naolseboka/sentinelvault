@@ -21,36 +21,36 @@ const (
 
 // KeyRecord stores SSH key material metadata.
 type KeyRecord struct {
-	ID          string    `json:"id"`
-	OrgID       string    `json:"org_id"`
-	Name        string    `json:"name"`
-	Type        string    `json:"type"`
-	PublicKey   string    `json:"public_key"`
-	PrivatePEM  string    `json:"private_pem,omitempty"`
-	Fingerprint string    `json:"fingerprint"`
-	CreatedAt   time.Time `json:"created_at"`
+	ID          string     `json:"id"`
+	OrgID       string     `json:"org_id"`
+	Name        string     `json:"name"`
+	Type        string     `json:"type"`
+	PublicKey   string     `json:"public_key"`
+	PrivatePEM  string     `json:"private_pem,omitempty"`
+	Fingerprint string     `json:"fingerprint"`
+	CreatedAt   time.Time  `json:"created_at"`
 	RotatedAt   *time.Time `json:"rotated_at,omitempty"`
 }
 
 // SignedCert is an SSH certificate issued by a CA key.
 type SignedCert struct {
-	ID         string    `json:"id"`
-	KeyID      string    `json:"key_id"`
-	OrgID      string    `json:"org_id"`
-	Principals []string  `json:"principals"`
-	ValidAfter time.Time `json:"valid_after"`
+	ID          string    `json:"id"`
+	KeyID       string    `json:"key_id"`
+	OrgID       string    `json:"org_id"`
+	Principals  []string  `json:"principals"`
+	ValidAfter  time.Time `json:"valid_after"`
 	ValidBefore time.Time `json:"valid_before"`
-	CertString string    `json:"cert"`
+	CertString  string    `json:"cert"`
 }
 
 // Manager handles SSH keys and certificates.
 type Manager struct {
-	mu      sync.Mutex
-	keys    map[string]*KeyRecord
-	certs   map[string]*SignedCert
-	caPriv  ed25519.PrivateKey
-	caPub   ed25519.PublicKey
-	signer  ssh.Signer
+	mu     sync.Mutex
+	keys   map[string]*KeyRecord
+	certs  map[string]*SignedCert
+	caPriv ed25519.PrivateKey
+	caPub  ed25519.PublicKey
+	signer ssh.Signer
 }
 
 // NewManager creates a manager with an embedded SSH CA.

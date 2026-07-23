@@ -8,19 +8,19 @@ import (
 )
 
 type HistoryEntry struct {
-	ID string `json:"id"`
-	OrgID string `json:"org_id"`
-	ActorID string `json:"actor_id"`
-	ResourceID string `json:"resource_id"`
-	Action string `json:"action"`
-	Details map[string]string `json:"details,omitempty"`
-	At time.Time `json:"at"`
+	ID         string            `json:"id"`
+	OrgID      string            `json:"org_id"`
+	ActorID    string            `json:"actor_id"`
+	ResourceID string            `json:"resource_id"`
+	Action     string            `json:"action"`
+	Details    map[string]string `json:"details,omitempty"`
+	At         time.Time         `json:"at"`
 }
 
 type SSHKeyHistory struct {
-	mu sync.RWMutex
+	mu      sync.RWMutex
 	entries []HistoryEntry
-	max int
+	max     int
 }
 
 func NewSSHKeyHistory(max int) *SSHKeyHistory {

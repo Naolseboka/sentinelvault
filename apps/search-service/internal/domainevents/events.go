@@ -8,25 +8,25 @@ import (
 
 // Event types for search-service.
 const (
-	EventDocumentCreated = "search.created"
-	EventDocumentUpdated = "search.updated"
-	EventDocumentDeleted = "search.deleted"
-	EventDocumentArchived = "search.archived"
-	EventDocumentRestored = "search.restored"
-	EventDocumentShared = "search.shared"
-	EventDocumentUnshared = "search.unshared"
-	EventDocumentExported = "search.exported"
-	EventDocumentImported = "search.imported"
-	EventDocumentRotated = "search.rotated"
-	EventDocumentAccessed = "search.accessed"
-	EventDocumentDenied = "search.denied"
-	EventDocumentApproved = "search.approved"
-	EventDocumentRevoked = "search.revoked"
-	EventDocumentExpired = "search.expired"
-	EventDocumentLocked = "search.locked"
-	EventDocumentUnlocked = "search.unlocked"
-	EventDocumentVerified = "search.verified"
-	EventDocumentFailed = "search.failed"
+	EventDocumentCreated   = "search.created"
+	EventDocumentUpdated   = "search.updated"
+	EventDocumentDeleted   = "search.deleted"
+	EventDocumentArchived  = "search.archived"
+	EventDocumentRestored  = "search.restored"
+	EventDocumentShared    = "search.shared"
+	EventDocumentUnshared  = "search.unshared"
+	EventDocumentExported  = "search.exported"
+	EventDocumentImported  = "search.imported"
+	EventDocumentRotated   = "search.rotated"
+	EventDocumentAccessed  = "search.accessed"
+	EventDocumentDenied    = "search.denied"
+	EventDocumentApproved  = "search.approved"
+	EventDocumentRevoked   = "search.revoked"
+	EventDocumentExpired   = "search.expired"
+	EventDocumentLocked    = "search.locked"
+	EventDocumentUnlocked  = "search.unlocked"
+	EventDocumentVerified  = "search.verified"
+	EventDocumentFailed    = "search.failed"
 	EventDocumentSucceeded = "search.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownDocumentEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewDocumentCreatedEvent builds a domain event.
 func NewDocumentCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

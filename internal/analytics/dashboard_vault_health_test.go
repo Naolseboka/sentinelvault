@@ -18,4 +18,5 @@ func TestVaultHealthReport(t *testing.T) {
 		t.Fatal("score")
 	}
 }
+
 // maintenance note 98

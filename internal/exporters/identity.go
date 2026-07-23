@@ -55,4 +55,5 @@ func ExportIdentityJSON(rows []IdentityExportRow, includeSecrets bool) ([]byte, 
 	}
 	return json.Marshal(out)
 }
+
 // maintenance note 23

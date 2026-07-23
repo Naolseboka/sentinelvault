@@ -38,8 +38,8 @@ type License struct {
 
 // Registry manages licenses.
 type Registry struct {
-	mu        sync.RWMutex
-	licenses  map[string]*License // by org
+	mu       sync.RWMutex
+	licenses map[string]*License // by org
 }
 
 // NewRegistry creates an empty registry.

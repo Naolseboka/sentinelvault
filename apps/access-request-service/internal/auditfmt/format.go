@@ -85,4 +85,5 @@ func FormatArchived(orgID, actorID, resourceID string) string {
 func AllActions() []string {
 	return []string{"access-request-service.created", "access-request-service.updated", "access-request-service.deleted", "access-request-service.read", "access-request-service.listed", "access-request-service.exported", "access-request-service.imported", "access-request-service.shared", "access-request-service.unshared", "access-request-service.approved", "access-request-service.denied", "access-request-service.rotated", "access-request-service.failed", "access-request-service.login", "access-request-service.logout", "access-request-service.mfa", "access-request-service.revoked", "access-request-service.restored", "access-request-service.archived"}
 }
+
 // maintenance note 72

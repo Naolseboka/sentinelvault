@@ -8,25 +8,25 @@ import (
 
 // Event types for provisioning-service.
 const (
-	EventProvisionPlanCreated = "provisioning.created"
-	EventProvisionPlanUpdated = "provisioning.updated"
-	EventProvisionPlanDeleted = "provisioning.deleted"
-	EventProvisionPlanArchived = "provisioning.archived"
-	EventProvisionPlanRestored = "provisioning.restored"
-	EventProvisionPlanShared = "provisioning.shared"
-	EventProvisionPlanUnshared = "provisioning.unshared"
-	EventProvisionPlanExported = "provisioning.exported"
-	EventProvisionPlanImported = "provisioning.imported"
-	EventProvisionPlanRotated = "provisioning.rotated"
-	EventProvisionPlanAccessed = "provisioning.accessed"
-	EventProvisionPlanDenied = "provisioning.denied"
-	EventProvisionPlanApproved = "provisioning.approved"
-	EventProvisionPlanRevoked = "provisioning.revoked"
-	EventProvisionPlanExpired = "provisioning.expired"
-	EventProvisionPlanLocked = "provisioning.locked"
-	EventProvisionPlanUnlocked = "provisioning.unlocked"
-	EventProvisionPlanVerified = "provisioning.verified"
-	EventProvisionPlanFailed = "provisioning.failed"
+	EventProvisionPlanCreated   = "provisioning.created"
+	EventProvisionPlanUpdated   = "provisioning.updated"
+	EventProvisionPlanDeleted   = "provisioning.deleted"
+	EventProvisionPlanArchived  = "provisioning.archived"
+	EventProvisionPlanRestored  = "provisioning.restored"
+	EventProvisionPlanShared    = "provisioning.shared"
+	EventProvisionPlanUnshared  = "provisioning.unshared"
+	EventProvisionPlanExported  = "provisioning.exported"
+	EventProvisionPlanImported  = "provisioning.imported"
+	EventProvisionPlanRotated   = "provisioning.rotated"
+	EventProvisionPlanAccessed  = "provisioning.accessed"
+	EventProvisionPlanDenied    = "provisioning.denied"
+	EventProvisionPlanApproved  = "provisioning.approved"
+	EventProvisionPlanRevoked   = "provisioning.revoked"
+	EventProvisionPlanExpired   = "provisioning.expired"
+	EventProvisionPlanLocked    = "provisioning.locked"
+	EventProvisionPlanUnlocked  = "provisioning.unlocked"
+	EventProvisionPlanVerified  = "provisioning.verified"
+	EventProvisionPlanFailed    = "provisioning.failed"
 	EventProvisionPlanSucceeded = "provisioning.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownProvisionPlanEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewProvisionPlanCreatedEvent builds a domain event.
 func NewProvisionPlanCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

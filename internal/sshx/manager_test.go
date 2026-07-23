@@ -29,4 +29,5 @@ func TestSSHManager(t *testing.T) {
 		t.Fatalf("rotate=%+v err=%v", rotated, err)
 	}
 }
+
 // maintenance note 71

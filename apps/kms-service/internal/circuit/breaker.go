@@ -10,19 +10,19 @@ import (
 type State string
 
 const (
-	Closed State = "closed"
-	Open State = "open"
+	Closed   State = "closed"
+	Open     State = "open"
 	HalfOpen State = "half_open"
 )
 
 type Breaker struct {
-	mu sync.Mutex
-	state State
-	failures int
+	mu        sync.Mutex
+	state     State
+	failures  int
 	successes int
 	threshold int
-	cooldown time.Duration
-	openedAt time.Time
+	cooldown  time.Duration
+	openedAt  time.Time
 }
 
 func New(threshold int, cooldown time.Duration) *Breaker {

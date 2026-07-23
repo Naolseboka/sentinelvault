@@ -8,25 +8,25 @@ import (
 
 // Event types for reporting-service.
 const (
-	EventReportCreated = "reporting.created"
-	EventReportUpdated = "reporting.updated"
-	EventReportDeleted = "reporting.deleted"
-	EventReportArchived = "reporting.archived"
-	EventReportRestored = "reporting.restored"
-	EventReportShared = "reporting.shared"
-	EventReportUnshared = "reporting.unshared"
-	EventReportExported = "reporting.exported"
-	EventReportImported = "reporting.imported"
-	EventReportRotated = "reporting.rotated"
-	EventReportAccessed = "reporting.accessed"
-	EventReportDenied = "reporting.denied"
-	EventReportApproved = "reporting.approved"
-	EventReportRevoked = "reporting.revoked"
-	EventReportExpired = "reporting.expired"
-	EventReportLocked = "reporting.locked"
-	EventReportUnlocked = "reporting.unlocked"
-	EventReportVerified = "reporting.verified"
-	EventReportFailed = "reporting.failed"
+	EventReportCreated   = "reporting.created"
+	EventReportUpdated   = "reporting.updated"
+	EventReportDeleted   = "reporting.deleted"
+	EventReportArchived  = "reporting.archived"
+	EventReportRestored  = "reporting.restored"
+	EventReportShared    = "reporting.shared"
+	EventReportUnshared  = "reporting.unshared"
+	EventReportExported  = "reporting.exported"
+	EventReportImported  = "reporting.imported"
+	EventReportRotated   = "reporting.rotated"
+	EventReportAccessed  = "reporting.accessed"
+	EventReportDenied    = "reporting.denied"
+	EventReportApproved  = "reporting.approved"
+	EventReportRevoked   = "reporting.revoked"
+	EventReportExpired   = "reporting.expired"
+	EventReportLocked    = "reporting.locked"
+	EventReportUnlocked  = "reporting.unlocked"
+	EventReportVerified  = "reporting.verified"
+	EventReportFailed    = "reporting.failed"
 	EventReportSucceeded = "reporting.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownReportEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewReportCreatedEvent builds a domain event.
 func NewReportCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

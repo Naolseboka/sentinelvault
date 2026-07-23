@@ -7,12 +7,12 @@ import (
 )
 
 type Record struct {
-	ID string
-	Name string
-	Status string
+	ID        string
+	Name      string
+	Status    string
 	CreatedAt time.Time
 	UpdatedAt time.Time
-	Score float64
+	Score     float64
 }
 
 func Sort(records []Record, by string, desc bool) {

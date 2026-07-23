@@ -8,25 +8,25 @@ import (
 
 // Event types for certificate-service.
 const (
-	EventCertificateCreated = "certificate.created"
-	EventCertificateUpdated = "certificate.updated"
-	EventCertificateDeleted = "certificate.deleted"
-	EventCertificateArchived = "certificate.archived"
-	EventCertificateRestored = "certificate.restored"
-	EventCertificateShared = "certificate.shared"
-	EventCertificateUnshared = "certificate.unshared"
-	EventCertificateExported = "certificate.exported"
-	EventCertificateImported = "certificate.imported"
-	EventCertificateRotated = "certificate.rotated"
-	EventCertificateAccessed = "certificate.accessed"
-	EventCertificateDenied = "certificate.denied"
-	EventCertificateApproved = "certificate.approved"
-	EventCertificateRevoked = "certificate.revoked"
-	EventCertificateExpired = "certificate.expired"
-	EventCertificateLocked = "certificate.locked"
-	EventCertificateUnlocked = "certificate.unlocked"
-	EventCertificateVerified = "certificate.verified"
-	EventCertificateFailed = "certificate.failed"
+	EventCertificateCreated   = "certificate.created"
+	EventCertificateUpdated   = "certificate.updated"
+	EventCertificateDeleted   = "certificate.deleted"
+	EventCertificateArchived  = "certificate.archived"
+	EventCertificateRestored  = "certificate.restored"
+	EventCertificateShared    = "certificate.shared"
+	EventCertificateUnshared  = "certificate.unshared"
+	EventCertificateExported  = "certificate.exported"
+	EventCertificateImported  = "certificate.imported"
+	EventCertificateRotated   = "certificate.rotated"
+	EventCertificateAccessed  = "certificate.accessed"
+	EventCertificateDenied    = "certificate.denied"
+	EventCertificateApproved  = "certificate.approved"
+	EventCertificateRevoked   = "certificate.revoked"
+	EventCertificateExpired   = "certificate.expired"
+	EventCertificateLocked    = "certificate.locked"
+	EventCertificateUnlocked  = "certificate.unlocked"
+	EventCertificateVerified  = "certificate.verified"
+	EventCertificateFailed    = "certificate.failed"
 	EventCertificateSucceeded = "certificate.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownCertificateEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewCertificateCreatedEvent builds a domain event.
 func NewCertificateCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {
@@ -360,4 +359,5 @@ func ValidateEvent(e Event) error {
 	}
 	return nil
 }
+
 // maintenance note 95

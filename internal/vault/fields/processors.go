@@ -632,7 +632,6 @@ func (BrandProcessor) Redact(v any) any {
 	return v
 }
 
-
 func All() []Processor {
 	return []Processor{
 		UsernameProcessor{},

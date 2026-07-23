@@ -64,4 +64,5 @@ func SchemaName() string { return "compliance" }
 
 // TableName returns the primary table name.
 func TableName() string { return "evidence" }
+
 // maintenance note 49

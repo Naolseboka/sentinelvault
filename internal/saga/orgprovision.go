@@ -6,7 +6,6 @@ import (
 	"github.com/sentinelvault/sentinelvault/internal/common"
 )
 
-
 type OrgProvisionStep1 struct{ fail bool }
 
 func (s OrgProvisionStep1) Name() string { return "orgprovision_step_1" }
@@ -66,7 +65,6 @@ func (s OrgProvisionStep4) Compensate(ctx context.Context, st map[string]any) er
 	st["orgprovision_step_4"] = false
 	return nil
 }
-
 
 // RegisterOrgProvision wires OrgProvision saga with compensation hooks.
 func RegisterOrgProvision(e *Engine) error {

@@ -8,25 +8,25 @@ import (
 
 // Event types for user-service.
 const (
-	EventUserCreated = "user.created"
-	EventUserUpdated = "user.updated"
-	EventUserDeleted = "user.deleted"
-	EventUserArchived = "user.archived"
-	EventUserRestored = "user.restored"
-	EventUserShared = "user.shared"
-	EventUserUnshared = "user.unshared"
-	EventUserExported = "user.exported"
-	EventUserImported = "user.imported"
-	EventUserRotated = "user.rotated"
-	EventUserAccessed = "user.accessed"
-	EventUserDenied = "user.denied"
-	EventUserApproved = "user.approved"
-	EventUserRevoked = "user.revoked"
-	EventUserExpired = "user.expired"
-	EventUserLocked = "user.locked"
-	EventUserUnlocked = "user.unlocked"
-	EventUserVerified = "user.verified"
-	EventUserFailed = "user.failed"
+	EventUserCreated   = "user.created"
+	EventUserUpdated   = "user.updated"
+	EventUserDeleted   = "user.deleted"
+	EventUserArchived  = "user.archived"
+	EventUserRestored  = "user.restored"
+	EventUserShared    = "user.shared"
+	EventUserUnshared  = "user.unshared"
+	EventUserExported  = "user.exported"
+	EventUserImported  = "user.imported"
+	EventUserRotated   = "user.rotated"
+	EventUserAccessed  = "user.accessed"
+	EventUserDenied    = "user.denied"
+	EventUserApproved  = "user.approved"
+	EventUserRevoked   = "user.revoked"
+	EventUserExpired   = "user.expired"
+	EventUserLocked    = "user.locked"
+	EventUserUnlocked  = "user.unlocked"
+	EventUserVerified  = "user.verified"
+	EventUserFailed    = "user.failed"
 	EventUserSucceeded = "user.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownUserEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewUserCreatedEvent builds a domain event.
 func NewUserCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {
@@ -360,4 +359,5 @@ func ValidateEvent(e Event) error {
 	}
 	return nil
 }
+
 // maintenance note 86

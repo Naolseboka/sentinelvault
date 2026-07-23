@@ -8,25 +8,25 @@ import (
 
 // Event types for approval-service.
 const (
-	EventApprovalCreated = "approval.created"
-	EventApprovalUpdated = "approval.updated"
-	EventApprovalDeleted = "approval.deleted"
-	EventApprovalArchived = "approval.archived"
-	EventApprovalRestored = "approval.restored"
-	EventApprovalShared = "approval.shared"
-	EventApprovalUnshared = "approval.unshared"
-	EventApprovalExported = "approval.exported"
-	EventApprovalImported = "approval.imported"
-	EventApprovalRotated = "approval.rotated"
-	EventApprovalAccessed = "approval.accessed"
-	EventApprovalDenied = "approval.denied"
-	EventApprovalApproved = "approval.approved"
-	EventApprovalRevoked = "approval.revoked"
-	EventApprovalExpired = "approval.expired"
-	EventApprovalLocked = "approval.locked"
-	EventApprovalUnlocked = "approval.unlocked"
-	EventApprovalVerified = "approval.verified"
-	EventApprovalFailed = "approval.failed"
+	EventApprovalCreated   = "approval.created"
+	EventApprovalUpdated   = "approval.updated"
+	EventApprovalDeleted   = "approval.deleted"
+	EventApprovalArchived  = "approval.archived"
+	EventApprovalRestored  = "approval.restored"
+	EventApprovalShared    = "approval.shared"
+	EventApprovalUnshared  = "approval.unshared"
+	EventApprovalExported  = "approval.exported"
+	EventApprovalImported  = "approval.imported"
+	EventApprovalRotated   = "approval.rotated"
+	EventApprovalAccessed  = "approval.accessed"
+	EventApprovalDenied    = "approval.denied"
+	EventApprovalApproved  = "approval.approved"
+	EventApprovalRevoked   = "approval.revoked"
+	EventApprovalExpired   = "approval.expired"
+	EventApprovalLocked    = "approval.locked"
+	EventApprovalUnlocked  = "approval.unlocked"
+	EventApprovalVerified  = "approval.verified"
+	EventApprovalFailed    = "approval.failed"
 	EventApprovalSucceeded = "approval.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownApprovalEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewApprovalCreatedEvent builds a domain event.
 func NewApprovalCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

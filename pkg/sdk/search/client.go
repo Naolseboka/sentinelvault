@@ -21,9 +21,9 @@ type Client struct {
 // New creates a search-service client.
 func New(baseURL, token string) *Client {
 	return &Client{
-		BaseURL: stringsTrimSlash(baseURL),
+		BaseURL:    stringsTrimSlash(baseURL),
 		HTTPClient: &http.Client{Timeout: 30 * time.Second},
-		Token: token,
+		Token:      token,
 	}
 }
 
@@ -47,10 +47,10 @@ type Document struct {
 
 // ListResult wraps paginated data.
 type ListResult struct {
-	Data       []Document `json:"data"`
-	Total      int64      `json:"total"`
-	Offset     int        `json:"offset"`
-	Limit      int        `json:"limit"`
+	Data   []Document `json:"data"`
+	Total  int64      `json:"total"`
+	Offset int        `json:"offset"`
+	Limit  int        `json:"limit"`
 }
 
 func (c *Client) do(ctx context.Context, method, path string, in any, out any) error {
@@ -91,7 +91,7 @@ func (c *Client) do(ctx context.Context, method, path string, in any, out any) e
 // Create creates a Document.
 func (c *Client) Create(ctx context.Context, orgID, name string, metadata map[string]string) (*Document, error) {
 	var out Document
-	err := c.do(ctx, http.MethodPost, "/v1/searchs", map[string]any{
+	err := c.do(ctx, http.MethodPost, "/v1/search", map[string]any{
 		"org_id": orgID, "name": name, "metadata": metadata,
 	}, &out)
 	return &out, err
@@ -100,7 +100,7 @@ func (c *Client) Create(ctx context.Context, orgID, name string, metadata map[st
 // Get fetches a Document by id.
 func (c *Client) Get(ctx context.Context, id string) (*Document, error) {
 	var out Document
-	err := c.do(ctx, http.MethodGet, "/v1/searchs/"+url.PathEscape(id), nil, &out)
+	err := c.do(ctx, http.MethodGet, "/v1/search/"+url.PathEscape(id), nil, &out)
 	return &out, err
 }
 
@@ -111,11 +111,11 @@ func (c *Client) List(ctx context.Context, orgID string, offset, limit int) (*Li
 	q.Set("offset", strconv.Itoa(offset))
 	q.Set("limit", strconv.Itoa(limit))
 	var out ListResult
-	err := c.do(ctx, http.MethodGet, "/v1/searchs?"+q.Encode(), nil, &out)
+	err := c.do(ctx, http.MethodGet, "/v1/search?"+q.Encode(), nil, &out)
 	return &out, err
 }
 
 // Delete deletes a Document.
 func (c *Client) Delete(ctx context.Context, id string) error {
-	return c.do(ctx, http.MethodDelete, "/v1/searchs/"+url.PathEscape(id), nil, nil)
+	return c.do(ctx, http.MethodDelete, "/v1/search/"+url.PathEscape(id), nil, nil)
 }

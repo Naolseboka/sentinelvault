@@ -65,4 +65,5 @@ func (c ControlArt7) Evaluate(ctx context.Context, inputs map[string]any) (*Evid
 		Status: status, Summary: summary, Artifacts: artifacts,
 	}, nil
 }
+
 // maintenance note 99

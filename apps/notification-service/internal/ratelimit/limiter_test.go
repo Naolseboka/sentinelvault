@@ -15,4 +15,5 @@ func TestNotificationLimiter(t *testing.T) {
 		t.Fatal("remaining")
 	}
 }
+
 // maintenance note 41

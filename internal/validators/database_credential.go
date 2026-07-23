@@ -59,34 +59,34 @@ func (v DatabaseCredentialValidator) Validate(p map[string]any) (normalized map[
 	}
 	warnings = make([]string, 0)
 
-// Password strength advisory (does not block store; surfaces findings).
-if pw, ok := p["password"].(string); ok {
-	if len(pw) < 12 {
-		warnings = append(warnings, "password shorter than 12 characters")
-	}
-	var classes int
-	for _, fn := range []func(rune) bool{unicode.IsLower, unicode.IsUpper, unicode.IsDigit} {
+	// Password strength advisory (does not block store; surfaces findings).
+	if pw, ok := p["password"].(string); ok {
+		if len(pw) < 12 {
+			warnings = append(warnings, "password shorter than 12 characters")
+		}
+		var classes int
+		for _, fn := range []func(rune) bool{unicode.IsLower, unicode.IsUpper, unicode.IsDigit} {
+			for _, r := range pw {
+				if fn(r) {
+					classes++
+					break
+				}
+			}
+		}
+		hasSpecial := false
 		for _, r := range pw {
-			if fn(r) {
-				classes++
+			if !unicode.IsLetter(r) && !unicode.IsDigit(r) {
+				hasSpecial = true
 				break
 			}
 		}
-	}
-	hasSpecial := false
-	for _, r := range pw {
-		if !unicode.IsLetter(r) && !unicode.IsDigit(r) {
-			hasSpecial = true
-			break
+		if hasSpecial {
+			classes++
+		}
+		if classes < 3 {
+			warnings = append(warnings, "password lacks character class diversity")
 		}
 	}
-	if hasSpecial {
-		classes++
-	}
-	if classes < 3 {
-		warnings = append(warnings, "password lacks character class diversity")
-	}
-}
 
 	return o, warnings, nil
 }

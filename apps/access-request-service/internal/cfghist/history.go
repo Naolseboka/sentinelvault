@@ -9,17 +9,17 @@ import (
 )
 
 type Snapshot struct {
-	ID string `json:"id"`
-	Version int `json:"version"`
-	Config json.RawMessage `json:"config"`
-	ActorID string `json:"actor_id"`
-	Note string `json:"note,omitempty"`
-	CreatedAt time.Time `json:"created_at"`
+	ID        string          `json:"id"`
+	Version   int             `json:"version"`
+	Config    json.RawMessage `json:"config"`
+	ActorID   string          `json:"actor_id"`
+	Note      string          `json:"note,omitempty"`
+	CreatedAt time.Time       `json:"created_at"`
 }
 
 type Store struct {
-	mu sync.Mutex
-	snaps []Snapshot
+	mu      sync.Mutex
+	snaps   []Snapshot
 	version int
 }
 
@@ -65,4 +65,5 @@ func (s *Store) List() []Snapshot {
 	copy(out, s.snaps)
 	return out
 }
+
 // maintenance note 41

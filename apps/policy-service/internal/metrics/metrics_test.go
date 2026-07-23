@@ -11,4 +11,5 @@ func TestPolicyDocMetrics(t *testing.T) {
 		t.Fatalf("%+v", s)
 	}
 }
+
 // maintenance note 45

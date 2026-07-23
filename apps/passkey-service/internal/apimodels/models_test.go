@@ -20,4 +20,5 @@ func TestWebAuthnCredModelsJSON(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
 // maintenance note 56

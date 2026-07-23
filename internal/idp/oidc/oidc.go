@@ -39,15 +39,15 @@ func ParseDiscovery(data []byte) (*DiscoveryDocument, error) {
 
 // IDTokenClaims are validated claims from an ID token payload (JWT middle segment decoded).
 type IDTokenClaims struct {
-	Iss      string   `json:"iss"`
-	Sub      string   `json:"sub"`
-	Aud      any      `json:"aud"`
-	Exp      int64    `json:"exp"`
-	Iat      int64    `json:"iat"`
-	Nonce    string   `json:"nonce"`
-	Email    string   `json:"email"`
-	Name     string   `json:"name"`
-	Amr      []string `json:"amr"`
+	Iss   string   `json:"iss"`
+	Sub   string   `json:"sub"`
+	Aud   any      `json:"aud"`
+	Exp   int64    `json:"exp"`
+	Iat   int64    `json:"iat"`
+	Nonce string   `json:"nonce"`
+	Email string   `json:"email"`
+	Name  string   `json:"name"`
+	Amr   []string `json:"amr"`
 }
 
 // ValidateClaims checks iss/aud/exp/nonce with clock skew.

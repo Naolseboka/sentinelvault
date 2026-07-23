@@ -8,25 +8,25 @@ import (
 
 // Event types for passkey-service.
 const (
-	EventPasskeyCreated = "passkey.created"
-	EventPasskeyUpdated = "passkey.updated"
-	EventPasskeyDeleted = "passkey.deleted"
-	EventPasskeyArchived = "passkey.archived"
-	EventPasskeyRestored = "passkey.restored"
-	EventPasskeyShared = "passkey.shared"
-	EventPasskeyUnshared = "passkey.unshared"
-	EventPasskeyExported = "passkey.exported"
-	EventPasskeyImported = "passkey.imported"
-	EventPasskeyRotated = "passkey.rotated"
-	EventPasskeyAccessed = "passkey.accessed"
-	EventPasskeyDenied = "passkey.denied"
-	EventPasskeyApproved = "passkey.approved"
-	EventPasskeyRevoked = "passkey.revoked"
-	EventPasskeyExpired = "passkey.expired"
-	EventPasskeyLocked = "passkey.locked"
-	EventPasskeyUnlocked = "passkey.unlocked"
-	EventPasskeyVerified = "passkey.verified"
-	EventPasskeyFailed = "passkey.failed"
+	EventPasskeyCreated   = "passkey.created"
+	EventPasskeyUpdated   = "passkey.updated"
+	EventPasskeyDeleted   = "passkey.deleted"
+	EventPasskeyArchived  = "passkey.archived"
+	EventPasskeyRestored  = "passkey.restored"
+	EventPasskeyShared    = "passkey.shared"
+	EventPasskeyUnshared  = "passkey.unshared"
+	EventPasskeyExported  = "passkey.exported"
+	EventPasskeyImported  = "passkey.imported"
+	EventPasskeyRotated   = "passkey.rotated"
+	EventPasskeyAccessed  = "passkey.accessed"
+	EventPasskeyDenied    = "passkey.denied"
+	EventPasskeyApproved  = "passkey.approved"
+	EventPasskeyRevoked   = "passkey.revoked"
+	EventPasskeyExpired   = "passkey.expired"
+	EventPasskeyLocked    = "passkey.locked"
+	EventPasskeyUnlocked  = "passkey.unlocked"
+	EventPasskeyVerified  = "passkey.verified"
+	EventPasskeyFailed    = "passkey.failed"
 	EventPasskeySucceeded = "passkey.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownPasskeyEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewPasskeyCreatedEvent builds a domain event.
 func NewPasskeyCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

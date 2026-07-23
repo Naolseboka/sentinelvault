@@ -10,7 +10,7 @@ import (
 
 // KeyType for transit keys.
 const (
-	KeyTypeAES256 = "aes256-gcm96"
+	KeyTypeAES256  = "aes256-gcm96"
 	KeyTypeEd25519 = "ed25519"
 )
 
@@ -32,8 +32,8 @@ type Key struct {
 // Engine provides encrypt/decrypt/sign/verify (Vault transit-like).
 type Engine struct {
 	policies map[string]*PolicyDocument
-	mu   sync.Mutex
-	keys map[string]*Key
+	mu       sync.Mutex
+	keys     map[string]*Key
 }
 
 // NewEngine creates a transit engine.

@@ -20,4 +20,5 @@ func TestSessionModelsJSON(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
 // maintenance note 96

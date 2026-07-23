@@ -8,25 +8,25 @@ import (
 
 // Event types for session-service.
 const (
-	EventSessionCreated = "session.created"
-	EventSessionUpdated = "session.updated"
-	EventSessionDeleted = "session.deleted"
-	EventSessionArchived = "session.archived"
-	EventSessionRestored = "session.restored"
-	EventSessionShared = "session.shared"
-	EventSessionUnshared = "session.unshared"
-	EventSessionExported = "session.exported"
-	EventSessionImported = "session.imported"
-	EventSessionRotated = "session.rotated"
-	EventSessionAccessed = "session.accessed"
-	EventSessionDenied = "session.denied"
-	EventSessionApproved = "session.approved"
-	EventSessionRevoked = "session.revoked"
-	EventSessionExpired = "session.expired"
-	EventSessionLocked = "session.locked"
-	EventSessionUnlocked = "session.unlocked"
-	EventSessionVerified = "session.verified"
-	EventSessionFailed = "session.failed"
+	EventSessionCreated   = "session.created"
+	EventSessionUpdated   = "session.updated"
+	EventSessionDeleted   = "session.deleted"
+	EventSessionArchived  = "session.archived"
+	EventSessionRestored  = "session.restored"
+	EventSessionShared    = "session.shared"
+	EventSessionUnshared  = "session.unshared"
+	EventSessionExported  = "session.exported"
+	EventSessionImported  = "session.imported"
+	EventSessionRotated   = "session.rotated"
+	EventSessionAccessed  = "session.accessed"
+	EventSessionDenied    = "session.denied"
+	EventSessionApproved  = "session.approved"
+	EventSessionRevoked   = "session.revoked"
+	EventSessionExpired   = "session.expired"
+	EventSessionLocked    = "session.locked"
+	EventSessionUnlocked  = "session.unlocked"
+	EventSessionVerified  = "session.verified"
+	EventSessionFailed    = "session.failed"
 	EventSessionSucceeded = "session.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSessionEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSessionCreatedEvent builds a domain event.
 func NewSessionCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

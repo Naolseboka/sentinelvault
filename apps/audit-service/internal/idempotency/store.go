@@ -8,17 +8,17 @@ import (
 )
 
 type Record struct {
-	Key string
+	Key         string
 	Fingerprint string
-	Response []byte
-	StatusCode int
-	ExpiresAt time.Time
+	Response    []byte
+	StatusCode  int
+	ExpiresAt   time.Time
 }
 
 type Store struct {
-	mu sync.Mutex
+	mu   sync.Mutex
 	data map[string]Record
-	ttl time.Duration
+	ttl  time.Duration
 }
 
 func NewStore(ttl time.Duration) *Store {

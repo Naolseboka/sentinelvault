@@ -14,14 +14,14 @@ const (
 
 // AuthEvent is a domain event emitted by identity services.
 type AuthEvent struct {
-	Type      AuthEventType  `json:"type"`
-	UserID    string         `json:"user_id,omitempty"`
-	OrgID     string         `json:"org_id,omitempty"`
-	SessionID string         `json:"session_id,omitempty"`
-	Email     string         `json:"email,omitempty"`
-	Reason    string         `json:"reason,omitempty"`
-	Metadata  map[string]any `json:"metadata,omitempty"`
-	OccurredAt time.Time     `json:"occurred_at"`
+	Type       AuthEventType  `json:"type"`
+	UserID     string         `json:"user_id,omitempty"`
+	OrgID      string         `json:"org_id,omitempty"`
+	SessionID  string         `json:"session_id,omitempty"`
+	Email      string         `json:"email,omitempty"`
+	Reason     string         `json:"reason,omitempty"`
+	Metadata   map[string]any `json:"metadata,omitempty"`
+	OccurredAt time.Time      `json:"occurred_at"`
 }
 
 // NewAuthEvent creates an auth event with a UTC timestamp.

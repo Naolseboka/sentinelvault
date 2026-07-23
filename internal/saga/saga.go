@@ -32,20 +32,20 @@ type Definition struct {
 }
 
 type Instance struct {
-	ID           string
-	Name         string
-	Status       string
-	CurrentStep  int
-	State        map[string]any
-	Error        string
-	CreatedAt    time.Time
-	UpdatedAt    time.Time
+	ID          string
+	Name        string
+	Status      string
+	CurrentStep int
+	State       map[string]any
+	Error       string
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
 }
 
 type Engine struct {
-	mu    sync.Mutex
-	defs  map[string]Definition
-	inst  map[string]*Instance
+	mu   sync.Mutex
+	defs map[string]Definition
+	inst map[string]*Instance
 }
 
 func NewEngine() *Engine {
@@ -183,4 +183,5 @@ func Builtins(e *Engine) {
 		{Name: "audit", Execute: func(ctx context.Context, s map[string]any) error { s["audited"] = true; return nil }},
 	}})
 }
+
 // maintenance note 16

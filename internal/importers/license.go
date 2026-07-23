@@ -13,11 +13,11 @@ import (
 
 // LicenseImportResult is one imported row.
 type LicenseImportResult struct {
-	Row     int            `json:"row"`
-	Name    string         `json:"name"`
-	Payload map[string]any `json:"payload"`
-	Warnings []string      `json:"warnings,omitempty"`
-	Error   string         `json:"error,omitempty"`
+	Row      int            `json:"row"`
+	Name     string         `json:"name"`
+	Payload  map[string]any `json:"payload"`
+	Warnings []string       `json:"warnings,omitempty"`
+	Error    string         `json:"error,omitempty"`
 }
 
 // ImportLicenseCSV parses CSV rows into validated license payloads.

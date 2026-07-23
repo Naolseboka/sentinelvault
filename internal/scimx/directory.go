@@ -62,8 +62,8 @@ func (d *Directory) CreateUser(orgID, userName, displayName, email string) (*Use
 	}
 	now := common.NowUTC()
 	u := &User{
-		ID: common.NewID(),
-		Schemas: []string{"urn:ietf:params:scim:schemas:core:2.0:User"},
+		ID:       common.NewID(),
+		Schemas:  []string{"urn:ietf:params:scim:schemas:core:2.0:User"},
 		UserName: userName, DisplayName: displayName, Active: true, OrgID: orgID,
 		Emails: []Email{{Value: email, Type: "work", Primary: true}},
 		Meta:   Meta{ResourceType: "User", Created: now, LastModified: now},
@@ -136,7 +136,7 @@ func (d *Directory) ListUsers(orgID, filter string, start, count int) ListRespon
 		to = total
 	}
 	return ListResponse{
-		Schemas: []string{"urn:ietf:params:scim:api:messages:2.0:ListResponse"},
+		Schemas:      []string{"urn:ietf:params:scim:api:messages:2.0:ListResponse"},
 		TotalResults: total, StartIndex: start, ItemsPerPage: to - from, Resources: all[from:to],
 	}
 }

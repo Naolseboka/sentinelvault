@@ -9,14 +9,14 @@ import (
 type CheckFunc func(ctx context.Context) error
 
 type Result struct {
-	Name string `json:"name"`
-	Healthy bool `json:"healthy"`
-	LatencyMs int64 `json:"latency_ms"`
-	Error string `json:"error,omitempty"`
+	Name      string `json:"name"`
+	Healthy   bool   `json:"healthy"`
+	LatencyMs int64  `json:"latency_ms"`
+	Error     string `json:"error,omitempty"`
 }
 
 type Registry struct {
-	mu sync.Mutex
+	mu     sync.Mutex
 	checks map[string]CheckFunc
 }
 

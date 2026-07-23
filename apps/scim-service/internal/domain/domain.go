@@ -24,15 +24,15 @@ type SCIMEmail struct {
 
 // SCIMUser is a SCIM User resource subset.
 type SCIMUser struct {
-	ID          string      `json:"id"`
-	OrgID       string      `json:"org_id"`
-	ExternalID  string      `json:"externalId,omitempty"`
-	UserName    string      `json:"userName"`
-	Active      bool        `json:"active"`
-	Name        SCIMName    `json:"name"`
-	Emails      []SCIMEmail `json:"emails"`
-	Schemas     []string    `json:"schemas"`
-	Meta        SCIMMeta    `json:"meta"`
+	ID         string      `json:"id"`
+	OrgID      string      `json:"org_id"`
+	ExternalID string      `json:"externalId,omitempty"`
+	UserName   string      `json:"userName"`
+	Active     bool        `json:"active"`
+	Name       SCIMName    `json:"name"`
+	Emails     []SCIMEmail `json:"emails"`
+	Schemas    []string    `json:"schemas"`
+	Meta       SCIMMeta    `json:"meta"`
 }
 
 // SCIMMeta holds SCIM resource metadata.
@@ -72,7 +72,7 @@ func (s *Service) CreateUser(_ context.Context, in CreateUserInput) (*SCIMUser, 
 		ID: common.NewID(), OrgID: in.OrgID, ExternalID: in.ExternalID,
 		UserName: in.UserName, Active: true, Name: in.Name, Emails: in.Emails,
 		Schemas: []string{"urn:ietf:params:scim:schemas:core:2.0:User"},
-		Meta: SCIMMeta{ResourceType: "User", Created: now, LastModified: now},
+		Meta:    SCIMMeta{ResourceType: "User", Created: now, LastModified: now},
 	}
 	s.mu.Lock()
 	s.users[user.ID] = user

@@ -25,4 +25,5 @@ func TestComplianceBreaker(t *testing.T) {
 		t.Fatal(b.State())
 	}
 }
+
 // maintenance note 34

@@ -40,4 +40,5 @@ func TestVaultItemEvaluatorErrors(t *testing.T) {
 		t.Fatal("expected invalid action")
 	}
 }
+
 // maintenance note 29

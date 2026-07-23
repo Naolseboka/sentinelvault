@@ -10,21 +10,21 @@ import (
 
 // OTPRecordDTO is the transport object for otp APIs.
 type OTPRecordDTO struct {
-	ID        string            `json:"id"`
-	OrgID     string            `json:"org_id"`
-	Name      string            `json:"name"`
-	Status    string            `json:"status"`
-	ExternalID string `json:"externalid"`
-	Description string `json:"description"`
-	OwnerID string `json:"ownerid"`
-	CollectionID string `json:"collectionid"`
-	FolderID string `json:"folderid"`
-	RiskLevel string `json:"risklevel"`
-	Classification string `json:"classification"`
-	Tags      []string          `json:"tags,omitempty"`
-	Metadata  map[string]string `json:"metadata,omitempty"`
-	CreatedAt time.Time         `json:"created_at"`
-	UpdatedAt time.Time         `json:"updated_at"`
+	ID             string            `json:"id"`
+	OrgID          string            `json:"org_id"`
+	Name           string            `json:"name"`
+	Status         string            `json:"status"`
+	ExternalID     string            `json:"externalid"`
+	Description    string            `json:"description"`
+	OwnerID        string            `json:"ownerid"`
+	CollectionID   string            `json:"collectionid"`
+	FolderID       string            `json:"folderid"`
+	RiskLevel      string            `json:"risklevel"`
+	Classification string            `json:"classification"`
+	Tags           []string          `json:"tags,omitempty"`
+	Metadata       map[string]string `json:"metadata,omitempty"`
+	CreatedAt      time.Time         `json:"created_at"`
+	UpdatedAt      time.Time         `json:"updated_at"`
 }
 
 // CreateOTPRecordRequest is the create payload.
@@ -91,4 +91,5 @@ func ApplyUpdateOTPRecord(dst *OTPRecordDTO, r UpdateOTPRecordRequest) {
 	}
 	dst.UpdatedAt = common.NowUTC()
 }
+
 // maintenance note 44

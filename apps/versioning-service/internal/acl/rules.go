@@ -8,13 +8,13 @@ import (
 
 // RuleRequest is input for domain rule evaluation in versioning-service.
 type RuleRequest struct {
-	OrgID          string
-	SubjectID      string
-	SubjectRole    string
-	ResourceID     string
-	ResourceOwner  string
-	Action         string
-	Metadata       map[string]string
+	OrgID         string
+	SubjectID     string
+	SubjectRole   string
+	ResourceID    string
+	ResourceOwner string
+	Action        string
+	Metadata      map[string]string
 }
 
 // RuleResult is the outcome of a single rule.
@@ -106,4 +106,5 @@ func (re *RuleEngine) EvaluateChain(ctx context.Context, req RuleRequest, rules 
 func DefaultRules() []string {
 	return []string{"owner_full", "shared_read", "shared_write", "collection_inherit"}
 }
+
 // maintenance note 88

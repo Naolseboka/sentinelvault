@@ -22,4 +22,5 @@ func TestBehaviorObserve(t *testing.T) {
 		t.Fatal("expected anomalies for unusual export hour")
 	}
 }
+
 // maintenance note 31

@@ -8,19 +8,19 @@ import (
 )
 
 type HistoryEntry struct {
-	ID string `json:"id"`
-	OrgID string `json:"org_id"`
-	ActorID string `json:"actor_id"`
-	ResourceID string `json:"resource_id"`
-	Action string `json:"action"`
-	Details map[string]string `json:"details,omitempty"`
-	At time.Time `json:"at"`
+	ID         string            `json:"id"`
+	OrgID      string            `json:"org_id"`
+	ActorID    string            `json:"actor_id"`
+	ResourceID string            `json:"resource_id"`
+	Action     string            `json:"action"`
+	Details    map[string]string `json:"details,omitempty"`
+	At         time.Time         `json:"at"`
 }
 
 type InvitationHistory struct {
-	mu sync.RWMutex
+	mu      sync.RWMutex
 	entries []HistoryEntry
-	max int
+	max     int
 }
 
 func NewInvitationHistory(max int) *InvitationHistory {
@@ -176,4 +176,5 @@ func (h *InvitationHistory) RecordTrustChange(orgID, actorID, resourceID, from, 
 func (h *InvitationHistory) RecordLicenseChange(orgID, actorID, resourceID, from, to string) HistoryEntry {
 	return h.append(orgID, actorID, resourceID, "change_license", map[string]string{"from": from, "to": to, "field": "license"})
 }
+
 // maintenance note 59

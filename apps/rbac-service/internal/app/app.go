@@ -33,4 +33,3 @@ type Service = domain.Service
 func NewService() *domain.Service {
 	return domain.NewService(domain.NewMemoryRepository())
 }
-

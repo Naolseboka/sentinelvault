@@ -21,7 +21,7 @@ func TestDiscoveryPKCEAuthURL(t *testing.T) {
 	}
 	u, err := BuildAuthCodeURL(AuthCodeURLInput{
 		AuthorizationEndpoint: doc.AuthorizationEndpoint,
-		ClientID: "client", RedirectURI: "https://app/callback",
+		ClientID:              "client", RedirectURI: "https://app/callback",
 		Scope: []string{"openid", "email"}, State: "s", Nonce: "n",
 		PKCEChallenge: pkce.Challenge, PKCEMethod: "S256",
 	})

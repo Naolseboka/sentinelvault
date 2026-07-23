@@ -9,12 +9,12 @@ import (
 
 // DomainEvent is a versioned domain event envelope.
 type DomainEvent struct {
-	ID            string          `json:"id"`
-	Type          string          `json:"type"`
-	AggregateID   string          `json:"aggregate_id"`
-	AggregateType string          `json:"aggregate_type"`
-	OccurredAt    time.Time       `json:"occurred_at"`
-	Payload       json.RawMessage `json:"payload"`
+	ID            string            `json:"id"`
+	Type          string            `json:"type"`
+	AggregateID   string            `json:"aggregate_id"`
+	AggregateType string            `json:"aggregate_type"`
+	OccurredAt    time.Time         `json:"occurred_at"`
+	Payload       json.RawMessage   `json:"payload"`
 	Metadata      map[string]string `json:"metadata,omitempty"`
 }
 

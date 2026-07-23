@@ -15,4 +15,5 @@ func TestLifecycleTransform(t *testing.T) {
 		t.Fatal("json")
 	}
 }
+
 // maintenance note 71

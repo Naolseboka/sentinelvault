@@ -15,4 +15,5 @@ func TestEncryptionLimiter(t *testing.T) {
 		t.Fatal("remaining")
 	}
 }
+
 // maintenance note 62

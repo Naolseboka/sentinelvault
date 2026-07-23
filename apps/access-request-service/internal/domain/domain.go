@@ -17,18 +17,18 @@ const (
 
 // AccessRequest is a just-in-time access workflow item.
 type AccessRequest struct {
-	ID          string     `json:"id"`
-	OrgID       string     `json:"org_id"`
-	UserID      string     `json:"user_id"`
-	ResourceID  string     `json:"resource_id"`
-	Permission  string     `json:"permission"`
-	Justification string   `json:"justification"`
-	Status      string     `json:"status"`
-	Duration    time.Duration `json:"duration"`
-	ExpiresAt   time.Time  `json:"expires_at"`
-	ApprovedBy  string     `json:"approved_by,omitempty"`
-	DecidedAt   *time.Time `json:"decided_at,omitempty"`
-	CreatedAt   time.Time  `json:"created_at"`
+	ID            string        `json:"id"`
+	OrgID         string        `json:"org_id"`
+	UserID        string        `json:"user_id"`
+	ResourceID    string        `json:"resource_id"`
+	Permission    string        `json:"permission"`
+	Justification string        `json:"justification"`
+	Status        string        `json:"status"`
+	Duration      time.Duration `json:"duration"`
+	ExpiresAt     time.Time     `json:"expires_at"`
+	ApprovedBy    string        `json:"approved_by,omitempty"`
+	DecidedAt     *time.Time    `json:"decided_at,omitempty"`
+	CreatedAt     time.Time     `json:"created_at"`
 }
 
 // CreateAccessInput holds access request fields.

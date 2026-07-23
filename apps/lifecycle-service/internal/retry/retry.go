@@ -6,10 +6,10 @@ import (
 )
 
 type Policy struct {
-	MaxAttempts int
+	MaxAttempts    int
 	InitialBackoff time.Duration
-	MaxBackoff time.Duration
-	Multiplier float64
+	MaxBackoff     time.Duration
+	Multiplier     float64
 }
 
 func DefaultPolicy() Policy {

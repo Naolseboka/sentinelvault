@@ -26,4 +26,5 @@ func TestImportSSHKeyJSON(t *testing.T) {
 		t.Fatalf("%+v", res)
 	}
 }
+
 // maintenance note 65

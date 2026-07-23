@@ -35,11 +35,11 @@ func (v CreditCardValidator) Validate(p map[string]any) (normalized map[string]a
 		return nil, nil, common.New(common.ErrCodeInvalidArgument, fmt.Sprintf("credit_card missing fields: %s", strings.Join(missing, ",")))
 	}
 
-if num, ok := p["number"].(string); ok && num != "" {
-	if !luhnValid(num) {
-		return nil, nil, common.New(common.ErrCodeInvalidArgument, "invalid card number (luhn)")
+	if num, ok := p["number"].(string); ok && num != "" {
+		if !luhnValid(num) {
+			return nil, nil, common.New(common.ErrCodeInvalidArgument, "invalid card number (luhn)")
+		}
 	}
-}
 
 	o := make(map[string]any, len(p))
 	if v, ok := p["cardholder"].(string); ok {

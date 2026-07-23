@@ -11,4 +11,5 @@ func TestBehaviorPtr(t *testing.T) {
 		t.Fatal("bool")
 	}
 }
+
 // maintenance note 97

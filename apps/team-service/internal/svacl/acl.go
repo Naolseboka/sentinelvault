@@ -9,23 +9,23 @@ import (
 
 // Actions for team-service.
 const (
-	ActionCreate = "team-service.create"
-	ActionRead = "team-service.read"
-	ActionUpdate = "team-service.update"
-	ActionDelete = "team-service.delete"
-	ActionList = "team-service.list"
-	ActionExport = "team-service.export"
-	ActionImport = "team-service.import"
-	ActionShare = "team-service.share"
-	ActionRotate = "team-service.rotate"
-	ActionApprove = "team-service.approve"
-	ActionDeny = "team-service.deny"
-	ActionRevoke = "team-service.revoke"
-	ActionRestore = "team-service.restore"
-	ActionArchive = "team-service.archive"
-	ActionAdmin = "team-service.admin"
-	ActionConfigure = "team-service.configure"
-	ActionExecute = "team-service.execute"
+	ActionCreate      = "team-service.create"
+	ActionRead        = "team-service.read"
+	ActionUpdate      = "team-service.update"
+	ActionDelete      = "team-service.delete"
+	ActionList        = "team-service.list"
+	ActionExport      = "team-service.export"
+	ActionImport      = "team-service.import"
+	ActionShare       = "team-service.share"
+	ActionRotate      = "team-service.rotate"
+	ActionApprove     = "team-service.approve"
+	ActionDeny        = "team-service.deny"
+	ActionRevoke      = "team-service.revoke"
+	ActionRestore     = "team-service.restore"
+	ActionArchive     = "team-service.archive"
+	ActionAdmin       = "team-service.admin"
+	ActionConfigure   = "team-service.configure"
+	ActionExecute     = "team-service.execute"
 	ActionImpersonate = "team-service.impersonate"
 )
 
@@ -120,4 +120,5 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"team-service.create", "team-service.read", "team-service.update", "team-service.delete", "team-service.list", "team-service.export", "team-service.import", "team-service.share", "team-service.rotate", "team-service.approve", "team-service.deny", "team-service.revoke", "team-service.restore", "team-service.archive", "team-service.admin", "team-service.configure", "team-service.execute", "team-service.impersonate"}
 }
+
 // maintenance note 38

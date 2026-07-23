@@ -15,4 +15,5 @@ func TestInvitationTransform(t *testing.T) {
 		t.Fatal("json")
 	}
 }
+
 // maintenance note 51

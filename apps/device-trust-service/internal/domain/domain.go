@@ -33,15 +33,15 @@ type DeviceTrustRecord struct {
 
 // EvaluateTrustInput holds device trust evaluation fields.
 type EvaluateTrustInput struct {
-	OrgID          string `json:"org_id"`
-	DeviceID       string `json:"device_id"`
-	UserID         string `json:"user_id"`
-	Fingerprint    string `json:"fingerprint"`
-	NewDevice      bool   `json:"new_device"`
-	SuspiciousIP   bool   `json:"suspicious_ip"`
-	FailedAttempts int    `json:"failed_attempts"`
-	ImpossibleTravel bool `json:"impossible_travel"`
-	CurrentLevel   string `json:"current_level"`
+	OrgID            string `json:"org_id"`
+	DeviceID         string `json:"device_id"`
+	UserID           string `json:"user_id"`
+	Fingerprint      string `json:"fingerprint"`
+	NewDevice        bool   `json:"new_device"`
+	SuspiciousIP     bool   `json:"suspicious_ip"`
+	FailedAttempts   int    `json:"failed_attempts"`
+	ImpossibleTravel bool   `json:"impossible_travel"`
+	CurrentLevel     string `json:"current_level"`
 }
 
 // Service scores device trust using the shared risk engine.
@@ -148,4 +148,5 @@ func SchemaName() string { return "device_trust" }
 
 // TableName returns the primary table name.
 func TableName() string { return "trust_records" }
+
 // maintenance note 84

@@ -13,13 +13,13 @@ import (
 
 // Snapshot is an encrypted backup artifact metadata.
 type Snapshot struct {
-	ID          string    `json:"id"`
-	OrgID       string    `json:"org_id"`
-	Label       string    `json:"label"`
-	SizeBytes   int       `json:"size_bytes"`
-	Checksum    string    `json:"checksum"`
-	CreatedAt   time.Time `json:"created_at"`
-	Encrypted   bool      `json:"encrypted"`
+	ID        string    `json:"id"`
+	OrgID     string    `json:"org_id"`
+	Label     string    `json:"label"`
+	SizeBytes int       `json:"size_bytes"`
+	Checksum  string    `json:"checksum"`
+	CreatedAt time.Time `json:"created_at"`
+	Encrypted bool      `json:"encrypted"`
 }
 
 // Store holds encrypted backup blobs in memory (MinIO adapter later).

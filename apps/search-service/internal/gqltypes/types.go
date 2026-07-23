@@ -3,32 +3,32 @@ package gqltypes
 import "time"
 
 type Search struct {
-	ID string `json:"id"`
-	OrgID string `json:"orgId"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	Tags []string `json:"tags"`
-	Metadata map[string]string `json:"metadata"`
+	ID        string            `json:"id"`
+	OrgID     string            `json:"orgId"`
+	Name      string            `json:"name"`
+	Status    string            `json:"status"`
+	CreatedAt time.Time         `json:"createdAt"`
+	UpdatedAt time.Time         `json:"updatedAt"`
+	Tags      []string          `json:"tags"`
+	Metadata  map[string]string `json:"metadata"`
 }
 
 type SearchConnection struct {
-	Nodes []Search `json:"nodes"`
-	TotalCount int `json:"totalCount"`
-	PageInfo PageInfo `json:"pageInfo"`
+	Nodes      []Search `json:"nodes"`
+	TotalCount int      `json:"totalCount"`
+	PageInfo   PageInfo `json:"pageInfo"`
 }
 
 type PageInfo struct {
-	HasNextPage bool `json:"hasNextPage"`
-	HasPreviousPage bool `json:"hasPreviousPage"`
-	StartCursor string `json:"startCursor"`
-	EndCursor string `json:"endCursor"`
+	HasNextPage     bool   `json:"hasNextPage"`
+	HasPreviousPage bool   `json:"hasPreviousPage"`
+	StartCursor     string `json:"startCursor"`
+	EndCursor       string `json:"endCursor"`
 }
 
 type SearchEdge struct {
 	Cursor string `json:"cursor"`
-	Node Search `json:"node"`
+	Node   Search `json:"node"`
 }
 
 func Connect(items []Search, offset, limit, total int) SearchConnection {
@@ -40,7 +40,7 @@ func Connect(items []Search, offset, limit, total int) SearchConnection {
 		end = len(items)
 	}
 	if offset > len(items) {
-	offset = len(items)
+		offset = len(items)
 	}
 	nodes := items[offset:end]
 	start, endc := "", ""

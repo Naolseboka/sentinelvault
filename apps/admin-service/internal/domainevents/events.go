@@ -8,25 +8,25 @@ import (
 
 // Event types for admin-service.
 const (
-	EventAdminActionCreated = "admin.created"
-	EventAdminActionUpdated = "admin.updated"
-	EventAdminActionDeleted = "admin.deleted"
-	EventAdminActionArchived = "admin.archived"
-	EventAdminActionRestored = "admin.restored"
-	EventAdminActionShared = "admin.shared"
-	EventAdminActionUnshared = "admin.unshared"
-	EventAdminActionExported = "admin.exported"
-	EventAdminActionImported = "admin.imported"
-	EventAdminActionRotated = "admin.rotated"
-	EventAdminActionAccessed = "admin.accessed"
-	EventAdminActionDenied = "admin.denied"
-	EventAdminActionApproved = "admin.approved"
-	EventAdminActionRevoked = "admin.revoked"
-	EventAdminActionExpired = "admin.expired"
-	EventAdminActionLocked = "admin.locked"
-	EventAdminActionUnlocked = "admin.unlocked"
-	EventAdminActionVerified = "admin.verified"
-	EventAdminActionFailed = "admin.failed"
+	EventAdminActionCreated   = "admin.created"
+	EventAdminActionUpdated   = "admin.updated"
+	EventAdminActionDeleted   = "admin.deleted"
+	EventAdminActionArchived  = "admin.archived"
+	EventAdminActionRestored  = "admin.restored"
+	EventAdminActionShared    = "admin.shared"
+	EventAdminActionUnshared  = "admin.unshared"
+	EventAdminActionExported  = "admin.exported"
+	EventAdminActionImported  = "admin.imported"
+	EventAdminActionRotated   = "admin.rotated"
+	EventAdminActionAccessed  = "admin.accessed"
+	EventAdminActionDenied    = "admin.denied"
+	EventAdminActionApproved  = "admin.approved"
+	EventAdminActionRevoked   = "admin.revoked"
+	EventAdminActionExpired   = "admin.expired"
+	EventAdminActionLocked    = "admin.locked"
+	EventAdminActionUnlocked  = "admin.unlocked"
+	EventAdminActionVerified  = "admin.verified"
+	EventAdminActionFailed    = "admin.failed"
 	EventAdminActionSucceeded = "admin.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownAdminActionEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewAdminActionCreatedEvent builds a domain event.
 func NewAdminActionCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

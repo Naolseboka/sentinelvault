@@ -20,7 +20,9 @@ func (c ControlCC6_2) ID() string { return "SOC2-CC6.2" }
 func (c ControlCC6_2) Title() string { return "Credentials" }
 
 // Description returns the control description.
-func (c ControlCC6_2) Description() string { return "Prior to issuing credentials registers and authorizes" }
+func (c ControlCC6_2) Description() string {
+	return "Prior to issuing credentials registers and authorizes"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceCC6_2 struct {

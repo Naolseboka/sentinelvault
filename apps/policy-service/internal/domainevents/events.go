@@ -8,25 +8,25 @@ import (
 
 // Event types for policy-service.
 const (
-	EventPolicyDocCreated = "policy.created"
-	EventPolicyDocUpdated = "policy.updated"
-	EventPolicyDocDeleted = "policy.deleted"
-	EventPolicyDocArchived = "policy.archived"
-	EventPolicyDocRestored = "policy.restored"
-	EventPolicyDocShared = "policy.shared"
-	EventPolicyDocUnshared = "policy.unshared"
-	EventPolicyDocExported = "policy.exported"
-	EventPolicyDocImported = "policy.imported"
-	EventPolicyDocRotated = "policy.rotated"
-	EventPolicyDocAccessed = "policy.accessed"
-	EventPolicyDocDenied = "policy.denied"
-	EventPolicyDocApproved = "policy.approved"
-	EventPolicyDocRevoked = "policy.revoked"
-	EventPolicyDocExpired = "policy.expired"
-	EventPolicyDocLocked = "policy.locked"
-	EventPolicyDocUnlocked = "policy.unlocked"
-	EventPolicyDocVerified = "policy.verified"
-	EventPolicyDocFailed = "policy.failed"
+	EventPolicyDocCreated   = "policy.created"
+	EventPolicyDocUpdated   = "policy.updated"
+	EventPolicyDocDeleted   = "policy.deleted"
+	EventPolicyDocArchived  = "policy.archived"
+	EventPolicyDocRestored  = "policy.restored"
+	EventPolicyDocShared    = "policy.shared"
+	EventPolicyDocUnshared  = "policy.unshared"
+	EventPolicyDocExported  = "policy.exported"
+	EventPolicyDocImported  = "policy.imported"
+	EventPolicyDocRotated   = "policy.rotated"
+	EventPolicyDocAccessed  = "policy.accessed"
+	EventPolicyDocDenied    = "policy.denied"
+	EventPolicyDocApproved  = "policy.approved"
+	EventPolicyDocRevoked   = "policy.revoked"
+	EventPolicyDocExpired   = "policy.expired"
+	EventPolicyDocLocked    = "policy.locked"
+	EventPolicyDocUnlocked  = "policy.unlocked"
+	EventPolicyDocVerified  = "policy.verified"
+	EventPolicyDocFailed    = "policy.failed"
 	EventPolicyDocSucceeded = "policy.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownPolicyDocEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewPolicyDocCreatedEvent builds a domain event.
 func NewPolicyDocCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

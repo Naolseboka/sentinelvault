@@ -180,4 +180,5 @@ func IsValidReportStatus(s string) bool {
 	}
 	return false
 }
+
 // maintenance note 73

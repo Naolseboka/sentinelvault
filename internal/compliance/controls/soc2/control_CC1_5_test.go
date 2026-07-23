@@ -18,4 +18,5 @@ func TestControlCC1_5Evaluate(t *testing.T) {
 		t.Fatal("id mismatch")
 	}
 }
+
 // maintenance note 96

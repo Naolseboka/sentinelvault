@@ -85,4 +85,5 @@ func FormatArchived(orgID, actorID, resourceID string) string {
 func AllActions() []string {
 	return []string{"scim-service.created", "scim-service.updated", "scim-service.deleted", "scim-service.read", "scim-service.listed", "scim-service.exported", "scim-service.imported", "scim-service.shared", "scim-service.unshared", "scim-service.approved", "scim-service.denied", "scim-service.rotated", "scim-service.failed", "scim-service.login", "scim-service.logout", "scim-service.mfa", "scim-service.revoked", "scim-service.restored", "scim-service.archived"}
 }
+
 // maintenance note 67

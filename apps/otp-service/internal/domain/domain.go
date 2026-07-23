@@ -42,7 +42,7 @@ type EnrollInput struct {
 
 // EnrollResult returns provisioning details (secret shown once at enroll).
 type EnrollResult struct {
-	Record *TOTPRecordView `json:"record"`
+	Record *TOTPRecordView  `json:"record"`
 	Secret *auth.TOTPSecret `json:"secret"`
 }
 

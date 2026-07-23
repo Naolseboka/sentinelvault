@@ -8,11 +8,11 @@ import (
 )
 
 type Flag struct {
-	Key         string
-	Enabled     bool
-	Percentage  int            // 0-100 sticky rollout
-	OrgAllow    map[string]bool
-	OrgDeny     map[string]bool
+	Key        string
+	Enabled    bool
+	Percentage int // 0-100 sticky rollout
+	OrgAllow   map[string]bool
+	OrgDeny    map[string]bool
 }
 
 type Registry struct {

@@ -7,12 +7,11 @@ import (
 
 // RiskHeatmapReport aggregates dashboard metrics for risk heatmap.
 type RiskHeatmapReport struct {
-	OrgID      string
+	OrgID       string
 	GeneratedAt time.Time
-	Sections   []ReportSection
-	Score      float64
+	Sections    []ReportSection
+	Score       float64
 }
-
 
 // BuildRiskHeatmapReport composes a report from metric calculators.
 func BuildRiskHeatmapReport(orgID string, from, to time.Time, metrics ...*LoginHeatmapCalculator) *RiskHeatmapReport {
@@ -25,8 +24,8 @@ func BuildRiskHeatmapReport(orgID string, from, to time.Time, metrics ...*LoginH
 		avg := m.Average(orgID, from, to)
 		total += avg
 		rep.Sections = append(rep.Sections, ReportSection{
-			Title: fmt.Sprintf("metric_%d", i),
-			Value: avg,
+			Title:  fmt.Sprintf("metric_%d", i),
+			Value:  avg,
 			Detail: fmt.Sprintf("window %s to %s", from.Format(time.RFC3339), to.Format(time.RFC3339)),
 		})
 	}

@@ -8,25 +8,25 @@ import (
 
 // Event types for risk-service.
 const (
-	EventRiskScoreCreated = "risk.created"
-	EventRiskScoreUpdated = "risk.updated"
-	EventRiskScoreDeleted = "risk.deleted"
-	EventRiskScoreArchived = "risk.archived"
-	EventRiskScoreRestored = "risk.restored"
-	EventRiskScoreShared = "risk.shared"
-	EventRiskScoreUnshared = "risk.unshared"
-	EventRiskScoreExported = "risk.exported"
-	EventRiskScoreImported = "risk.imported"
-	EventRiskScoreRotated = "risk.rotated"
-	EventRiskScoreAccessed = "risk.accessed"
-	EventRiskScoreDenied = "risk.denied"
-	EventRiskScoreApproved = "risk.approved"
-	EventRiskScoreRevoked = "risk.revoked"
-	EventRiskScoreExpired = "risk.expired"
-	EventRiskScoreLocked = "risk.locked"
-	EventRiskScoreUnlocked = "risk.unlocked"
-	EventRiskScoreVerified = "risk.verified"
-	EventRiskScoreFailed = "risk.failed"
+	EventRiskScoreCreated   = "risk.created"
+	EventRiskScoreUpdated   = "risk.updated"
+	EventRiskScoreDeleted   = "risk.deleted"
+	EventRiskScoreArchived  = "risk.archived"
+	EventRiskScoreRestored  = "risk.restored"
+	EventRiskScoreShared    = "risk.shared"
+	EventRiskScoreUnshared  = "risk.unshared"
+	EventRiskScoreExported  = "risk.exported"
+	EventRiskScoreImported  = "risk.imported"
+	EventRiskScoreRotated   = "risk.rotated"
+	EventRiskScoreAccessed  = "risk.accessed"
+	EventRiskScoreDenied    = "risk.denied"
+	EventRiskScoreApproved  = "risk.approved"
+	EventRiskScoreRevoked   = "risk.revoked"
+	EventRiskScoreExpired   = "risk.expired"
+	EventRiskScoreLocked    = "risk.locked"
+	EventRiskScoreUnlocked  = "risk.unlocked"
+	EventRiskScoreVerified  = "risk.verified"
+	EventRiskScoreFailed    = "risk.failed"
 	EventRiskScoreSucceeded = "risk.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownRiskScoreEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewRiskScoreCreatedEvent builds a domain event.
 func NewRiskScoreCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

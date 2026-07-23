@@ -20,4 +20,5 @@ func TestSessionFilters(t *testing.T) {
 		t.Fatalf("%d", len(out))
 	}
 }
+
 // maintenance note 78

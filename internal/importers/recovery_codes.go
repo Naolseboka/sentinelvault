@@ -13,11 +13,11 @@ import (
 
 // RecoveryCodesImportResult is one imported row.
 type RecoveryCodesImportResult struct {
-	Row     int            `json:"row"`
-	Name    string         `json:"name"`
-	Payload map[string]any `json:"payload"`
-	Warnings []string      `json:"warnings,omitempty"`
-	Error   string         `json:"error,omitempty"`
+	Row      int            `json:"row"`
+	Name     string         `json:"name"`
+	Payload  map[string]any `json:"payload"`
+	Warnings []string       `json:"warnings,omitempty"`
+	Error    string         `json:"error,omitempty"`
 }
 
 // ImportRecoveryCodesCSV parses CSV rows into validated recovery_codes payloads.

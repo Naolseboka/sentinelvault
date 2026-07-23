@@ -7,12 +7,11 @@ import (
 
 // SecurityPostureReport aggregates dashboard metrics for security posture.
 type SecurityPostureReport struct {
-	OrgID      string
+	OrgID       string
 	GeneratedAt time.Time
-	Sections   []ReportSection
-	Score      float64
+	Sections    []ReportSection
+	Score       float64
 }
-
 
 // BuildSecurityPostureReport composes a report from metric calculators.
 func BuildSecurityPostureReport(orgID string, from, to time.Time, metrics ...*LoginHeatmapCalculator) *SecurityPostureReport {
@@ -25,8 +24,8 @@ func BuildSecurityPostureReport(orgID string, from, to time.Time, metrics ...*Lo
 		avg := m.Average(orgID, from, to)
 		total += avg
 		rep.Sections = append(rep.Sections, ReportSection{
-			Title: fmt.Sprintf("metric_%d", i),
-			Value: avg,
+			Title:  fmt.Sprintf("metric_%d", i),
+			Value:  avg,
 			Detail: fmt.Sprintf("window %s to %s", from.Format(time.RFC3339), to.Format(time.RFC3339)),
 		})
 	}

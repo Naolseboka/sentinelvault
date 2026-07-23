@@ -6,10 +6,10 @@ import (
 )
 
 type Policy struct {
-	MaxAttempts int
+	MaxAttempts    int
 	InitialBackoff time.Duration
-	MaxBackoff time.Duration
-	Multiplier float64
+	MaxBackoff     time.Duration
+	Multiplier     float64
 }
 
 func DefaultPolicy() Policy {
@@ -48,4 +48,5 @@ func Do(ctx context.Context, p Policy, fn func(attempt int) error) error {
 	}
 	return err
 }
+
 // maintenance note 68

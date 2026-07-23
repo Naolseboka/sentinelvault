@@ -8,25 +8,25 @@ import (
 
 // Event types for threat-service.
 const (
-	EventFindingCreated = "threat.created"
-	EventFindingUpdated = "threat.updated"
-	EventFindingDeleted = "threat.deleted"
-	EventFindingArchived = "threat.archived"
-	EventFindingRestored = "threat.restored"
-	EventFindingShared = "threat.shared"
-	EventFindingUnshared = "threat.unshared"
-	EventFindingExported = "threat.exported"
-	EventFindingImported = "threat.imported"
-	EventFindingRotated = "threat.rotated"
-	EventFindingAccessed = "threat.accessed"
-	EventFindingDenied = "threat.denied"
-	EventFindingApproved = "threat.approved"
-	EventFindingRevoked = "threat.revoked"
-	EventFindingExpired = "threat.expired"
-	EventFindingLocked = "threat.locked"
-	EventFindingUnlocked = "threat.unlocked"
-	EventFindingVerified = "threat.verified"
-	EventFindingFailed = "threat.failed"
+	EventFindingCreated   = "threat.created"
+	EventFindingUpdated   = "threat.updated"
+	EventFindingDeleted   = "threat.deleted"
+	EventFindingArchived  = "threat.archived"
+	EventFindingRestored  = "threat.restored"
+	EventFindingShared    = "threat.shared"
+	EventFindingUnshared  = "threat.unshared"
+	EventFindingExported  = "threat.exported"
+	EventFindingImported  = "threat.imported"
+	EventFindingRotated   = "threat.rotated"
+	EventFindingAccessed  = "threat.accessed"
+	EventFindingDenied    = "threat.denied"
+	EventFindingApproved  = "threat.approved"
+	EventFindingRevoked   = "threat.revoked"
+	EventFindingExpired   = "threat.expired"
+	EventFindingLocked    = "threat.locked"
+	EventFindingUnlocked  = "threat.unlocked"
+	EventFindingVerified  = "threat.verified"
+	EventFindingFailed    = "threat.failed"
 	EventFindingSucceeded = "threat.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownFindingEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewFindingCreatedEvent builds a domain event.
 func NewFindingCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

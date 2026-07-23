@@ -3,32 +3,32 @@ package gqltypes
 import "time"
 
 type Threat struct {
-	ID string `json:"id"`
-	OrgID string `json:"orgId"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	Tags []string `json:"tags"`
-	Metadata map[string]string `json:"metadata"`
+	ID        string            `json:"id"`
+	OrgID     string            `json:"orgId"`
+	Name      string            `json:"name"`
+	Status    string            `json:"status"`
+	CreatedAt time.Time         `json:"createdAt"`
+	UpdatedAt time.Time         `json:"updatedAt"`
+	Tags      []string          `json:"tags"`
+	Metadata  map[string]string `json:"metadata"`
 }
 
 type ThreatConnection struct {
-	Nodes []Threat `json:"nodes"`
-	TotalCount int `json:"totalCount"`
-	PageInfo PageInfo `json:"pageInfo"`
+	Nodes      []Threat `json:"nodes"`
+	TotalCount int      `json:"totalCount"`
+	PageInfo   PageInfo `json:"pageInfo"`
 }
 
 type PageInfo struct {
-	HasNextPage bool `json:"hasNextPage"`
-	HasPreviousPage bool `json:"hasPreviousPage"`
-	StartCursor string `json:"startCursor"`
-	EndCursor string `json:"endCursor"`
+	HasNextPage     bool   `json:"hasNextPage"`
+	HasPreviousPage bool   `json:"hasPreviousPage"`
+	StartCursor     string `json:"startCursor"`
+	EndCursor       string `json:"endCursor"`
 }
 
 type ThreatEdge struct {
 	Cursor string `json:"cursor"`
-	Node Threat `json:"node"`
+	Node   Threat `json:"node"`
 }
 
 func Connect(items []Threat, offset, limit, total int) ThreatConnection {
@@ -40,7 +40,7 @@ func Connect(items []Threat, offset, limit, total int) ThreatConnection {
 		end = len(items)
 	}
 	if offset > len(items) {
-	offset = len(items)
+		offset = len(items)
 	}
 	nodes := items[offset:end]
 	start, endc := "", ""
@@ -52,4 +52,5 @@ func Connect(items []Threat, offset, limit, total int) ThreatConnection {
 		PageInfo: PageInfo{HasNextPage: end < total, HasPreviousPage: offset > 0, StartCursor: start, EndCursor: endc},
 	}
 }
+
 // maintenance note 54

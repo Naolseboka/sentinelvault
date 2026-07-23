@@ -21,13 +21,13 @@ const (
 
 // LDAPConfig holds directory sync connection settings (no live LDAP required).
 type LDAPConfig struct {
-	OrgID    string `json:"org_id"`
-	Host     string `json:"host"`
-	Port     int    `json:"port"`
-	BaseDN   string `json:"base_dn"`
-	BindDN   string `json:"bind_dn"`
-	Filter   string `json:"filter"`
-	Enabled  bool   `json:"enabled"`
+	OrgID   string `json:"org_id"`
+	Host    string `json:"host"`
+	Port    int    `json:"port"`
+	BaseDN  string `json:"base_dn"`
+	BindDN  string `json:"bind_dn"`
+	Filter  string `json:"filter"`
+	Enabled bool   `json:"enabled"`
 }
 
 // SyncConflict describes a directory sync conflict.
@@ -81,17 +81,17 @@ type RunSyncInput struct {
 
 // DirectoryEntry is a simulated LDAP user for in-memory sync.
 type DirectoryEntry struct {
-	ExternalID string
-	Email      string
+	ExternalID  string
+	Email       string
 	DisplayName string
-	Active     bool
+	Active      bool
 }
 
 // Service manages directory sync jobs and LDAP configuration.
 type Service struct {
 	mu      sync.RWMutex
 	jobs    map[string]*SyncJob
-	configs map[string]*LDAPConfig // orgID -> config
+	configs map[string]*LDAPConfig      // orgID -> config
 	entries map[string][]DirectoryEntry // orgID -> simulated directory
 }
 

@@ -3,10 +3,10 @@ package paging
 import "github.com/sentinelvault/sentinelvault/internal/common"
 
 type Page struct {
-	Offset int `json:"offset"`
-	Limit int `json:"limit"`
-	Total int64 `json:"total"`
-	HasMore bool `json:"has_more"`
+	Offset  int   `json:"offset"`
+	Limit   int   `json:"limit"`
+	Total   int64 `json:"total"`
+	HasMore bool  `json:"has_more"`
 }
 
 func Normalize(offset, limit, defaultLimit, maxLimit int) (int, int, error) {
@@ -46,4 +46,5 @@ func Slice[T any](in []T, offset, limit int) []T {
 	}
 	return in[offset:end]
 }
+
 // maintenance note 87

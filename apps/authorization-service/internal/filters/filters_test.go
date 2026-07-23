@@ -20,4 +20,5 @@ func TestDecisionFilters(t *testing.T) {
 		t.Fatalf("%d", len(out))
 	}
 }
+
 // maintenance note 44

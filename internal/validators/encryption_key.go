@@ -67,4 +67,5 @@ func (EncryptionKeyValidator) RequiredFields() []string {
 func (EncryptionKeyValidator) OptionalFields() []string {
 	return []string{"algorithm", "purpose"}
 }
+
 // maintenance note 97

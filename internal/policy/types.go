@@ -47,4 +47,5 @@ type Rule struct {
 	AdminBypass bool        `json:"admin_bypass"`
 	TimeWindow  *TimeWindow `json:"time_window,omitempty"`
 }
+
 // maintenance note 77

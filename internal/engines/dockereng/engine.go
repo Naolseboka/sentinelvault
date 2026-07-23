@@ -11,29 +11,29 @@ import (
 )
 
 type Role struct {
-	ID string `json:"id"`
-	OrgID string `json:"org_id"`
-	Name string `json:"name"`
-	Config map[string]string `json:"config"`
-	DefaultTTL time.Duration `json:"default_ttl"`
-	MaxTTL time.Duration `json:"max_ttl"`
+	ID         string            `json:"id"`
+	OrgID      string            `json:"org_id"`
+	Name       string            `json:"name"`
+	Config     map[string]string `json:"config"`
+	DefaultTTL time.Duration     `json:"default_ttl"`
+	MaxTTL     time.Duration     `json:"max_ttl"`
 }
 
 type Lease struct {
-	ID string `json:"id"`
-	RoleID string `json:"role_id"`
-	OrgID string `json:"org_id"`
-	Token string `json:"token"`
-	ExpiresAt time.Time `json:"expires_at"`
-	Revoked bool `json:"revoked"`
-	Meta map[string]string `json:"meta,omitempty"`
+	ID        string            `json:"id"`
+	RoleID    string            `json:"role_id"`
+	OrgID     string            `json:"org_id"`
+	Token     string            `json:"token"`
+	ExpiresAt time.Time         `json:"expires_at"`
+	Revoked   bool              `json:"revoked"`
+	Meta      map[string]string `json:"meta,omitempty"`
 }
 
 type Engine struct {
 	policies map[string]*PolicyDocument
-	mu sync.Mutex
-	roles map[string]*Role
-	leases map[string]*Lease
+	mu       sync.Mutex
+	roles    map[string]*Role
+	leases   map[string]*Lease
 }
 
 func NewEngine() *Engine {
@@ -79,7 +79,7 @@ func (e *Engine) Issue(roleID string, ttl time.Duration, meta map[string]string)
 	sum := sha256.Sum256([]byte(fmt.Sprintf("%s:%s:%d", role.ID, role.Name, time.Now().UnixNano())))
 	l := &Lease{
 		ID: common.NewID(), RoleID: role.ID, OrgID: role.OrgID,
-		Token: "dockereng_" + hex.EncodeToString(sum[:16]),
+		Token:     "dockereng_" + hex.EncodeToString(sum[:16]),
 		ExpiresAt: common.NowUTC().Add(ttl), Meta: meta,
 	}
 	e.leases[l.ID] = l

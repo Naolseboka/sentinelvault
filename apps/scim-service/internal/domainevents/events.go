@@ -8,25 +8,25 @@ import (
 
 // Event types for scim-service.
 const (
-	EventSCIMUserCreated = "scim.created"
-	EventSCIMUserUpdated = "scim.updated"
-	EventSCIMUserDeleted = "scim.deleted"
-	EventSCIMUserArchived = "scim.archived"
-	EventSCIMUserRestored = "scim.restored"
-	EventSCIMUserShared = "scim.shared"
-	EventSCIMUserUnshared = "scim.unshared"
-	EventSCIMUserExported = "scim.exported"
-	EventSCIMUserImported = "scim.imported"
-	EventSCIMUserRotated = "scim.rotated"
-	EventSCIMUserAccessed = "scim.accessed"
-	EventSCIMUserDenied = "scim.denied"
-	EventSCIMUserApproved = "scim.approved"
-	EventSCIMUserRevoked = "scim.revoked"
-	EventSCIMUserExpired = "scim.expired"
-	EventSCIMUserLocked = "scim.locked"
-	EventSCIMUserUnlocked = "scim.unlocked"
-	EventSCIMUserVerified = "scim.verified"
-	EventSCIMUserFailed = "scim.failed"
+	EventSCIMUserCreated   = "scim.created"
+	EventSCIMUserUpdated   = "scim.updated"
+	EventSCIMUserDeleted   = "scim.deleted"
+	EventSCIMUserArchived  = "scim.archived"
+	EventSCIMUserRestored  = "scim.restored"
+	EventSCIMUserShared    = "scim.shared"
+	EventSCIMUserUnshared  = "scim.unshared"
+	EventSCIMUserExported  = "scim.exported"
+	EventSCIMUserImported  = "scim.imported"
+	EventSCIMUserRotated   = "scim.rotated"
+	EventSCIMUserAccessed  = "scim.accessed"
+	EventSCIMUserDenied    = "scim.denied"
+	EventSCIMUserApproved  = "scim.approved"
+	EventSCIMUserRevoked   = "scim.revoked"
+	EventSCIMUserExpired   = "scim.expired"
+	EventSCIMUserLocked    = "scim.locked"
+	EventSCIMUserUnlocked  = "scim.unlocked"
+	EventSCIMUserVerified  = "scim.verified"
+	EventSCIMUserFailed    = "scim.failed"
 	EventSCIMUserSucceeded = "scim.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSCIMUserEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSCIMUserCreatedEvent builds a domain event.
 func NewSCIMUserCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

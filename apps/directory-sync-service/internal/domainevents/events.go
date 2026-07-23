@@ -8,25 +8,25 @@ import (
 
 // Event types for directory-sync-service.
 const (
-	EventSyncJobCreated = "directorysync.created"
-	EventSyncJobUpdated = "directorysync.updated"
-	EventSyncJobDeleted = "directorysync.deleted"
-	EventSyncJobArchived = "directorysync.archived"
-	EventSyncJobRestored = "directorysync.restored"
-	EventSyncJobShared = "directorysync.shared"
-	EventSyncJobUnshared = "directorysync.unshared"
-	EventSyncJobExported = "directorysync.exported"
-	EventSyncJobImported = "directorysync.imported"
-	EventSyncJobRotated = "directorysync.rotated"
-	EventSyncJobAccessed = "directorysync.accessed"
-	EventSyncJobDenied = "directorysync.denied"
-	EventSyncJobApproved = "directorysync.approved"
-	EventSyncJobRevoked = "directorysync.revoked"
-	EventSyncJobExpired = "directorysync.expired"
-	EventSyncJobLocked = "directorysync.locked"
-	EventSyncJobUnlocked = "directorysync.unlocked"
-	EventSyncJobVerified = "directorysync.verified"
-	EventSyncJobFailed = "directorysync.failed"
+	EventSyncJobCreated   = "directorysync.created"
+	EventSyncJobUpdated   = "directorysync.updated"
+	EventSyncJobDeleted   = "directorysync.deleted"
+	EventSyncJobArchived  = "directorysync.archived"
+	EventSyncJobRestored  = "directorysync.restored"
+	EventSyncJobShared    = "directorysync.shared"
+	EventSyncJobUnshared  = "directorysync.unshared"
+	EventSyncJobExported  = "directorysync.exported"
+	EventSyncJobImported  = "directorysync.imported"
+	EventSyncJobRotated   = "directorysync.rotated"
+	EventSyncJobAccessed  = "directorysync.accessed"
+	EventSyncJobDenied    = "directorysync.denied"
+	EventSyncJobApproved  = "directorysync.approved"
+	EventSyncJobRevoked   = "directorysync.revoked"
+	EventSyncJobExpired   = "directorysync.expired"
+	EventSyncJobLocked    = "directorysync.locked"
+	EventSyncJobUnlocked  = "directorysync.unlocked"
+	EventSyncJobVerified  = "directorysync.verified"
+	EventSyncJobFailed    = "directorysync.failed"
 	EventSyncJobSucceeded = "directorysync.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSyncJobEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSyncJobCreatedEvent builds a domain event.
 func NewSyncJobCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

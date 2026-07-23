@@ -84,4 +84,5 @@ func (h *Handler) reject(w http.ResponseWriter, r *http.Request) {
 	}
 	httpx.WriteJSON(w, http.StatusOK, inv)
 }
+
 // maintenance note 96

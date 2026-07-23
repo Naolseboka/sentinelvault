@@ -30,10 +30,10 @@ type Event struct {
 
 // Chain maintains a hash-linked, signed audit log.
 type Chain struct {
-	priv    ed25519.PrivateKey
-	pub     ed25519.PublicKey
+	priv     ed25519.PrivateKey
+	pub      ed25519.PublicKey
 	lastHash string
-	events  []Event
+	events   []Event
 }
 
 // NewChain creates a chain with a fresh Ed25519 keypair.

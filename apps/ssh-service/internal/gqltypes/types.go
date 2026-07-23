@@ -3,32 +3,32 @@ package gqltypes
 import "time"
 
 type Ssh struct {
-	ID string `json:"id"`
-	OrgID string `json:"orgId"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	Tags []string `json:"tags"`
-	Metadata map[string]string `json:"metadata"`
+	ID        string            `json:"id"`
+	OrgID     string            `json:"orgId"`
+	Name      string            `json:"name"`
+	Status    string            `json:"status"`
+	CreatedAt time.Time         `json:"createdAt"`
+	UpdatedAt time.Time         `json:"updatedAt"`
+	Tags      []string          `json:"tags"`
+	Metadata  map[string]string `json:"metadata"`
 }
 
 type SshConnection struct {
-	Nodes []Ssh `json:"nodes"`
-	TotalCount int `json:"totalCount"`
-	PageInfo PageInfo `json:"pageInfo"`
+	Nodes      []Ssh    `json:"nodes"`
+	TotalCount int      `json:"totalCount"`
+	PageInfo   PageInfo `json:"pageInfo"`
 }
 
 type PageInfo struct {
-	HasNextPage bool `json:"hasNextPage"`
-	HasPreviousPage bool `json:"hasPreviousPage"`
-	StartCursor string `json:"startCursor"`
-	EndCursor string `json:"endCursor"`
+	HasNextPage     bool   `json:"hasNextPage"`
+	HasPreviousPage bool   `json:"hasPreviousPage"`
+	StartCursor     string `json:"startCursor"`
+	EndCursor       string `json:"endCursor"`
 }
 
 type SshEdge struct {
 	Cursor string `json:"cursor"`
-	Node Ssh `json:"node"`
+	Node   Ssh    `json:"node"`
 }
 
 func Connect(items []Ssh, offset, limit, total int) SshConnection {
@@ -40,7 +40,7 @@ func Connect(items []Ssh, offset, limit, total int) SshConnection {
 		end = len(items)
 	}
 	if offset > len(items) {
-	offset = len(items)
+		offset = len(items)
 	}
 	nodes := items[offset:end]
 	start, endc := "", ""

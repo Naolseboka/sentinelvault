@@ -13,11 +13,11 @@ import (
 
 // OTPSeedImportResult is one imported row.
 type OTPSeedImportResult struct {
-	Row     int            `json:"row"`
-	Name    string         `json:"name"`
-	Payload map[string]any `json:"payload"`
-	Warnings []string      `json:"warnings,omitempty"`
-	Error   string         `json:"error,omitempty"`
+	Row      int            `json:"row"`
+	Name     string         `json:"name"`
+	Payload  map[string]any `json:"payload"`
+	Warnings []string       `json:"warnings,omitempty"`
+	Error    string         `json:"error,omitempty"`
 }
 
 // ImportOTPSeedCSV parses CSV rows into validated otp_seed payloads.

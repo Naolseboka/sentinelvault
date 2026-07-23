@@ -17,26 +17,26 @@ import (
 
 // CertificateRecord stores issued cert metadata and PEM.
 type CertificateRecord struct {
-	ID         string    `json:"id"`
-	OrgID      string    `json:"org_id"`
-	CommonName string    `json:"common_name"`
-	Serial     string    `json:"serial"`
-	NotBefore  time.Time `json:"not_before"`
-	NotAfter   time.Time `json:"not_after"`
-	CertPEM    string    `json:"cert_pem"`
-	KeyPEM     string    `json:"key_pem,omitempty"`
-	Revoked    bool      `json:"revoked"`
+	ID         string     `json:"id"`
+	OrgID      string     `json:"org_id"`
+	CommonName string     `json:"common_name"`
+	Serial     string     `json:"serial"`
+	NotBefore  time.Time  `json:"not_before"`
+	NotAfter   time.Time  `json:"not_after"`
+	CertPEM    string     `json:"cert_pem"`
+	KeyPEM     string     `json:"key_pem,omitempty"`
+	Revoked    bool       `json:"revoked"`
 	RevokedAt  *time.Time `json:"revoked_at,omitempty"`
 }
 
 // Authority is an in-process CA.
 type Authority struct {
-	mu       sync.Mutex
-	caCert   *x509.Certificate
-	caKey    *ecdsa.PrivateKey
-	caPEM    string
-	issued   map[string]*CertificateRecord
-	serial   int64
+	mu     sync.Mutex
+	caCert *x509.Certificate
+	caKey  *ecdsa.PrivateKey
+	caPEM  string
+	issued map[string]*CertificateRecord
+	serial int64
 }
 
 // NewAuthority creates a self-signed CA for org/dev use.
@@ -50,12 +50,12 @@ func NewAuthority(commonName string) (*Authority, error) {
 		return nil, err
 	}
 	tmpl := &x509.Certificate{
-		SerialNumber: serial,
-		Subject:      pkix.Name{CommonName: commonName, Organization: []string{"SentinelVault"}},
-		NotBefore:    time.Now().UTC().Add(-time.Hour),
-		NotAfter:     time.Now().UTC().Add(10 * 365 * 24 * time.Hour),
-		KeyUsage:     x509.KeyUsageCertSign | x509.KeyUsageCRLSign | x509.KeyUsageDigitalSignature,
-		IsCA:         true,
+		SerialNumber:          serial,
+		Subject:               pkix.Name{CommonName: commonName, Organization: []string{"SentinelVault"}},
+		NotBefore:             time.Now().UTC().Add(-time.Hour),
+		NotAfter:              time.Now().UTC().Add(10 * 365 * 24 * time.Hour),
+		KeyUsage:              x509.KeyUsageCertSign | x509.KeyUsageCRLSign | x509.KeyUsageDigitalSignature,
+		IsCA:                  true,
 		BasicConstraintsValid: true,
 	}
 	der, err := x509.CreateCertificate(rand.Reader, tmpl, tmpl, &key.PublicKey, key)
@@ -152,4 +152,5 @@ func (a *Authority) Get(id string) (*CertificateRecord, error) {
 	cp.KeyPEM = ""
 	return &cp, nil
 }
+
 // maintenance note 29

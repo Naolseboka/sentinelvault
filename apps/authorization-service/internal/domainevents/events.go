@@ -8,25 +8,25 @@ import (
 
 // Event types for authorization-service.
 const (
-	EventAuthzDecisionCreated = "authorization.created"
-	EventAuthzDecisionUpdated = "authorization.updated"
-	EventAuthzDecisionDeleted = "authorization.deleted"
-	EventAuthzDecisionArchived = "authorization.archived"
-	EventAuthzDecisionRestored = "authorization.restored"
-	EventAuthzDecisionShared = "authorization.shared"
-	EventAuthzDecisionUnshared = "authorization.unshared"
-	EventAuthzDecisionExported = "authorization.exported"
-	EventAuthzDecisionImported = "authorization.imported"
-	EventAuthzDecisionRotated = "authorization.rotated"
-	EventAuthzDecisionAccessed = "authorization.accessed"
-	EventAuthzDecisionDenied = "authorization.denied"
-	EventAuthzDecisionApproved = "authorization.approved"
-	EventAuthzDecisionRevoked = "authorization.revoked"
-	EventAuthzDecisionExpired = "authorization.expired"
-	EventAuthzDecisionLocked = "authorization.locked"
-	EventAuthzDecisionUnlocked = "authorization.unlocked"
-	EventAuthzDecisionVerified = "authorization.verified"
-	EventAuthzDecisionFailed = "authorization.failed"
+	EventAuthzDecisionCreated   = "authorization.created"
+	EventAuthzDecisionUpdated   = "authorization.updated"
+	EventAuthzDecisionDeleted   = "authorization.deleted"
+	EventAuthzDecisionArchived  = "authorization.archived"
+	EventAuthzDecisionRestored  = "authorization.restored"
+	EventAuthzDecisionShared    = "authorization.shared"
+	EventAuthzDecisionUnshared  = "authorization.unshared"
+	EventAuthzDecisionExported  = "authorization.exported"
+	EventAuthzDecisionImported  = "authorization.imported"
+	EventAuthzDecisionRotated   = "authorization.rotated"
+	EventAuthzDecisionAccessed  = "authorization.accessed"
+	EventAuthzDecisionDenied    = "authorization.denied"
+	EventAuthzDecisionApproved  = "authorization.approved"
+	EventAuthzDecisionRevoked   = "authorization.revoked"
+	EventAuthzDecisionExpired   = "authorization.expired"
+	EventAuthzDecisionLocked    = "authorization.locked"
+	EventAuthzDecisionUnlocked  = "authorization.unlocked"
+	EventAuthzDecisionVerified  = "authorization.verified"
+	EventAuthzDecisionFailed    = "authorization.failed"
 	EventAuthzDecisionSucceeded = "authorization.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownAuthzDecisionEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewAuthzDecisionCreatedEvent builds a domain event.
 func NewAuthzDecisionCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

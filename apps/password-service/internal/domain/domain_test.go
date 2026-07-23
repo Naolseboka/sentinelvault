@@ -35,11 +35,11 @@ func TestCreateStoresCiphertextNotPlaintext(t *testing.T) {
 	ctx := context.Background()
 	secret := "super-secret-password"
 	view, err := svc.Create(ctx, CreateRequest{
-		OrgID:   "org-1",
-		KeyID:   keyID,
-		Type:    vault.ItemTypePassword,
-		Name:    "Example Login",
-		Payload: vault.ItemPayload{"password": secret, "username": "alice"},
+		OrgID:    "org-1",
+		KeyID:    keyID,
+		Type:     vault.ItemTypePassword,
+		Name:     "Example Login",
+		Payload:  vault.ItemPayload{"password": secret, "username": "alice"},
 		Metadata: vault.ItemMetadata{URL: "https://example.com"},
 	})
 	if err != nil {

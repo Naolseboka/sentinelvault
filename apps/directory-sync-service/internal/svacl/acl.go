@@ -9,23 +9,23 @@ import (
 
 // Actions for directory-sync-service.
 const (
-	ActionCreate = "directory-sync-service.create"
-	ActionRead = "directory-sync-service.read"
-	ActionUpdate = "directory-sync-service.update"
-	ActionDelete = "directory-sync-service.delete"
-	ActionList = "directory-sync-service.list"
-	ActionExport = "directory-sync-service.export"
-	ActionImport = "directory-sync-service.import"
-	ActionShare = "directory-sync-service.share"
-	ActionRotate = "directory-sync-service.rotate"
-	ActionApprove = "directory-sync-service.approve"
-	ActionDeny = "directory-sync-service.deny"
-	ActionRevoke = "directory-sync-service.revoke"
-	ActionRestore = "directory-sync-service.restore"
-	ActionArchive = "directory-sync-service.archive"
-	ActionAdmin = "directory-sync-service.admin"
-	ActionConfigure = "directory-sync-service.configure"
-	ActionExecute = "directory-sync-service.execute"
+	ActionCreate      = "directory-sync-service.create"
+	ActionRead        = "directory-sync-service.read"
+	ActionUpdate      = "directory-sync-service.update"
+	ActionDelete      = "directory-sync-service.delete"
+	ActionList        = "directory-sync-service.list"
+	ActionExport      = "directory-sync-service.export"
+	ActionImport      = "directory-sync-service.import"
+	ActionShare       = "directory-sync-service.share"
+	ActionRotate      = "directory-sync-service.rotate"
+	ActionApprove     = "directory-sync-service.approve"
+	ActionDeny        = "directory-sync-service.deny"
+	ActionRevoke      = "directory-sync-service.revoke"
+	ActionRestore     = "directory-sync-service.restore"
+	ActionArchive     = "directory-sync-service.archive"
+	ActionAdmin       = "directory-sync-service.admin"
+	ActionConfigure   = "directory-sync-service.configure"
+	ActionExecute     = "directory-sync-service.execute"
 	ActionImpersonate = "directory-sync-service.impersonate"
 )
 
@@ -120,4 +120,5 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"directory-sync-service.create", "directory-sync-service.read", "directory-sync-service.update", "directory-sync-service.delete", "directory-sync-service.list", "directory-sync-service.export", "directory-sync-service.import", "directory-sync-service.share", "directory-sync-service.rotate", "directory-sync-service.approve", "directory-sync-service.deny", "directory-sync-service.revoke", "directory-sync-service.restore", "directory-sync-service.archive", "directory-sync-service.admin", "directory-sync-service.configure", "directory-sync-service.execute", "directory-sync-service.impersonate"}
 }
+
 // maintenance note 18

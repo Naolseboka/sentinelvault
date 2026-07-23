@@ -8,25 +8,25 @@ import (
 
 // Event types for lifecycle-service.
 const (
-	EventLifecycleStateCreated = "lifecycle.created"
-	EventLifecycleStateUpdated = "lifecycle.updated"
-	EventLifecycleStateDeleted = "lifecycle.deleted"
-	EventLifecycleStateArchived = "lifecycle.archived"
-	EventLifecycleStateRestored = "lifecycle.restored"
-	EventLifecycleStateShared = "lifecycle.shared"
-	EventLifecycleStateUnshared = "lifecycle.unshared"
-	EventLifecycleStateExported = "lifecycle.exported"
-	EventLifecycleStateImported = "lifecycle.imported"
-	EventLifecycleStateRotated = "lifecycle.rotated"
-	EventLifecycleStateAccessed = "lifecycle.accessed"
-	EventLifecycleStateDenied = "lifecycle.denied"
-	EventLifecycleStateApproved = "lifecycle.approved"
-	EventLifecycleStateRevoked = "lifecycle.revoked"
-	EventLifecycleStateExpired = "lifecycle.expired"
-	EventLifecycleStateLocked = "lifecycle.locked"
-	EventLifecycleStateUnlocked = "lifecycle.unlocked"
-	EventLifecycleStateVerified = "lifecycle.verified"
-	EventLifecycleStateFailed = "lifecycle.failed"
+	EventLifecycleStateCreated   = "lifecycle.created"
+	EventLifecycleStateUpdated   = "lifecycle.updated"
+	EventLifecycleStateDeleted   = "lifecycle.deleted"
+	EventLifecycleStateArchived  = "lifecycle.archived"
+	EventLifecycleStateRestored  = "lifecycle.restored"
+	EventLifecycleStateShared    = "lifecycle.shared"
+	EventLifecycleStateUnshared  = "lifecycle.unshared"
+	EventLifecycleStateExported  = "lifecycle.exported"
+	EventLifecycleStateImported  = "lifecycle.imported"
+	EventLifecycleStateRotated   = "lifecycle.rotated"
+	EventLifecycleStateAccessed  = "lifecycle.accessed"
+	EventLifecycleStateDenied    = "lifecycle.denied"
+	EventLifecycleStateApproved  = "lifecycle.approved"
+	EventLifecycleStateRevoked   = "lifecycle.revoked"
+	EventLifecycleStateExpired   = "lifecycle.expired"
+	EventLifecycleStateLocked    = "lifecycle.locked"
+	EventLifecycleStateUnlocked  = "lifecycle.unlocked"
+	EventLifecycleStateVerified  = "lifecycle.verified"
+	EventLifecycleStateFailed    = "lifecycle.failed"
 	EventLifecycleStateSucceeded = "lifecycle.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownLifecycleStateEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewLifecycleStateCreatedEvent builds a domain event.
 func NewLifecycleStateCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

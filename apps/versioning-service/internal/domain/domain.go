@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"sync"
 
-	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/common"
+	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/vault"
 )
 
@@ -24,9 +24,9 @@ type Repository interface {
 
 // Service manages vault item versions.
 type Service struct {
-	repo       Repository
-	encryptor  vault.Encryptor
-	restorer   ItemRestorer
+	repo      Repository
+	encryptor vault.Encryptor
+	restorer  ItemRestorer
 }
 
 // NewService creates a versioning service.

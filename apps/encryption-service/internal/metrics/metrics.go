@@ -20,15 +20,15 @@ type EncryptOpMetrics struct {
 
 // Snapshot is a point-in-time copy of counters.
 type EncryptOpSnapshot struct {
-	Created  int64 `json:"created"`
-	Updated  int64 `json:"updated"`
-	Deleted  int64 `json:"deleted"`
-	Read     int64 `json:"read"`
-	Errors   int64 `json:"errors"`
-	Denied   int64 `json:"denied"`
-	Exported int64 `json:"exported"`
-	Imported int64 `json:"imported"`
-	Rotated  int64 `json:"rotated"`
+	Created   int64 `json:"created"`
+	Updated   int64 `json:"updated"`
+	Deleted   int64 `json:"deleted"`
+	Read      int64 `json:"read"`
+	Errors    int64 `json:"errors"`
+	Denied    int64 `json:"denied"`
+	Exported  int64 `json:"exported"`
+	Imported  int64 `json:"imported"`
+	Rotated   int64 `json:"rotated"`
 	LatencyMs int64 `json:"latency_ms"`
 }
 

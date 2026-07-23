@@ -8,22 +8,22 @@ import (
 )
 
 type Item struct {
-	ID string
-	OrgID string
-	Name string
+	ID     string
+	OrgID  string
+	Name   string
 	Status string
 }
 
 type Result struct {
-	ID string `json:"id"`
-	OK bool `json:"ok"`
+	ID    string `json:"id"`
+	OK    bool   `json:"ok"`
 	Error string `json:"error,omitempty"`
 }
 
 type Processor struct {
-	mu sync.Mutex
+	mu      sync.Mutex
 	created int
-	failed int
+	failed  int
 }
 
 func NewProcessor() *Processor { return &Processor{} }
@@ -42,11 +42,15 @@ func (p *Processor) CreateMany(ctx context.Context, items []Item, fn CreateFunc)
 		}
 		id, err := fn(ctx, it)
 		if err != nil {
-			p.mu.Lock(); p.failed++; p.mu.Unlock()
+			p.mu.Lock()
+			p.failed++
+			p.mu.Unlock()
 			out = append(out, Result{OK: false, Error: err.Error()})
 			continue
 		}
-		p.mu.Lock(); p.created++; p.mu.Unlock()
+		p.mu.Lock()
+		p.created++
+		p.mu.Unlock()
 		out = append(out, Result{ID: id, OK: true})
 	}
 	return out
@@ -85,7 +89,8 @@ func (p *Processor) UpdateMany(ctx context.Context, items []Item, fn UpdateFunc)
 }
 
 func (p *Processor) Stats() (created, failed int) {
-	p.mu.Lock(); defer p.mu.Unlock()
+	p.mu.Lock()
+	defer p.mu.Unlock()
 	return p.created, p.failed
 }
 

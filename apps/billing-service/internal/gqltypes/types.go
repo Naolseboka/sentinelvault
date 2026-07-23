@@ -3,32 +3,32 @@ package gqltypes
 import "time"
 
 type Billing struct {
-	ID string `json:"id"`
-	OrgID string `json:"orgId"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	CreatedAt time.Time `json:"createdAt"`
-	UpdatedAt time.Time `json:"updatedAt"`
-	Tags []string `json:"tags"`
-	Metadata map[string]string `json:"metadata"`
+	ID        string            `json:"id"`
+	OrgID     string            `json:"orgId"`
+	Name      string            `json:"name"`
+	Status    string            `json:"status"`
+	CreatedAt time.Time         `json:"createdAt"`
+	UpdatedAt time.Time         `json:"updatedAt"`
+	Tags      []string          `json:"tags"`
+	Metadata  map[string]string `json:"metadata"`
 }
 
 type BillingConnection struct {
-	Nodes []Billing `json:"nodes"`
-	TotalCount int `json:"totalCount"`
-	PageInfo PageInfo `json:"pageInfo"`
+	Nodes      []Billing `json:"nodes"`
+	TotalCount int       `json:"totalCount"`
+	PageInfo   PageInfo  `json:"pageInfo"`
 }
 
 type PageInfo struct {
-	HasNextPage bool `json:"hasNextPage"`
-	HasPreviousPage bool `json:"hasPreviousPage"`
-	StartCursor string `json:"startCursor"`
-	EndCursor string `json:"endCursor"`
+	HasNextPage     bool   `json:"hasNextPage"`
+	HasPreviousPage bool   `json:"hasPreviousPage"`
+	StartCursor     string `json:"startCursor"`
+	EndCursor       string `json:"endCursor"`
 }
 
 type BillingEdge struct {
-	Cursor string `json:"cursor"`
-	Node Billing `json:"node"`
+	Cursor string  `json:"cursor"`
+	Node   Billing `json:"node"`
 }
 
 func Connect(items []Billing, offset, limit, total int) BillingConnection {
@@ -40,7 +40,7 @@ func Connect(items []Billing, offset, limit, total int) BillingConnection {
 		end = len(items)
 	}
 	if offset > len(items) {
-	offset = len(items)
+		offset = len(items)
 	}
 	nodes := items[offset:end]
 	start, endc := "", ""

@@ -33,4 +33,5 @@ func PAN(s string) string {
 	}
 	return strings.Repeat("*", len(digits)-4) + string(digits[len(digits)-4:])
 }
+
 // maintenance note 59

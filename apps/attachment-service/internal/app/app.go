@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
-	httpapi "github.com/sentinelvault/sentinelvault/apps/attachment-service/internal/http"
 	"github.com/sentinelvault/sentinelvault/apps/attachment-service/internal/domain"
+	httpapi "github.com/sentinelvault/sentinelvault/apps/attachment-service/internal/http"
+	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	kmsdomain "github.com/sentinelvault/sentinelvault/internal/kms"
 	"github.com/sentinelvault/sentinelvault/internal/platform"
 )

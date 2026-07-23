@@ -8,25 +8,25 @@ import (
 
 // Event types for backup-service.
 const (
-	EventSnapshotCreated = "backup.created"
-	EventSnapshotUpdated = "backup.updated"
-	EventSnapshotDeleted = "backup.deleted"
-	EventSnapshotArchived = "backup.archived"
-	EventSnapshotRestored = "backup.restored"
-	EventSnapshotShared = "backup.shared"
-	EventSnapshotUnshared = "backup.unshared"
-	EventSnapshotExported = "backup.exported"
-	EventSnapshotImported = "backup.imported"
-	EventSnapshotRotated = "backup.rotated"
-	EventSnapshotAccessed = "backup.accessed"
-	EventSnapshotDenied = "backup.denied"
-	EventSnapshotApproved = "backup.approved"
-	EventSnapshotRevoked = "backup.revoked"
-	EventSnapshotExpired = "backup.expired"
-	EventSnapshotLocked = "backup.locked"
-	EventSnapshotUnlocked = "backup.unlocked"
-	EventSnapshotVerified = "backup.verified"
-	EventSnapshotFailed = "backup.failed"
+	EventSnapshotCreated   = "backup.created"
+	EventSnapshotUpdated   = "backup.updated"
+	EventSnapshotDeleted   = "backup.deleted"
+	EventSnapshotArchived  = "backup.archived"
+	EventSnapshotRestored  = "backup.restored"
+	EventSnapshotShared    = "backup.shared"
+	EventSnapshotUnshared  = "backup.unshared"
+	EventSnapshotExported  = "backup.exported"
+	EventSnapshotImported  = "backup.imported"
+	EventSnapshotRotated   = "backup.rotated"
+	EventSnapshotAccessed  = "backup.accessed"
+	EventSnapshotDenied    = "backup.denied"
+	EventSnapshotApproved  = "backup.approved"
+	EventSnapshotRevoked   = "backup.revoked"
+	EventSnapshotExpired   = "backup.expired"
+	EventSnapshotLocked    = "backup.locked"
+	EventSnapshotUnlocked  = "backup.unlocked"
+	EventSnapshotVerified  = "backup.verified"
+	EventSnapshotFailed    = "backup.failed"
 	EventSnapshotSucceeded = "backup.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSnapshotEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSnapshotCreatedEvent builds a domain event.
 func NewSnapshotCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

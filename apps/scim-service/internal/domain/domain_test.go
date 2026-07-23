@@ -10,7 +10,7 @@ func TestSCIMCreateUser(t *testing.T) {
 	ctx := context.Background()
 	user, err := svc.CreateUser(ctx, CreateUserInput{
 		OrgID: "org-1", UserName: "jane@example.com",
-		Name: SCIMName{GivenName: "Jane", FamilyName: "Doe"},
+		Name:   SCIMName{GivenName: "Jane", FamilyName: "Doe"},
 		Emails: []SCIMEmail{{Value: "jane@example.com", Primary: true}},
 	})
 	if err != nil {

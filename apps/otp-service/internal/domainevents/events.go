@@ -8,25 +8,25 @@ import (
 
 // Event types for otp-service.
 const (
-	EventOTPRecordCreated = "otp.created"
-	EventOTPRecordUpdated = "otp.updated"
-	EventOTPRecordDeleted = "otp.deleted"
-	EventOTPRecordArchived = "otp.archived"
-	EventOTPRecordRestored = "otp.restored"
-	EventOTPRecordShared = "otp.shared"
-	EventOTPRecordUnshared = "otp.unshared"
-	EventOTPRecordExported = "otp.exported"
-	EventOTPRecordImported = "otp.imported"
-	EventOTPRecordRotated = "otp.rotated"
-	EventOTPRecordAccessed = "otp.accessed"
-	EventOTPRecordDenied = "otp.denied"
-	EventOTPRecordApproved = "otp.approved"
-	EventOTPRecordRevoked = "otp.revoked"
-	EventOTPRecordExpired = "otp.expired"
-	EventOTPRecordLocked = "otp.locked"
-	EventOTPRecordUnlocked = "otp.unlocked"
-	EventOTPRecordVerified = "otp.verified"
-	EventOTPRecordFailed = "otp.failed"
+	EventOTPRecordCreated   = "otp.created"
+	EventOTPRecordUpdated   = "otp.updated"
+	EventOTPRecordDeleted   = "otp.deleted"
+	EventOTPRecordArchived  = "otp.archived"
+	EventOTPRecordRestored  = "otp.restored"
+	EventOTPRecordShared    = "otp.shared"
+	EventOTPRecordUnshared  = "otp.unshared"
+	EventOTPRecordExported  = "otp.exported"
+	EventOTPRecordImported  = "otp.imported"
+	EventOTPRecordRotated   = "otp.rotated"
+	EventOTPRecordAccessed  = "otp.accessed"
+	EventOTPRecordDenied    = "otp.denied"
+	EventOTPRecordApproved  = "otp.approved"
+	EventOTPRecordRevoked   = "otp.revoked"
+	EventOTPRecordExpired   = "otp.expired"
+	EventOTPRecordLocked    = "otp.locked"
+	EventOTPRecordUnlocked  = "otp.unlocked"
+	EventOTPRecordVerified  = "otp.verified"
+	EventOTPRecordFailed    = "otp.failed"
 	EventOTPRecordSucceeded = "otp.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownOTPRecordEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewOTPRecordCreatedEvent builds a domain event.
 func NewOTPRecordCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

@@ -15,10 +15,10 @@ const apiKeyPrefix = "sv_"
 
 // APIKeyMaterial holds a generated API key and its storage hash.
 type APIKeyMaterial struct {
-	Key       string `json:"key"`
-	KeyID     string `json:"key_id"`
-	Hash      string `json:"hash"`
-	Prefix    string `json:"prefix"`
+	Key    string `json:"key"`
+	KeyID  string `json:"key_id"`
+	Hash   string `json:"hash"`
+	Prefix string `json:"prefix"`
 }
 
 // GenerateAPIKey creates a new API key with sv_ prefix and hash for storage.

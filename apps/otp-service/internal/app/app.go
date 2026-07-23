@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
-	httpapi "github.com/sentinelvault/sentinelvault/apps/otp-service/internal/http"
 	"github.com/sentinelvault/sentinelvault/apps/otp-service/internal/domain"
+	httpapi "github.com/sentinelvault/sentinelvault/apps/otp-service/internal/http"
+	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	kmsdomain "github.com/sentinelvault/sentinelvault/internal/kms"
 	"github.com/sentinelvault/sentinelvault/internal/platform"
 )
@@ -44,4 +44,5 @@ type Service = domain.Service
 func NewService(enc *encdomain.Service, keyID string) *domain.Service {
 	return domain.NewService(enc, keyID)
 }
+
 // maintenance note 76

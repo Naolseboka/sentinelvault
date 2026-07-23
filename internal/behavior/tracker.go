@@ -26,19 +26,19 @@ type Signal struct {
 
 // Baseline captures typical activity hours and rates.
 type Baseline struct {
-	UserID       string             `json:"user_id"`
-	HourHistogram [24]int           `json:"hour_histogram"`
-	TypeCounts   map[string]int     `json:"type_counts"`
-	Total        int                `json:"total"`
+	UserID        string         `json:"user_id"`
+	HourHistogram [24]int        `json:"hour_histogram"`
+	TypeCounts    map[string]int `json:"type_counts"`
+	Total         int            `json:"total"`
 }
 
 // Anomaly describes unusual behavior.
 type Anomaly struct {
-	UserID  string  `json:"user_id"`
-	OrgID   string  `json:"org_id"`
-	Type    string  `json:"type"`
-	Score   float64 `json:"score"`
-	Reason  string  `json:"reason"`
+	UserID string  `json:"user_id"`
+	OrgID  string  `json:"org_id"`
+	Type   string  `json:"type"`
+	Score  float64 `json:"score"`
+	Reason string  `json:"reason"`
 }
 
 // Tracker maintains per-user baselines.

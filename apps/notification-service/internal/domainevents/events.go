@@ -8,25 +8,25 @@ import (
 
 // Event types for notification-service.
 const (
-	EventMessageCreated = "notification.created"
-	EventMessageUpdated = "notification.updated"
-	EventMessageDeleted = "notification.deleted"
-	EventMessageArchived = "notification.archived"
-	EventMessageRestored = "notification.restored"
-	EventMessageShared = "notification.shared"
-	EventMessageUnshared = "notification.unshared"
-	EventMessageExported = "notification.exported"
-	EventMessageImported = "notification.imported"
-	EventMessageRotated = "notification.rotated"
-	EventMessageAccessed = "notification.accessed"
-	EventMessageDenied = "notification.denied"
-	EventMessageApproved = "notification.approved"
-	EventMessageRevoked = "notification.revoked"
-	EventMessageExpired = "notification.expired"
-	EventMessageLocked = "notification.locked"
-	EventMessageUnlocked = "notification.unlocked"
-	EventMessageVerified = "notification.verified"
-	EventMessageFailed = "notification.failed"
+	EventMessageCreated   = "notification.created"
+	EventMessageUpdated   = "notification.updated"
+	EventMessageDeleted   = "notification.deleted"
+	EventMessageArchived  = "notification.archived"
+	EventMessageRestored  = "notification.restored"
+	EventMessageShared    = "notification.shared"
+	EventMessageUnshared  = "notification.unshared"
+	EventMessageExported  = "notification.exported"
+	EventMessageImported  = "notification.imported"
+	EventMessageRotated   = "notification.rotated"
+	EventMessageAccessed  = "notification.accessed"
+	EventMessageDenied    = "notification.denied"
+	EventMessageApproved  = "notification.approved"
+	EventMessageRevoked   = "notification.revoked"
+	EventMessageExpired   = "notification.expired"
+	EventMessageLocked    = "notification.locked"
+	EventMessageUnlocked  = "notification.unlocked"
+	EventMessageVerified  = "notification.verified"
+	EventMessageFailed    = "notification.failed"
 	EventMessageSucceeded = "notification.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownMessageEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewMessageCreatedEvent builds a domain event.
 func NewMessageCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

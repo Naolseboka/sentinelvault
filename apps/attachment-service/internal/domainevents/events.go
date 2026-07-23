@@ -8,25 +8,25 @@ import (
 
 // Event types for attachment-service.
 const (
-	EventAttachmentCreated = "attachment.created"
-	EventAttachmentUpdated = "attachment.updated"
-	EventAttachmentDeleted = "attachment.deleted"
-	EventAttachmentArchived = "attachment.archived"
-	EventAttachmentRestored = "attachment.restored"
-	EventAttachmentShared = "attachment.shared"
-	EventAttachmentUnshared = "attachment.unshared"
-	EventAttachmentExported = "attachment.exported"
-	EventAttachmentImported = "attachment.imported"
-	EventAttachmentRotated = "attachment.rotated"
-	EventAttachmentAccessed = "attachment.accessed"
-	EventAttachmentDenied = "attachment.denied"
-	EventAttachmentApproved = "attachment.approved"
-	EventAttachmentRevoked = "attachment.revoked"
-	EventAttachmentExpired = "attachment.expired"
-	EventAttachmentLocked = "attachment.locked"
-	EventAttachmentUnlocked = "attachment.unlocked"
-	EventAttachmentVerified = "attachment.verified"
-	EventAttachmentFailed = "attachment.failed"
+	EventAttachmentCreated   = "attachment.created"
+	EventAttachmentUpdated   = "attachment.updated"
+	EventAttachmentDeleted   = "attachment.deleted"
+	EventAttachmentArchived  = "attachment.archived"
+	EventAttachmentRestored  = "attachment.restored"
+	EventAttachmentShared    = "attachment.shared"
+	EventAttachmentUnshared  = "attachment.unshared"
+	EventAttachmentExported  = "attachment.exported"
+	EventAttachmentImported  = "attachment.imported"
+	EventAttachmentRotated   = "attachment.rotated"
+	EventAttachmentAccessed  = "attachment.accessed"
+	EventAttachmentDenied    = "attachment.denied"
+	EventAttachmentApproved  = "attachment.approved"
+	EventAttachmentRevoked   = "attachment.revoked"
+	EventAttachmentExpired   = "attachment.expired"
+	EventAttachmentLocked    = "attachment.locked"
+	EventAttachmentUnlocked  = "attachment.unlocked"
+	EventAttachmentVerified  = "attachment.verified"
+	EventAttachmentFailed    = "attachment.failed"
 	EventAttachmentSucceeded = "attachment.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownAttachmentEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewAttachmentCreatedEvent builds a domain event.
 func NewAttachmentCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

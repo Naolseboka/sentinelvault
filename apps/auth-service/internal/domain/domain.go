@@ -26,9 +26,9 @@ var slugRe = regexp.MustCompile(`[^a-z0-9]+`)
 
 // RegisterInput bootstraps a user and organization.
 type RegisterInput struct {
-	Email   string `json:"email"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
-	OrgName string `json:"org_name"`
+	OrgName  string `json:"org_name"`
 }
 
 // LoginInput authenticates a user.
@@ -81,15 +81,15 @@ type Credential struct {
 
 // SessionRef tracks an active authenticated session.
 type SessionRef struct {
-	ID           string     `json:"id"`
-	UserID       string     `json:"user_id"`
-	OrgID        string     `json:"org_id"`
-	DeviceID     string     `json:"device_id"`
-	RefreshHash  string     `json:"-"`
-	ExpiresAt    time.Time  `json:"expires_at"`
-	RevokedAt    *time.Time `json:"revoked_at,omitempty"`
-	MFAVerified  bool       `json:"mfa_verified"`
-	CreatedAt    time.Time  `json:"created_at"`
+	ID          string     `json:"id"`
+	UserID      string     `json:"user_id"`
+	OrgID       string     `json:"org_id"`
+	DeviceID    string     `json:"device_id"`
+	RefreshHash string     `json:"-"`
+	ExpiresAt   time.Time  `json:"expires_at"`
+	RevokedAt   *time.Time `json:"revoked_at,omitempty"`
+	MFAVerified bool       `json:"mfa_verified"`
+	CreatedAt   time.Time  `json:"created_at"`
 }
 
 // CredentialRepository persists credentials.
@@ -111,12 +111,12 @@ type SessionRepository interface {
 
 // Service implements auth-service business logic.
 type Service struct {
-	creds    CredentialRepository
-	sessions SessionRepository
-	users    *UserStore
-	orgs     *OrgStore
-	tokens   *auth.TokenManager
-	events   queue.Producer
+	creds     CredentialRepository
+	sessions  SessionRepository
+	users     *UserStore
+	orgs      *OrgStore
+	tokens    *auth.TokenManager
+	events    queue.Producer
 	jwtSecret []byte
 }
 
@@ -434,8 +434,8 @@ func TableName() string { return "credentials" }
 
 // UserStore holds bootstrapped users in memory.
 type UserStore struct {
-	mu    sync.RWMutex
-	byID  map[string]*UserRecord
+	mu      sync.RWMutex
+	byID    map[string]*UserRecord
 	byEmail map[string]string
 }
 
@@ -548,8 +548,8 @@ func (r *MemoryCredentialRepository) Update(_ context.Context, cred *Credential)
 
 // MemorySessionRepository is an in-memory session store.
 type MemorySessionRepository struct {
-	mu           sync.RWMutex
-	byID         map[string]*SessionRef
+	mu            sync.RWMutex
+	byID          map[string]*SessionRef
 	byRefreshHash map[string]string
 }
 

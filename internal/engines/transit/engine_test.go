@@ -27,4 +27,5 @@ func TestTransitEncryptDecryptRotate(t *testing.T) {
 		t.Fatalf("pt2=%s err=%v", pt2, err)
 	}
 }
+
 // maintenance note 26

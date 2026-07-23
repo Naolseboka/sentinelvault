@@ -8,25 +8,25 @@ import (
 
 // Event types for rotation-service.
 const (
-	EventRotationPolicyCreated = "rotation.created"
-	EventRotationPolicyUpdated = "rotation.updated"
-	EventRotationPolicyDeleted = "rotation.deleted"
-	EventRotationPolicyArchived = "rotation.archived"
-	EventRotationPolicyRestored = "rotation.restored"
-	EventRotationPolicyShared = "rotation.shared"
-	EventRotationPolicyUnshared = "rotation.unshared"
-	EventRotationPolicyExported = "rotation.exported"
-	EventRotationPolicyImported = "rotation.imported"
-	EventRotationPolicyRotated = "rotation.rotated"
-	EventRotationPolicyAccessed = "rotation.accessed"
-	EventRotationPolicyDenied = "rotation.denied"
-	EventRotationPolicyApproved = "rotation.approved"
-	EventRotationPolicyRevoked = "rotation.revoked"
-	EventRotationPolicyExpired = "rotation.expired"
-	EventRotationPolicyLocked = "rotation.locked"
-	EventRotationPolicyUnlocked = "rotation.unlocked"
-	EventRotationPolicyVerified = "rotation.verified"
-	EventRotationPolicyFailed = "rotation.failed"
+	EventRotationPolicyCreated   = "rotation.created"
+	EventRotationPolicyUpdated   = "rotation.updated"
+	EventRotationPolicyDeleted   = "rotation.deleted"
+	EventRotationPolicyArchived  = "rotation.archived"
+	EventRotationPolicyRestored  = "rotation.restored"
+	EventRotationPolicyShared    = "rotation.shared"
+	EventRotationPolicyUnshared  = "rotation.unshared"
+	EventRotationPolicyExported  = "rotation.exported"
+	EventRotationPolicyImported  = "rotation.imported"
+	EventRotationPolicyRotated   = "rotation.rotated"
+	EventRotationPolicyAccessed  = "rotation.accessed"
+	EventRotationPolicyDenied    = "rotation.denied"
+	EventRotationPolicyApproved  = "rotation.approved"
+	EventRotationPolicyRevoked   = "rotation.revoked"
+	EventRotationPolicyExpired   = "rotation.expired"
+	EventRotationPolicyLocked    = "rotation.locked"
+	EventRotationPolicyUnlocked  = "rotation.unlocked"
+	EventRotationPolicyVerified  = "rotation.verified"
+	EventRotationPolicyFailed    = "rotation.failed"
 	EventRotationPolicySucceeded = "rotation.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownRotationPolicyEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewRotationPolicyCreatedEvent builds a domain event.
 func NewRotationPolicyCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

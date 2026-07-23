@@ -20,7 +20,9 @@ func (c ControlCC1_4) ID() string { return "SOC2-CC1.4" }
 func (c ControlCC1_4) Title() string { return "Competence" }
 
 // Description returns the control description.
-func (c ControlCC1_4) Description() string { return "Organization demonstrates commitment to competence" }
+func (c ControlCC1_4) Description() string {
+	return "Organization demonstrates commitment to competence"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceCC1_4 struct {

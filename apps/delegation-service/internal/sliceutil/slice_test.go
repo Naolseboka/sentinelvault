@@ -22,4 +22,5 @@ func TestDelegationSlice(t *testing.T) {
 		t.Fatal(m)
 	}
 }
+
 // maintenance note 42

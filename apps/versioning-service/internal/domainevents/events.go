@@ -8,25 +8,25 @@ import (
 
 // Event types for versioning-service.
 const (
-	EventVersionCreated = "versioning.created"
-	EventVersionUpdated = "versioning.updated"
-	EventVersionDeleted = "versioning.deleted"
-	EventVersionArchived = "versioning.archived"
-	EventVersionRestored = "versioning.restored"
-	EventVersionShared = "versioning.shared"
-	EventVersionUnshared = "versioning.unshared"
-	EventVersionExported = "versioning.exported"
-	EventVersionImported = "versioning.imported"
-	EventVersionRotated = "versioning.rotated"
-	EventVersionAccessed = "versioning.accessed"
-	EventVersionDenied = "versioning.denied"
-	EventVersionApproved = "versioning.approved"
-	EventVersionRevoked = "versioning.revoked"
-	EventVersionExpired = "versioning.expired"
-	EventVersionLocked = "versioning.locked"
-	EventVersionUnlocked = "versioning.unlocked"
-	EventVersionVerified = "versioning.verified"
-	EventVersionFailed = "versioning.failed"
+	EventVersionCreated   = "versioning.created"
+	EventVersionUpdated   = "versioning.updated"
+	EventVersionDeleted   = "versioning.deleted"
+	EventVersionArchived  = "versioning.archived"
+	EventVersionRestored  = "versioning.restored"
+	EventVersionShared    = "versioning.shared"
+	EventVersionUnshared  = "versioning.unshared"
+	EventVersionExported  = "versioning.exported"
+	EventVersionImported  = "versioning.imported"
+	EventVersionRotated   = "versioning.rotated"
+	EventVersionAccessed  = "versioning.accessed"
+	EventVersionDenied    = "versioning.denied"
+	EventVersionApproved  = "versioning.approved"
+	EventVersionRevoked   = "versioning.revoked"
+	EventVersionExpired   = "versioning.expired"
+	EventVersionLocked    = "versioning.locked"
+	EventVersionUnlocked  = "versioning.unlocked"
+	EventVersionVerified  = "versioning.verified"
+	EventVersionFailed    = "versioning.failed"
 	EventVersionSucceeded = "versioning.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownVersionEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewVersionCreatedEvent builds a domain event.
 func NewVersionCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

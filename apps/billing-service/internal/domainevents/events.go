@@ -8,25 +8,25 @@ import (
 
 // Event types for billing-service.
 const (
-	EventLicenseCreated = "billing.created"
-	EventLicenseUpdated = "billing.updated"
-	EventLicenseDeleted = "billing.deleted"
-	EventLicenseArchived = "billing.archived"
-	EventLicenseRestored = "billing.restored"
-	EventLicenseShared = "billing.shared"
-	EventLicenseUnshared = "billing.unshared"
-	EventLicenseExported = "billing.exported"
-	EventLicenseImported = "billing.imported"
-	EventLicenseRotated = "billing.rotated"
-	EventLicenseAccessed = "billing.accessed"
-	EventLicenseDenied = "billing.denied"
-	EventLicenseApproved = "billing.approved"
-	EventLicenseRevoked = "billing.revoked"
-	EventLicenseExpired = "billing.expired"
-	EventLicenseLocked = "billing.locked"
-	EventLicenseUnlocked = "billing.unlocked"
-	EventLicenseVerified = "billing.verified"
-	EventLicenseFailed = "billing.failed"
+	EventLicenseCreated   = "billing.created"
+	EventLicenseUpdated   = "billing.updated"
+	EventLicenseDeleted   = "billing.deleted"
+	EventLicenseArchived  = "billing.archived"
+	EventLicenseRestored  = "billing.restored"
+	EventLicenseShared    = "billing.shared"
+	EventLicenseUnshared  = "billing.unshared"
+	EventLicenseExported  = "billing.exported"
+	EventLicenseImported  = "billing.imported"
+	EventLicenseRotated   = "billing.rotated"
+	EventLicenseAccessed  = "billing.accessed"
+	EventLicenseDenied    = "billing.denied"
+	EventLicenseApproved  = "billing.approved"
+	EventLicenseRevoked   = "billing.revoked"
+	EventLicenseExpired   = "billing.expired"
+	EventLicenseLocked    = "billing.locked"
+	EventLicenseUnlocked  = "billing.unlocked"
+	EventLicenseVerified  = "billing.verified"
+	EventLicenseFailed    = "billing.failed"
 	EventLicenseSucceeded = "billing.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownLicenseEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewLicenseCreatedEvent builds a domain event.
 func NewLicenseCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

@@ -9,23 +9,23 @@ import (
 
 // Actions for versioning-service.
 const (
-	ActionCreate = "versioning-service.create"
-	ActionRead = "versioning-service.read"
-	ActionUpdate = "versioning-service.update"
-	ActionDelete = "versioning-service.delete"
-	ActionList = "versioning-service.list"
-	ActionExport = "versioning-service.export"
-	ActionImport = "versioning-service.import"
-	ActionShare = "versioning-service.share"
-	ActionRotate = "versioning-service.rotate"
-	ActionApprove = "versioning-service.approve"
-	ActionDeny = "versioning-service.deny"
-	ActionRevoke = "versioning-service.revoke"
-	ActionRestore = "versioning-service.restore"
-	ActionArchive = "versioning-service.archive"
-	ActionAdmin = "versioning-service.admin"
-	ActionConfigure = "versioning-service.configure"
-	ActionExecute = "versioning-service.execute"
+	ActionCreate      = "versioning-service.create"
+	ActionRead        = "versioning-service.read"
+	ActionUpdate      = "versioning-service.update"
+	ActionDelete      = "versioning-service.delete"
+	ActionList        = "versioning-service.list"
+	ActionExport      = "versioning-service.export"
+	ActionImport      = "versioning-service.import"
+	ActionShare       = "versioning-service.share"
+	ActionRotate      = "versioning-service.rotate"
+	ActionApprove     = "versioning-service.approve"
+	ActionDeny        = "versioning-service.deny"
+	ActionRevoke      = "versioning-service.revoke"
+	ActionRestore     = "versioning-service.restore"
+	ActionArchive     = "versioning-service.archive"
+	ActionAdmin       = "versioning-service.admin"
+	ActionConfigure   = "versioning-service.configure"
+	ActionExecute     = "versioning-service.execute"
 	ActionImpersonate = "versioning-service.impersonate"
 )
 
@@ -120,4 +120,5 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"versioning-service.create", "versioning-service.read", "versioning-service.update", "versioning-service.delete", "versioning-service.list", "versioning-service.export", "versioning-service.import", "versioning-service.share", "versioning-service.rotate", "versioning-service.approve", "versioning-service.deny", "versioning-service.revoke", "versioning-service.restore", "versioning-service.archive", "versioning-service.admin", "versioning-service.configure", "versioning-service.execute", "versioning-service.impersonate"}
 }
+
 // maintenance note 20

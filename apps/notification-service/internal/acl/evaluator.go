@@ -19,19 +19,19 @@ var roleRank = map[string]int{
 
 // Principal holds subject identity for ACL checks.
 type Principal struct {
-	ID       string
-	OrgID    string
-	Role     string
-	Teams     []string
-	Expires  *time.Time
+	ID      string
+	OrgID   string
+	Role    string
+	Teams   []string
+	Expires *time.Time
 }
 
 // Resource identifies a Message instance.
 type Resource struct {
-	ID     string
-	OrgID  string
+	ID      string
+	OrgID   string
 	OwnerID string
-	Tags   map[string]string
+	Tags    map[string]string
 }
 
 // Evaluator evaluates domain-specific grants for notification-service.
@@ -120,4 +120,5 @@ func ValidateAction(action string) error {
 		return common.New(common.ErrCodeInvalidArgument, "unknown action")
 	}
 }
+
 // maintenance note 33

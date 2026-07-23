@@ -88,7 +88,7 @@ func SeedAdminBinding(userID string) {
 }
 
 // CreateLocalRole registers a custom role in the in-memory RBAC adapter.
-func (r *localRBAC) createRole(name string, perms []policy.Permission) string {
+func (r *localRBAC) CreateLocalRole(name string, perms []policy.Permission) string {
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	id := common.NewID()
@@ -96,9 +96,11 @@ func (r *localRBAC) createRole(name string, perms []policy.Permission) string {
 	return id
 }
 
-func (r *localRBAC) bind(userID, roleID, roleName string) {
+// BindLocalRole attaches a role to a user in the in-memory RBAC adapter.
+func (r *localRBAC) BindLocalRole(userID, roleID, roleName string) {
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	r.bindings = append(r.bindings, localBinding{UserID: userID, RoleID: roleID, RoleName: roleName})
 }
+
 // maintenance note 45

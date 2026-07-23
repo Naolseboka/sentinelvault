@@ -7,7 +7,7 @@ func TestSearchPaging(t *testing.T) {
 	if err != nil || o != 0 || l != 50 {
 		t.Fatal(err, o, l)
 	}
-	items := []int{1,2,3,4,5}
+	items := []int{1, 2, 3, 4, 5}
 	got := Slice(items, 1, 2)
 	if len(got) != 2 || got[0] != 2 {
 		t.Fatal(got)
@@ -17,4 +17,5 @@ func TestSearchPaging(t *testing.T) {
 		t.Fatal(p)
 	}
 }
+
 // maintenance note 26

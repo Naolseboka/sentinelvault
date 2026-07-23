@@ -90,8 +90,8 @@ func SchemaName() string { return "devices" }
 func TableName() string  { return "devices" }
 
 type MemoryRepository struct {
-	mu          sync.RWMutex
-	byID        map[string]*Device
+	mu            sync.RWMutex
+	byID          map[string]*Device
 	byFingerprint map[string]string
 }
 
@@ -151,4 +151,5 @@ func (r *MemoryRepository) Update(_ context.Context, d *Device) error {
 	r.byID[d.ID] = &cp
 	return nil
 }
+
 // maintenance note 76

@@ -8,25 +8,25 @@ import (
 
 // Event types for ssh-service.
 const (
-	EventSSHKeyCreated = "ssh.created"
-	EventSSHKeyUpdated = "ssh.updated"
-	EventSSHKeyDeleted = "ssh.deleted"
-	EventSSHKeyArchived = "ssh.archived"
-	EventSSHKeyRestored = "ssh.restored"
-	EventSSHKeyShared = "ssh.shared"
-	EventSSHKeyUnshared = "ssh.unshared"
-	EventSSHKeyExported = "ssh.exported"
-	EventSSHKeyImported = "ssh.imported"
-	EventSSHKeyRotated = "ssh.rotated"
-	EventSSHKeyAccessed = "ssh.accessed"
-	EventSSHKeyDenied = "ssh.denied"
-	EventSSHKeyApproved = "ssh.approved"
-	EventSSHKeyRevoked = "ssh.revoked"
-	EventSSHKeyExpired = "ssh.expired"
-	EventSSHKeyLocked = "ssh.locked"
-	EventSSHKeyUnlocked = "ssh.unlocked"
-	EventSSHKeyVerified = "ssh.verified"
-	EventSSHKeyFailed = "ssh.failed"
+	EventSSHKeyCreated   = "ssh.created"
+	EventSSHKeyUpdated   = "ssh.updated"
+	EventSSHKeyDeleted   = "ssh.deleted"
+	EventSSHKeyArchived  = "ssh.archived"
+	EventSSHKeyRestored  = "ssh.restored"
+	EventSSHKeyShared    = "ssh.shared"
+	EventSSHKeyUnshared  = "ssh.unshared"
+	EventSSHKeyExported  = "ssh.exported"
+	EventSSHKeyImported  = "ssh.imported"
+	EventSSHKeyRotated   = "ssh.rotated"
+	EventSSHKeyAccessed  = "ssh.accessed"
+	EventSSHKeyDenied    = "ssh.denied"
+	EventSSHKeyApproved  = "ssh.approved"
+	EventSSHKeyRevoked   = "ssh.revoked"
+	EventSSHKeyExpired   = "ssh.expired"
+	EventSSHKeyLocked    = "ssh.locked"
+	EventSSHKeyUnlocked  = "ssh.unlocked"
+	EventSSHKeyVerified  = "ssh.verified"
+	EventSSHKeyFailed    = "ssh.failed"
 	EventSSHKeySucceeded = "ssh.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSSHKeyEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSSHKeyCreatedEvent builds a domain event.
 func NewSSHKeyCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

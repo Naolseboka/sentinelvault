@@ -10,11 +10,11 @@ import (
 )
 
 type Role struct {
-	ID          string             `json:"id"`
-	OrgID       string             `json:"org_id"`
-	Name        string             `json:"name"`
+	ID          string              `json:"id"`
+	OrgID       string              `json:"org_id"`
+	Name        string              `json:"name"`
 	Permissions []policy.Permission `json:"permissions"`
-	CreatedAt   time.Time          `json:"created_at"`
+	CreatedAt   time.Time           `json:"created_at"`
 }
 
 type RoleBinding struct {

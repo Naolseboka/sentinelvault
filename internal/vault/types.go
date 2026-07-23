@@ -92,22 +92,22 @@ type VaultItem struct {
 
 // StoredRecord is the persisted form: ciphertext only, no plaintext payload fields.
 type StoredRecord struct {
-	ID         string     `json:"id"`
-	OrgID      string     `json:"org_id"`
-	Type       ItemType   `json:"type"`
-	Name       string     `json:"name"`
-	Version    int        `json:"version"`
-	Status     ItemStatus `json:"status"`
-	Metadata   ItemMetadata `json:"metadata"`
-	Ciphertext []byte     `json:"ciphertext"`
-	KeyID      string     `json:"key_id"`
-	CollectionID string   `json:"collection_id,omitempty"`
-	FolderID   string     `json:"folder_id,omitempty"`
-	CreatedBy  string     `json:"created_by,omitempty"`
-	UpdatedBy  string     `json:"updated_by,omitempty"`
-	CreatedAt  time.Time  `json:"created_at"`
-	UpdatedAt  time.Time  `json:"updated_at"`
-	DeletedAt  *time.Time `json:"deleted_at,omitempty"`
+	ID           string       `json:"id"`
+	OrgID        string       `json:"org_id"`
+	Type         ItemType     `json:"type"`
+	Name         string       `json:"name"`
+	Version      int          `json:"version"`
+	Status       ItemStatus   `json:"status"`
+	Metadata     ItemMetadata `json:"metadata"`
+	Ciphertext   []byte       `json:"ciphertext"`
+	KeyID        string       `json:"key_id"`
+	CollectionID string       `json:"collection_id,omitempty"`
+	FolderID     string       `json:"folder_id,omitempty"`
+	CreatedBy    string       `json:"created_by,omitempty"`
+	UpdatedBy    string       `json:"updated_by,omitempty"`
+	CreatedAt    time.Time    `json:"created_at"`
+	UpdatedAt    time.Time    `json:"updated_at"`
+	DeletedAt    *time.Time   `json:"deleted_at,omitempty"`
 }
 
 // ItemPayload is the decrypted secret fields for an item. Stored only in ciphertext at rest.

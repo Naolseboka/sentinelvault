@@ -89,11 +89,11 @@ func (a *Aggregator) Rate(name string, from, to time.Time) float64 {
 
 // HygieneScorecard summarizes password posture.
 type HygieneScorecard struct {
-	TotalItems     int
-	WeakCount      int
-	ReusedCount    int
-	StaleCount     int
-	Score          float64 // 0-100
+	TotalItems  int
+	WeakCount   int
+	ReusedCount int
+	StaleCount  int
+	Score       float64 // 0-100
 }
 
 func ComputeHygiene(total, weak, reused, stale int) HygieneScorecard {
@@ -112,10 +112,10 @@ func ComputeHygiene(total, weak, reused, stale int) HygieneScorecard {
 
 // SessionStats aggregates durations.
 type SessionStats struct {
-	Count   int
-	AvgSec  float64
-	P95Sec  float64
-	MaxSec  float64
+	Count  int
+	AvgSec float64
+	P95Sec float64
+	MaxSec float64
 }
 
 func ComputeSessionStats(durations []time.Duration) SessionStats {

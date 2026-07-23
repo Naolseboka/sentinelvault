@@ -24,4 +24,5 @@ func TestAggregatorAndHygiene(t *testing.T) {
 		t.Fatalf("%+v", st)
 	}
 }
+
 // maintenance note 52

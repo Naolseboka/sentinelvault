@@ -37,9 +37,9 @@ type Attempt struct {
 }
 
 type Registry struct {
-	mu   sync.Mutex
-	eps  map[string]*Endpoint
-	logs []Attempt
+	mu     sync.Mutex
+	eps    map[string]*Endpoint
+	logs   []Attempt
 	client *http.Client
 }
 

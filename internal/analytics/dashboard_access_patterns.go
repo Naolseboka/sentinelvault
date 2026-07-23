@@ -7,12 +7,11 @@ import (
 
 // AccessPatternsReport aggregates dashboard metrics for access patterns.
 type AccessPatternsReport struct {
-	OrgID      string
+	OrgID       string
 	GeneratedAt time.Time
-	Sections   []ReportSection
-	Score      float64
+	Sections    []ReportSection
+	Score       float64
 }
-
 
 // BuildAccessPatternsReport composes a report from metric calculators.
 func BuildAccessPatternsReport(orgID string, from, to time.Time, metrics ...*LoginHeatmapCalculator) *AccessPatternsReport {
@@ -25,8 +24,8 @@ func BuildAccessPatternsReport(orgID string, from, to time.Time, metrics ...*Log
 		avg := m.Average(orgID, from, to)
 		total += avg
 		rep.Sections = append(rep.Sections, ReportSection{
-			Title: fmt.Sprintf("metric_%d", i),
-			Value: avg,
+			Title:  fmt.Sprintf("metric_%d", i),
+			Value:  avg,
 			Detail: fmt.Sprintf("window %s to %s", from.Format(time.RFC3339), to.Format(time.RFC3339)),
 		})
 	}

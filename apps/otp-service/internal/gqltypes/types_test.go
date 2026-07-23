@@ -12,4 +12,5 @@ func TestOtpConnect(t *testing.T) {
 		t.Fatalf("%+v", c)
 	}
 }
+
 // maintenance note 17

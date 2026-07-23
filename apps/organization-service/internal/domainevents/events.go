@@ -8,25 +8,25 @@ import (
 
 // Event types for organization-service.
 const (
-	EventOrganizationCreated = "organization.created"
-	EventOrganizationUpdated = "organization.updated"
-	EventOrganizationDeleted = "organization.deleted"
-	EventOrganizationArchived = "organization.archived"
-	EventOrganizationRestored = "organization.restored"
-	EventOrganizationShared = "organization.shared"
-	EventOrganizationUnshared = "organization.unshared"
-	EventOrganizationExported = "organization.exported"
-	EventOrganizationImported = "organization.imported"
-	EventOrganizationRotated = "organization.rotated"
-	EventOrganizationAccessed = "organization.accessed"
-	EventOrganizationDenied = "organization.denied"
-	EventOrganizationApproved = "organization.approved"
-	EventOrganizationRevoked = "organization.revoked"
-	EventOrganizationExpired = "organization.expired"
-	EventOrganizationLocked = "organization.locked"
-	EventOrganizationUnlocked = "organization.unlocked"
-	EventOrganizationVerified = "organization.verified"
-	EventOrganizationFailed = "organization.failed"
+	EventOrganizationCreated   = "organization.created"
+	EventOrganizationUpdated   = "organization.updated"
+	EventOrganizationDeleted   = "organization.deleted"
+	EventOrganizationArchived  = "organization.archived"
+	EventOrganizationRestored  = "organization.restored"
+	EventOrganizationShared    = "organization.shared"
+	EventOrganizationUnshared  = "organization.unshared"
+	EventOrganizationExported  = "organization.exported"
+	EventOrganizationImported  = "organization.imported"
+	EventOrganizationRotated   = "organization.rotated"
+	EventOrganizationAccessed  = "organization.accessed"
+	EventOrganizationDenied    = "organization.denied"
+	EventOrganizationApproved  = "organization.approved"
+	EventOrganizationRevoked   = "organization.revoked"
+	EventOrganizationExpired   = "organization.expired"
+	EventOrganizationLocked    = "organization.locked"
+	EventOrganizationUnlocked  = "organization.unlocked"
+	EventOrganizationVerified  = "organization.verified"
+	EventOrganizationFailed    = "organization.failed"
 	EventOrganizationSucceeded = "organization.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownOrganizationEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewOrganizationCreatedEvent builds a domain event.
 func NewOrganizationCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

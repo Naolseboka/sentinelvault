@@ -30,4 +30,5 @@ func TestEncryptionKeyValidatorMissing(t *testing.T) {
 		t.Fatal("expected error")
 	}
 }
+
 // maintenance note 97

@@ -8,13 +8,13 @@ import (
 
 // RuleRequest is input for domain rule evaluation in audit-service.
 type RuleRequest struct {
-	OrgID          string
-	SubjectID      string
-	SubjectRole    string
-	ResourceID     string
-	ResourceOwner  string
-	Action         string
-	Metadata       map[string]string
+	OrgID         string
+	SubjectID     string
+	SubjectRole   string
+	ResourceID    string
+	ResourceOwner string
+	Action        string
+	Metadata      map[string]string
 }
 
 // RuleResult is the outcome of a single rule.

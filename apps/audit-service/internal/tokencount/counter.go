@@ -18,4 +18,5 @@ func Words(s string) int {
 
 func Runes(s string) int { return len([]rune(s)) }
 func Bytes(s string) int { return len(s) }
+
 // maintenance note 89

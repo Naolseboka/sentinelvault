@@ -15,4 +15,5 @@ func TestDeviceTrustTransform(t *testing.T) {
 		t.Fatal("json")
 	}
 }
+
 // maintenance note 67

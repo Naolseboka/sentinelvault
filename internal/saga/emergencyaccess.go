@@ -6,7 +6,6 @@ import (
 	"github.com/sentinelvault/sentinelvault/internal/common"
 )
 
-
 type EmergencyAccessStep1 struct{ fail bool }
 
 func (s EmergencyAccessStep1) Name() string { return "emergencyaccess_step_1" }
@@ -66,7 +65,6 @@ func (s EmergencyAccessStep4) Compensate(ctx context.Context, st map[string]any)
 	st["emergencyaccess_step_4"] = false
 	return nil
 }
-
 
 // RegisterEmergencyAccess wires EmergencyAccess saga with compensation hooks.
 func RegisterEmergencyAccess(e *Engine) error {

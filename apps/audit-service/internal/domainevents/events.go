@@ -8,25 +8,25 @@ import (
 
 // Event types for audit-service.
 const (
-	EventAuditEventCreated = "audit.created"
-	EventAuditEventUpdated = "audit.updated"
-	EventAuditEventDeleted = "audit.deleted"
-	EventAuditEventArchived = "audit.archived"
-	EventAuditEventRestored = "audit.restored"
-	EventAuditEventShared = "audit.shared"
-	EventAuditEventUnshared = "audit.unshared"
-	EventAuditEventExported = "audit.exported"
-	EventAuditEventImported = "audit.imported"
-	EventAuditEventRotated = "audit.rotated"
-	EventAuditEventAccessed = "audit.accessed"
-	EventAuditEventDenied = "audit.denied"
-	EventAuditEventApproved = "audit.approved"
-	EventAuditEventRevoked = "audit.revoked"
-	EventAuditEventExpired = "audit.expired"
-	EventAuditEventLocked = "audit.locked"
-	EventAuditEventUnlocked = "audit.unlocked"
-	EventAuditEventVerified = "audit.verified"
-	EventAuditEventFailed = "audit.failed"
+	EventAuditEventCreated   = "audit.created"
+	EventAuditEventUpdated   = "audit.updated"
+	EventAuditEventDeleted   = "audit.deleted"
+	EventAuditEventArchived  = "audit.archived"
+	EventAuditEventRestored  = "audit.restored"
+	EventAuditEventShared    = "audit.shared"
+	EventAuditEventUnshared  = "audit.unshared"
+	EventAuditEventExported  = "audit.exported"
+	EventAuditEventImported  = "audit.imported"
+	EventAuditEventRotated   = "audit.rotated"
+	EventAuditEventAccessed  = "audit.accessed"
+	EventAuditEventDenied    = "audit.denied"
+	EventAuditEventApproved  = "audit.approved"
+	EventAuditEventRevoked   = "audit.revoked"
+	EventAuditEventExpired   = "audit.expired"
+	EventAuditEventLocked    = "audit.locked"
+	EventAuditEventUnlocked  = "audit.unlocked"
+	EventAuditEventVerified  = "audit.verified"
+	EventAuditEventFailed    = "audit.failed"
 	EventAuditEventSucceeded = "audit.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownAuditEventEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewAuditEventCreatedEvent builds a domain event.
 func NewAuditEventCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

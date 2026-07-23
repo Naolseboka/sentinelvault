@@ -94,4 +94,5 @@ func (e *Engine) IssueToken(roleID string, ttl time.Duration) (*AccessToken, err
 	cp := *tok
 	return &cp, nil
 }
+
 // maintenance note 39

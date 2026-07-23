@@ -21,9 +21,9 @@ type Client struct {
 // New creates a directory-sync-service client.
 func New(baseURL, token string) *Client {
 	return &Client{
-		BaseURL: stringsTrimSlash(baseURL),
+		BaseURL:    stringsTrimSlash(baseURL),
 		HTTPClient: &http.Client{Timeout: 30 * time.Second},
-		Token: token,
+		Token:      token,
 	}
 }
 
@@ -47,10 +47,10 @@ type SyncJob struct {
 
 // ListResult wraps paginated data.
 type ListResult struct {
-	Data       []SyncJob `json:"data"`
-	Total      int64      `json:"total"`
-	Offset     int        `json:"offset"`
-	Limit      int        `json:"limit"`
+	Data   []SyncJob `json:"data"`
+	Total  int64     `json:"total"`
+	Offset int       `json:"offset"`
+	Limit  int       `json:"limit"`
 }
 
 func (c *Client) do(ctx context.Context, method, path string, in any, out any) error {

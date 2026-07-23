@@ -8,25 +8,25 @@ import (
 
 // Event types for kms-service.
 const (
-	EventKeyCreated = "kms.created"
-	EventKeyUpdated = "kms.updated"
-	EventKeyDeleted = "kms.deleted"
-	EventKeyArchived = "kms.archived"
-	EventKeyRestored = "kms.restored"
-	EventKeyShared = "kms.shared"
-	EventKeyUnshared = "kms.unshared"
-	EventKeyExported = "kms.exported"
-	EventKeyImported = "kms.imported"
-	EventKeyRotated = "kms.rotated"
-	EventKeyAccessed = "kms.accessed"
-	EventKeyDenied = "kms.denied"
-	EventKeyApproved = "kms.approved"
-	EventKeyRevoked = "kms.revoked"
-	EventKeyExpired = "kms.expired"
-	EventKeyLocked = "kms.locked"
-	EventKeyUnlocked = "kms.unlocked"
-	EventKeyVerified = "kms.verified"
-	EventKeyFailed = "kms.failed"
+	EventKeyCreated   = "kms.created"
+	EventKeyUpdated   = "kms.updated"
+	EventKeyDeleted   = "kms.deleted"
+	EventKeyArchived  = "kms.archived"
+	EventKeyRestored  = "kms.restored"
+	EventKeyShared    = "kms.shared"
+	EventKeyUnshared  = "kms.unshared"
+	EventKeyExported  = "kms.exported"
+	EventKeyImported  = "kms.imported"
+	EventKeyRotated   = "kms.rotated"
+	EventKeyAccessed  = "kms.accessed"
+	EventKeyDenied    = "kms.denied"
+	EventKeyApproved  = "kms.approved"
+	EventKeyRevoked   = "kms.revoked"
+	EventKeyExpired   = "kms.expired"
+	EventKeyLocked    = "kms.locked"
+	EventKeyUnlocked  = "kms.unlocked"
+	EventKeyVerified  = "kms.verified"
+	EventKeyFailed    = "kms.failed"
 	EventKeySucceeded = "kms.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownKeyEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewKeyCreatedEvent builds a domain event.
 func NewKeyCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {
@@ -360,4 +359,5 @@ func ValidateEvent(e Event) error {
 	}
 	return nil
 }
+
 // maintenance note 48

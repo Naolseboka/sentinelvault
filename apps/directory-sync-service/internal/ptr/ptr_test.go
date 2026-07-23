@@ -11,4 +11,5 @@ func TestDirectorySyncPtr(t *testing.T) {
 		t.Fatal("bool")
 	}
 }
+
 // maintenance note 51

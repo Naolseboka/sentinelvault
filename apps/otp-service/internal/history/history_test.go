@@ -19,4 +19,5 @@ func TestOTPRecordHistory(t *testing.T) {
 		t.Fatal("list")
 	}
 }
+
 // maintenance note 98

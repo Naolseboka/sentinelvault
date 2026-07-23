@@ -21,12 +21,12 @@ var (
 
 // WebAuthnCredential stores a registered passkey credential.
 type WebAuthnCredential struct {
-	ID         string `json:"id"`
-	UserID     string `json:"user_id"`
-	CredentialID []byte `json:"credential_id"`
-	PublicKey  []byte `json:"public_key"`
-	SignCount  uint32 `json:"sign_count"`
-	CreatedAt  time.Time `json:"created_at"`
+	ID           string    `json:"id"`
+	UserID       string    `json:"user_id"`
+	CredentialID []byte    `json:"credential_id"`
+	PublicKey    []byte    `json:"public_key"`
+	SignCount    uint32    `json:"sign_count"`
+	CreatedAt    time.Time `json:"created_at"`
 }
 
 // WebAuthnChallenge represents an in-flight registration or assertion challenge.
@@ -138,8 +138,8 @@ type CredentialStore interface {
 
 // MemoryCredentialStore is an in-memory CredentialStore for development.
 type MemoryCredentialStore struct {
-	mu    sync.RWMutex
-	byID  map[string]*WebAuthnCredential
+	mu     sync.RWMutex
+	byID   map[string]*WebAuthnCredential
 	byUser map[string][]string // userID -> credential IDs
 }
 

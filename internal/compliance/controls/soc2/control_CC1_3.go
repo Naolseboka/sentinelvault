@@ -20,7 +20,9 @@ func (c ControlCC1_3) ID() string { return "SOC2-CC1.3" }
 func (c ControlCC1_3) Title() string { return "Management establishment" }
 
 // Description returns the control description.
-func (c ControlCC1_3) Description() string { return "Management establishes structures and reporting lines" }
+func (c ControlCC1_3) Description() string {
+	return "Management establishes structures and reporting lines"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceCC1_3 struct {

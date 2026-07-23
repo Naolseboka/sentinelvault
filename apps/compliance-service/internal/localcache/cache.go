@@ -7,11 +7,11 @@ import (
 
 type entry struct {
 	value any
-	exp time.Time
+	exp   time.Time
 }
 
 type Cache struct {
-	mu sync.RWMutex
+	mu   sync.RWMutex
 	data map[string]entry
 }
 
@@ -56,4 +56,5 @@ func (c *Cache) Len() int {
 	defer c.mu.RUnlock()
 	return len(c.data)
 }
+
 // maintenance note 93

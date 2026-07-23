@@ -38,4 +38,5 @@ func TestChainValidation(t *testing.T) {
 		t.Fatal("expected validation error")
 	}
 }
+
 // maintenance note 45

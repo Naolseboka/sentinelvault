@@ -20,7 +20,9 @@ func (c ControlCC1_1) ID() string { return "SOC2-CC1.1" }
 func (c ControlCC1_1) Title() string { return "COS principles" }
 
 // Description returns the control description.
-func (c ControlCC1_1) Description() string { return "Demonstrate commitment to integrity and ethical values" }
+func (c ControlCC1_1) Description() string {
+	return "Demonstrate commitment to integrity and ethical values"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceCC1_1 struct {

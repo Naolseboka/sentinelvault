@@ -20,4 +20,5 @@ func TestPasswordItemModelsJSON(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
 // maintenance note 36

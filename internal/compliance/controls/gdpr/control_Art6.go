@@ -20,7 +20,9 @@ func (c ControlArt6) ID() string { return "GDPR-Art6" }
 func (c ControlArt6) Title() string { return "Lawfulness" }
 
 // Description returns the control description.
-func (c ControlArt6) Description() string { return "Processing shall be lawful only if at least one basis applies" }
+func (c ControlArt6) Description() string {
+	return "Processing shall be lawful only if at least one basis applies"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceArt6 struct {

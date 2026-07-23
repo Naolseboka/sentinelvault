@@ -1,6 +1,5 @@
 package searchx
 
-
 func ExtractPassword(payload map[string]any) map[string]string {
 	out := map[string]string{"type": "password"}
 	for _, k := range []string{"name", "username", "url", "issuer", "host", "provider", "title", "product", "account"} {
@@ -210,7 +209,6 @@ func ExtractPasskey(payload map[string]any) map[string]string {
 	}
 	return out
 }
-
 
 func ExtractForType(itemType string, payload map[string]any) map[string]string {
 	switch itemType {

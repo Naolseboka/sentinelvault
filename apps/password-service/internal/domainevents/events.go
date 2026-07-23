@@ -8,25 +8,25 @@ import (
 
 // Event types for password-service.
 const (
-	EventVaultItemCreated = "password.created"
-	EventVaultItemUpdated = "password.updated"
-	EventVaultItemDeleted = "password.deleted"
-	EventVaultItemArchived = "password.archived"
-	EventVaultItemRestored = "password.restored"
-	EventVaultItemShared = "password.shared"
-	EventVaultItemUnshared = "password.unshared"
-	EventVaultItemExported = "password.exported"
-	EventVaultItemImported = "password.imported"
-	EventVaultItemRotated = "password.rotated"
-	EventVaultItemAccessed = "password.accessed"
-	EventVaultItemDenied = "password.denied"
-	EventVaultItemApproved = "password.approved"
-	EventVaultItemRevoked = "password.revoked"
-	EventVaultItemExpired = "password.expired"
-	EventVaultItemLocked = "password.locked"
-	EventVaultItemUnlocked = "password.unlocked"
-	EventVaultItemVerified = "password.verified"
-	EventVaultItemFailed = "password.failed"
+	EventVaultItemCreated   = "password.created"
+	EventVaultItemUpdated   = "password.updated"
+	EventVaultItemDeleted   = "password.deleted"
+	EventVaultItemArchived  = "password.archived"
+	EventVaultItemRestored  = "password.restored"
+	EventVaultItemShared    = "password.shared"
+	EventVaultItemUnshared  = "password.unshared"
+	EventVaultItemExported  = "password.exported"
+	EventVaultItemImported  = "password.imported"
+	EventVaultItemRotated   = "password.rotated"
+	EventVaultItemAccessed  = "password.accessed"
+	EventVaultItemDenied    = "password.denied"
+	EventVaultItemApproved  = "password.approved"
+	EventVaultItemRevoked   = "password.revoked"
+	EventVaultItemExpired   = "password.expired"
+	EventVaultItemLocked    = "password.locked"
+	EventVaultItemUnlocked  = "password.unlocked"
+	EventVaultItemVerified  = "password.verified"
+	EventVaultItemFailed    = "password.failed"
 	EventVaultItemSucceeded = "password.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownVaultItemEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewVaultItemCreatedEvent builds a domain event.
 func NewVaultItemCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

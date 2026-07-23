@@ -8,4 +8,5 @@ func TestKmsAuditFmt(t *testing.T) {
 		t.Fatal(s)
 	}
 }
+
 // maintenance note 41

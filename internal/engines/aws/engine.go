@@ -13,13 +13,13 @@ import (
 
 // Role maps to IAM-like temporary credentials.
 type Role struct {
-	ID          string        `json:"id"`
-	OrgID       string        `json:"org_id"`
-	Name        string        `json:"name"`
-	AccountID   string        `json:"account_id"`
-	PolicyARNs  []string      `json:"policy_arns"`
-	DefaultTTL  time.Duration `json:"default_ttl"`
-	MaxTTL      time.Duration `json:"max_ttl"`
+	ID         string        `json:"id"`
+	OrgID      string        `json:"org_id"`
+	Name       string        `json:"name"`
+	AccountID  string        `json:"account_id"`
+	PolicyARNs []string      `json:"policy_arns"`
+	DefaultTTL time.Duration `json:"default_ttl"`
+	MaxTTL     time.Duration `json:"max_ttl"`
 }
 
 // Credentials are STS-like temporary keys.

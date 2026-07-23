@@ -8,25 +8,25 @@ import (
 
 // Event types for device-trust-service.
 const (
-	EventTrustRecordCreated = "devicetrust.created"
-	EventTrustRecordUpdated = "devicetrust.updated"
-	EventTrustRecordDeleted = "devicetrust.deleted"
-	EventTrustRecordArchived = "devicetrust.archived"
-	EventTrustRecordRestored = "devicetrust.restored"
-	EventTrustRecordShared = "devicetrust.shared"
-	EventTrustRecordUnshared = "devicetrust.unshared"
-	EventTrustRecordExported = "devicetrust.exported"
-	EventTrustRecordImported = "devicetrust.imported"
-	EventTrustRecordRotated = "devicetrust.rotated"
-	EventTrustRecordAccessed = "devicetrust.accessed"
-	EventTrustRecordDenied = "devicetrust.denied"
-	EventTrustRecordApproved = "devicetrust.approved"
-	EventTrustRecordRevoked = "devicetrust.revoked"
-	EventTrustRecordExpired = "devicetrust.expired"
-	EventTrustRecordLocked = "devicetrust.locked"
-	EventTrustRecordUnlocked = "devicetrust.unlocked"
-	EventTrustRecordVerified = "devicetrust.verified"
-	EventTrustRecordFailed = "devicetrust.failed"
+	EventTrustRecordCreated   = "devicetrust.created"
+	EventTrustRecordUpdated   = "devicetrust.updated"
+	EventTrustRecordDeleted   = "devicetrust.deleted"
+	EventTrustRecordArchived  = "devicetrust.archived"
+	EventTrustRecordRestored  = "devicetrust.restored"
+	EventTrustRecordShared    = "devicetrust.shared"
+	EventTrustRecordUnshared  = "devicetrust.unshared"
+	EventTrustRecordExported  = "devicetrust.exported"
+	EventTrustRecordImported  = "devicetrust.imported"
+	EventTrustRecordRotated   = "devicetrust.rotated"
+	EventTrustRecordAccessed  = "devicetrust.accessed"
+	EventTrustRecordDenied    = "devicetrust.denied"
+	EventTrustRecordApproved  = "devicetrust.approved"
+	EventTrustRecordRevoked   = "devicetrust.revoked"
+	EventTrustRecordExpired   = "devicetrust.expired"
+	EventTrustRecordLocked    = "devicetrust.locked"
+	EventTrustRecordUnlocked  = "devicetrust.unlocked"
+	EventTrustRecordVerified  = "devicetrust.verified"
+	EventTrustRecordFailed    = "devicetrust.failed"
 	EventTrustRecordSucceeded = "devicetrust.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownTrustRecordEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewTrustRecordCreatedEvent builds a domain event.
 func NewTrustRecordCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

@@ -31,19 +31,19 @@ type OrgStats struct {
 
 // UsageAggregation summarizes vault activity.
 type UsageAggregation struct {
-	ActiveUsers  int     `json:"active_users"`
-	Logins       int     `json:"logins"`
-	VaultReads   int     `json:"vault_reads"`
-	VaultWrites  int     `json:"vault_writes"`
+	ActiveUsers    int     `json:"active_users"`
+	Logins         int     `json:"logins"`
+	VaultReads     int     `json:"vault_reads"`
+	VaultWrites    int     `json:"vault_writes"`
 	ReadWriteRatio float64 `json:"read_write_ratio"`
 }
 
 // AccessAggregation summarizes access control events.
 type AccessAggregation struct {
-	Grants       int     `json:"grants"`
-	Denials      int     `json:"denials"`
-	DenialRate   float64 `json:"denial_rate_pct"`
-	TotalEvents  int     `json:"total_events"`
+	Grants      int     `json:"grants"`
+	Denials     int     `json:"denials"`
+	DenialRate  float64 `json:"denial_rate_pct"`
+	TotalEvents int     `json:"total_events"`
 }
 
 // RotationAggregation summarizes credential rotation jobs.
@@ -55,21 +55,21 @@ type RotationAggregation struct {
 
 // PostureAggregation summarizes security posture indicators.
 type PostureAggregation struct {
-	WeakPasswords    int     `json:"weak_passwords"`
-	MFAEnabledUsers  int     `json:"mfa_enabled_users"`
-	TotalUsers       int     `json:"total_users"`
-	MFACoveragePct   float64 `json:"mfa_coverage_pct"`
-	WeakPasswordPct  float64 `json:"weak_password_pct"`
+	WeakPasswords   int     `json:"weak_passwords"`
+	MFAEnabledUsers int     `json:"mfa_enabled_users"`
+	TotalUsers      int     `json:"total_users"`
+	MFACoveragePct  float64 `json:"mfa_coverage_pct"`
+	WeakPasswordPct float64 `json:"weak_password_pct"`
 }
 
 // GeneratedReport is a platform analytics report with typed aggregations.
 type GeneratedReport struct {
-	ID          string    `json:"id"`
-	OrgID       string    `json:"org_id"`
-	Type        string    `json:"type"`
-	GeneratedAt time.Time `json:"generated_at"`
-	Summary     string    `json:"summary"`
-	Stats       OrgStats  `json:"stats"`
+	ID          string               `json:"id"`
+	OrgID       string               `json:"org_id"`
+	Type        string               `json:"type"`
+	GeneratedAt time.Time            `json:"generated_at"`
+	Summary     string               `json:"summary"`
+	Stats       OrgStats             `json:"stats"`
 	Usage       *UsageAggregation    `json:"usage,omitempty"`
 	Access      *AccessAggregation   `json:"access,omitempty"`
 	Rotation    *RotationAggregation `json:"rotation,omitempty"`
@@ -172,8 +172,8 @@ func (s *Service) GenerateReport(_ context.Context, in GenerateInput) (*Generate
 		total := max(cp.TotalUsers, 1)
 		report.Posture = &PostureAggregation{
 			WeakPasswords: cp.WeakPasswords, MFAEnabledUsers: cp.MFAEnabledUsers,
-			TotalUsers: cp.TotalUsers,
-			MFACoveragePct: float64(cp.MFAEnabledUsers) / float64(total) * 100,
+			TotalUsers:      cp.TotalUsers,
+			MFACoveragePct:  float64(cp.MFAEnabledUsers) / float64(total) * 100,
 			WeakPasswordPct: float64(cp.WeakPasswords) / float64(total) * 100,
 		}
 	}

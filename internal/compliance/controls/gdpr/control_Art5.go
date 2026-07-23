@@ -20,7 +20,9 @@ func (c ControlArt5) ID() string { return "GDPR-Art5" }
 func (c ControlArt5) Title() string { return "Principles" }
 
 // Description returns the control description.
-func (c ControlArt5) Description() string { return "Lawfulness, fairness, transparency, purpose limitation" }
+func (c ControlArt5) Description() string {
+	return "Lawfulness, fairness, transparency, purpose limitation"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceArt5 struct {

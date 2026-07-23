@@ -13,9 +13,9 @@ type Window struct {
 }
 
 type Limiter struct {
-	mu sync.Mutex
+	mu      sync.Mutex
 	windows map[string]Window
-	hits map[string]map[string][]time.Time
+	hits    map[string]map[string][]time.Time
 }
 
 func NewLimiter() *Limiter {
@@ -23,8 +23,8 @@ func NewLimiter() *Limiter {
 		windows: map[string]Window{
 			"second": {Limit: 20, Every: time.Second},
 			"minute": {Limit: 300, Every: time.Minute},
-			"hour": {Limit: 5000, Every: time.Hour},
-			"day": {Limit: 50000, Every: 24 * time.Hour},
+			"hour":   {Limit: 5000, Every: time.Hour},
+			"day":    {Limit: 50000, Every: 24 * time.Hour},
 		},
 		hits: map[string]map[string][]time.Time{},
 	}
@@ -85,4 +85,5 @@ func (l *Limiter) Remaining(key, window string) int {
 	}
 	return left
 }
+
 // maintenance note 26

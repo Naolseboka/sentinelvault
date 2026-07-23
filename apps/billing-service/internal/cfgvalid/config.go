@@ -7,11 +7,11 @@ import (
 )
 
 type ServiceConfig struct {
-	Name string
-	HTTPAddr string
+	Name        string
+	HTTPAddr    string
 	DatabaseURL string
-	RedisURL string
-	LogLevel string
+	RedisURL    string
+	LogLevel    string
 }
 
 func Validate(c ServiceConfig) []string {

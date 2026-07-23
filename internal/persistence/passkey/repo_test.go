@@ -11,4 +11,5 @@ func TestPasskeyRecordDefaults(t *testing.T) {
 		t.Fatalf("version=%d", rec.Version)
 	}
 }
+
 // maintenance note 17

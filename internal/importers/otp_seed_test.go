@@ -26,4 +26,5 @@ func TestImportOTPSeedJSON(t *testing.T) {
 		t.Fatalf("%+v", res)
 	}
 }
+
 // maintenance note 14

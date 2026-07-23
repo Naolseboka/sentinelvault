@@ -59,27 +59,43 @@ func (v Version) String() string {
 
 func Compare(a, b Version) int {
 	if a.Major != b.Major {
-		if a.Major < b.Major { return -1 }
+		if a.Major < b.Major {
+			return -1
+		}
 		return 1
 	}
 	if a.Minor != b.Minor {
-		if a.Minor < b.Minor { return -1 }
+		if a.Minor < b.Minor {
+			return -1
+		}
 		return 1
 	}
 	if a.Patch != b.Patch {
-		if a.Patch < b.Patch { return -1 }
+		if a.Patch < b.Patch {
+			return -1
+		}
 		return 1
 	}
 	if a.Pre == b.Pre {
 		return 0
 	}
-	if a.Pre == "" { return 1 }
-	if b.Pre == "" { return -1 }
-	if a.Pre < b.Pre { return -1 }
-	if a.Pre > b.Pre { return 1 }
+	if a.Pre == "" {
+		return 1
+	}
+	if b.Pre == "" {
+		return -1
+	}
+	if a.Pre < b.Pre {
+		return -1
+	}
+	if a.Pre > b.Pre {
+		return 1
+	}
 	return 0
 }
 
 func (v Version) BumpMajor() Version { return Version{Major: v.Major + 1} }
 func (v Version) BumpMinor() Version { return Version{Major: v.Major, Minor: v.Minor + 1} }
-func (v Version) BumpPatch() Version { return Version{Major: v.Major, Minor: v.Minor, Patch: v.Patch + 1} }
+func (v Version) BumpPatch() Version {
+	return Version{Major: v.Major, Minor: v.Minor, Patch: v.Patch + 1}
+}

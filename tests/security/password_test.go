@@ -22,4 +22,5 @@ func TestWeakPasswordDetection(t *testing.T) {
 		t.Fatalf("expected high/critical finding: %+v", findings)
 	}
 }
+
 // maintenance note 68

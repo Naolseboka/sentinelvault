@@ -85,4 +85,5 @@ func FormatArchived(orgID, actorID, resourceID string) string {
 func AllActions() []string {
 	return []string{"attachment-service.created", "attachment-service.updated", "attachment-service.deleted", "attachment-service.read", "attachment-service.listed", "attachment-service.exported", "attachment-service.imported", "attachment-service.shared", "attachment-service.unshared", "attachment-service.approved", "attachment-service.denied", "attachment-service.rotated", "attachment-service.failed", "attachment-service.login", "attachment-service.logout", "attachment-service.mfa", "attachment-service.revoked", "attachment-service.restored", "attachment-service.archived"}
 }
+
 // maintenance note 41

@@ -8,25 +8,25 @@ import (
 
 // Event types for device-service.
 const (
-	EventDeviceCreated = "device.created"
-	EventDeviceUpdated = "device.updated"
-	EventDeviceDeleted = "device.deleted"
-	EventDeviceArchived = "device.archived"
-	EventDeviceRestored = "device.restored"
-	EventDeviceShared = "device.shared"
-	EventDeviceUnshared = "device.unshared"
-	EventDeviceExported = "device.exported"
-	EventDeviceImported = "device.imported"
-	EventDeviceRotated = "device.rotated"
-	EventDeviceAccessed = "device.accessed"
-	EventDeviceDenied = "device.denied"
-	EventDeviceApproved = "device.approved"
-	EventDeviceRevoked = "device.revoked"
-	EventDeviceExpired = "device.expired"
-	EventDeviceLocked = "device.locked"
-	EventDeviceUnlocked = "device.unlocked"
-	EventDeviceVerified = "device.verified"
-	EventDeviceFailed = "device.failed"
+	EventDeviceCreated   = "device.created"
+	EventDeviceUpdated   = "device.updated"
+	EventDeviceDeleted   = "device.deleted"
+	EventDeviceArchived  = "device.archived"
+	EventDeviceRestored  = "device.restored"
+	EventDeviceShared    = "device.shared"
+	EventDeviceUnshared  = "device.unshared"
+	EventDeviceExported  = "device.exported"
+	EventDeviceImported  = "device.imported"
+	EventDeviceRotated   = "device.rotated"
+	EventDeviceAccessed  = "device.accessed"
+	EventDeviceDenied    = "device.denied"
+	EventDeviceApproved  = "device.approved"
+	EventDeviceRevoked   = "device.revoked"
+	EventDeviceExpired   = "device.expired"
+	EventDeviceLocked    = "device.locked"
+	EventDeviceUnlocked  = "device.unlocked"
+	EventDeviceVerified  = "device.verified"
+	EventDeviceFailed    = "device.failed"
 	EventDeviceSucceeded = "device.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownDeviceEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewDeviceCreatedEvent builds a domain event.
 func NewDeviceCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

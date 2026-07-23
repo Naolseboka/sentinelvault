@@ -6,7 +6,6 @@ import (
 	"github.com/sentinelvault/sentinelvault/internal/common"
 )
 
-
 type SecretRotationStep1 struct{ fail bool }
 
 func (s SecretRotationStep1) Name() string { return "secretrotation_step_1" }
@@ -66,7 +65,6 @@ func (s SecretRotationStep4) Compensate(ctx context.Context, st map[string]any) 
 	st["secretrotation_step_4"] = false
 	return nil
 }
-
 
 // RegisterSecretRotation wires SecretRotation saga with compensation hooks.
 func RegisterSecretRotation(e *Engine) error {

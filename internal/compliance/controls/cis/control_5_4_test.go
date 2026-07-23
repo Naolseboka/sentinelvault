@@ -18,4 +18,5 @@ func TestControl5_4Evaluate(t *testing.T) {
 		t.Fatal("id mismatch")
 	}
 }
+
 // maintenance note 26

@@ -95,4 +95,5 @@ func (c *WebhookFailuresCalculator) Average(orgID string, from, to time.Time) fl
 	}
 	return sum / float64(n)
 }
+
 // maintenance note 87

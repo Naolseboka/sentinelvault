@@ -18,4 +18,5 @@ func TestInvitationIdempotency(t *testing.T) {
 		t.Fatal("expected conflict")
 	}
 }
+
 // maintenance note 96

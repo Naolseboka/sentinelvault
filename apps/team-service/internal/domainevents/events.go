@@ -8,25 +8,25 @@ import (
 
 // Event types for team-service.
 const (
-	EventTeamCreated = "team.created"
-	EventTeamUpdated = "team.updated"
-	EventTeamDeleted = "team.deleted"
-	EventTeamArchived = "team.archived"
-	EventTeamRestored = "team.restored"
-	EventTeamShared = "team.shared"
-	EventTeamUnshared = "team.unshared"
-	EventTeamExported = "team.exported"
-	EventTeamImported = "team.imported"
-	EventTeamRotated = "team.rotated"
-	EventTeamAccessed = "team.accessed"
-	EventTeamDenied = "team.denied"
-	EventTeamApproved = "team.approved"
-	EventTeamRevoked = "team.revoked"
-	EventTeamExpired = "team.expired"
-	EventTeamLocked = "team.locked"
-	EventTeamUnlocked = "team.unlocked"
-	EventTeamVerified = "team.verified"
-	EventTeamFailed = "team.failed"
+	EventTeamCreated   = "team.created"
+	EventTeamUpdated   = "team.updated"
+	EventTeamDeleted   = "team.deleted"
+	EventTeamArchived  = "team.archived"
+	EventTeamRestored  = "team.restored"
+	EventTeamShared    = "team.shared"
+	EventTeamUnshared  = "team.unshared"
+	EventTeamExported  = "team.exported"
+	EventTeamImported  = "team.imported"
+	EventTeamRotated   = "team.rotated"
+	EventTeamAccessed  = "team.accessed"
+	EventTeamDenied    = "team.denied"
+	EventTeamApproved  = "team.approved"
+	EventTeamRevoked   = "team.revoked"
+	EventTeamExpired   = "team.expired"
+	EventTeamLocked    = "team.locked"
+	EventTeamUnlocked  = "team.unlocked"
+	EventTeamVerified  = "team.verified"
+	EventTeamFailed    = "team.failed"
 	EventTeamSucceeded = "team.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownTeamEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewTeamCreatedEvent builds a domain event.
 func NewTeamCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

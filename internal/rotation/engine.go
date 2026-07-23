@@ -9,39 +9,39 @@ import (
 
 // Mode of rotation.
 const (
-	ModeAutomatic  = "automatic"
-	ModeManual     = "manual"
-	ModeScheduled  = "scheduled"
-	ModeApproval   = "approval"
-	ModeEmergency  = "emergency"
+	ModeAutomatic = "automatic"
+	ModeManual    = "manual"
+	ModeScheduled = "scheduled"
+	ModeApproval  = "approval"
+	ModeEmergency = "emergency"
 )
 
 // Policy defines how a secret/credential is rotated.
 type Policy struct {
-	ID             string        `json:"id"`
-	OrgID          string        `json:"org_id"`
-	Name           string        `json:"name"`
-	TargetType     string        `json:"target_type"` // secret|password|ssh|certificate|db
-	TargetID       string        `json:"target_id"`
-	Mode           string        `json:"mode"`
-	Interval       time.Duration `json:"interval"`
-	NextRunAt      time.Time     `json:"next_run_at"`
-	ApprovalRequired bool        `json:"approval_required"`
-	Enabled        bool          `json:"enabled"`
-	CreatedAt      time.Time     `json:"created_at"`
+	ID               string        `json:"id"`
+	OrgID            string        `json:"org_id"`
+	Name             string        `json:"name"`
+	TargetType       string        `json:"target_type"` // secret|password|ssh|certificate|db
+	TargetID         string        `json:"target_id"`
+	Mode             string        `json:"mode"`
+	Interval         time.Duration `json:"interval"`
+	NextRunAt        time.Time     `json:"next_run_at"`
+	ApprovalRequired bool          `json:"approval_required"`
+	Enabled          bool          `json:"enabled"`
+	CreatedAt        time.Time     `json:"created_at"`
 }
 
 // Job is a rotation execution attempt.
 type Job struct {
-	ID        string    `json:"id"`
-	PolicyID  string    `json:"policy_id"`
-	OrgID     string    `json:"org_id"`
-	Status    string    `json:"status"` // pending|running|succeeded|failed|rolled_back
-	Mode      string    `json:"mode"`
-	Error     string    `json:"error,omitempty"`
-	StartedAt time.Time `json:"started_at"`
+	ID         string     `json:"id"`
+	PolicyID   string     `json:"policy_id"`
+	OrgID      string     `json:"org_id"`
+	Status     string     `json:"status"` // pending|running|succeeded|failed|rolled_back
+	Mode       string     `json:"mode"`
+	Error      string     `json:"error,omitempty"`
+	StartedAt  time.Time  `json:"started_at"`
 	FinishedAt *time.Time `json:"finished_at,omitempty"`
-	NewVersion string   `json:"new_version,omitempty"`
+	NewVersion string     `json:"new_version,omitempty"`
 }
 
 // Rotator generates new secret material.

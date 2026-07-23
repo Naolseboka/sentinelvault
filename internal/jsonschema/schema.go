@@ -9,23 +9,23 @@ import (
 type Type string
 
 const (
-	TypeObject Type = "object"
-	TypeArray Type = "array"
-	TypeString Type = "string"
-	TypeNumber Type = "number"
+	TypeObject  Type = "object"
+	TypeArray   Type = "array"
+	TypeString  Type = "string"
+	TypeNumber  Type = "number"
 	TypeBoolean Type = "boolean"
 )
 
 type Schema struct {
-	Type Type `json:"type"`
-	Required []string `json:"required,omitempty"`
+	Type       Type               `json:"type"`
+	Required   []string           `json:"required,omitempty"`
 	Properties map[string]*Schema `json:"properties,omitempty"`
-	Items *Schema `json:"items,omitempty"`
-	MinLength int `json:"minLength,omitempty"`
-	MaxLength int `json:"maxLength,omitempty"`
-	Minimum *float64 `json:"minimum,omitempty"`
-	Maximum *float64 `json:"maximum,omitempty"`
-	Enum []any `json:"enum,omitempty"`
+	Items      *Schema            `json:"items,omitempty"`
+	MinLength  int                `json:"minLength,omitempty"`
+	MaxLength  int                `json:"maxLength,omitempty"`
+	Minimum    *float64           `json:"minimum,omitempty"`
+	Maximum    *float64           `json:"maximum,omitempty"`
+	Enum       []any              `json:"enum,omitempty"`
 }
 
 func (s *Schema) Validate(v any) []string {
@@ -130,7 +130,7 @@ func enumHas(enum []any, s string) bool {
 
 func AuthRegisterSchema() *Schema {
 	return &Schema{Type: TypeObject, Required: []string{"email", "password", "org_name"}, Properties: map[string]*Schema{
-		"email": {Type: TypeString, MinLength: 3, MaxLength: 320},
+		"email":    {Type: TypeString, MinLength: 3, MaxLength: 320},
 		"password": {Type: TypeString, MinLength: 8, MaxLength: 128},
 		"org_name": {Type: TypeString, MinLength: 1, MaxLength: 256},
 	}}
@@ -138,9 +138,9 @@ func AuthRegisterSchema() *Schema {
 
 func VaultItemCreateSchema() *Schema {
 	return &Schema{Type: TypeObject, Required: []string{"org_id", "name", "type"}, Properties: map[string]*Schema{
-		"org_id": {Type: TypeString, MinLength: 1},
-		"name": {Type: TypeString, MinLength: 1, MaxLength: 256},
-		"type": {Type: TypeString, Enum: []any{"password", "secret", "api_key", "note"}},
+		"org_id":  {Type: TypeString, MinLength: 1},
+		"name":    {Type: TypeString, MinLength: 1, MaxLength: 256},
+		"type":    {Type: TypeString, Enum: []any{"password", "secret", "api_key", "note"}},
 		"payload": {Type: TypeObject},
 	}}
 }

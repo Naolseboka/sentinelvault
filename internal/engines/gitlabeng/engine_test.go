@@ -13,4 +13,5 @@ func TestGitLabToken(t *testing.T) {
 		t.Fatalf("%+v %v", tok, err)
 	}
 }
+
 // maintenance note 94

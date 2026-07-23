@@ -65,4 +65,5 @@ func (c Control5_2) Evaluate(ctx context.Context, inputs map[string]any) (*Evide
 		Status: status, Summary: summary, Artifacts: artifacts,
 	}, nil
 }
+
 // maintenance note 94

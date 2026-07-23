@@ -10,21 +10,21 @@ import (
 
 // SnapshotDTO is the transport object for backup APIs.
 type SnapshotDTO struct {
-	ID        string            `json:"id"`
-	OrgID     string            `json:"org_id"`
-	Name      string            `json:"name"`
-	Status    string            `json:"status"`
-	ExternalID string `json:"externalid"`
-	Description string `json:"description"`
-	OwnerID string `json:"ownerid"`
-	CollectionID string `json:"collectionid"`
-	FolderID string `json:"folderid"`
-	RiskLevel string `json:"risklevel"`
-	Classification string `json:"classification"`
-	Tags      []string          `json:"tags,omitempty"`
-	Metadata  map[string]string `json:"metadata,omitempty"`
-	CreatedAt time.Time         `json:"created_at"`
-	UpdatedAt time.Time         `json:"updated_at"`
+	ID             string            `json:"id"`
+	OrgID          string            `json:"org_id"`
+	Name           string            `json:"name"`
+	Status         string            `json:"status"`
+	ExternalID     string            `json:"externalid"`
+	Description    string            `json:"description"`
+	OwnerID        string            `json:"ownerid"`
+	CollectionID   string            `json:"collectionid"`
+	FolderID       string            `json:"folderid"`
+	RiskLevel      string            `json:"risklevel"`
+	Classification string            `json:"classification"`
+	Tags           []string          `json:"tags,omitempty"`
+	Metadata       map[string]string `json:"metadata,omitempty"`
+	CreatedAt      time.Time         `json:"created_at"`
+	UpdatedAt      time.Time         `json:"updated_at"`
 }
 
 // CreateSnapshotRequest is the create payload.

@@ -18,30 +18,30 @@ const (
 
 // AccessRequest is a privileged access request.
 type AccessRequest struct {
-	ID           string    `json:"id"`
-	OrgID        string    `json:"org_id"`
-	RequesterID  string    `json:"requester_id"`
-	ResourceType string    `json:"resource_type"`
-	ResourceID   string    `json:"resource_id"`
-	Justification string   `json:"justification"`
-	Status       string    `json:"status"`
-	ApproverID   string    `json:"approver_id,omitempty"`
-	TTL          time.Duration `json:"ttl"`
-	ExpiresAt    *time.Time `json:"expires_at,omitempty"`
-	CreatedAt    time.Time `json:"created_at"`
-	DecidedAt    *time.Time `json:"decided_at,omitempty"`
+	ID            string        `json:"id"`
+	OrgID         string        `json:"org_id"`
+	RequesterID   string        `json:"requester_id"`
+	ResourceType  string        `json:"resource_type"`
+	ResourceID    string        `json:"resource_id"`
+	Justification string        `json:"justification"`
+	Status        string        `json:"status"`
+	ApproverID    string        `json:"approver_id,omitempty"`
+	TTL           time.Duration `json:"ttl"`
+	ExpiresAt     *time.Time    `json:"expires_at,omitempty"`
+	CreatedAt     time.Time     `json:"created_at"`
+	DecidedAt     *time.Time    `json:"decided_at,omitempty"`
 }
 
 // EmergencyAccess is a break-glass grant.
 type EmergencyAccess struct {
-	ID          string    `json:"id"`
-	OrgID       string    `json:"org_id"`
-	ActorID     string    `json:"actor_id"`
-	ResourceID  string    `json:"resource_id"`
-	Reason      string    `json:"reason"`
-	Status      string    `json:"status"`
-	ExpiresAt   time.Time `json:"expires_at"`
-	CreatedAt   time.Time `json:"created_at"`
+	ID         string    `json:"id"`
+	OrgID      string    `json:"org_id"`
+	ActorID    string    `json:"actor_id"`
+	ResourceID string    `json:"resource_id"`
+	Reason     string    `json:"reason"`
+	Status     string    `json:"status"`
+	ExpiresAt  time.Time `json:"expires_at"`
+	CreatedAt  time.Time `json:"created_at"`
 }
 
 // Delegation grants another user temporary rights.
@@ -58,8 +58,8 @@ type Delegation struct {
 
 // Workflow manages PAM state machines.
 type Workflow struct {
-	mu         sync.Mutex
-	requests   map[string]*AccessRequest
+	mu          sync.Mutex
+	requests    map[string]*AccessRequest
 	emergencies map[string]*EmergencyAccess
 	delegations map[string]*Delegation
 }
@@ -67,7 +67,7 @@ type Workflow struct {
 // NewWorkflow creates a PAM workflow engine.
 func NewWorkflow() *Workflow {
 	return &Workflow{
-		requests: map[string]*AccessRequest{},
+		requests:    map[string]*AccessRequest{},
 		emergencies: map[string]*EmergencyAccess{},
 		delegations: map[string]*Delegation{},
 	}

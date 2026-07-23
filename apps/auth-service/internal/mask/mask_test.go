@@ -19,4 +19,5 @@ func TestAuthMask(t *testing.T) {
 		t.Fatal(pan)
 	}
 }
+
 // maintenance note 15

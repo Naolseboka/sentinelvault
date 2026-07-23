@@ -8,25 +8,25 @@ import (
 
 // Event types for invitation-service.
 const (
-	EventInvitationCreated = "invitation.created"
-	EventInvitationUpdated = "invitation.updated"
-	EventInvitationDeleted = "invitation.deleted"
-	EventInvitationArchived = "invitation.archived"
-	EventInvitationRestored = "invitation.restored"
-	EventInvitationShared = "invitation.shared"
-	EventInvitationUnshared = "invitation.unshared"
-	EventInvitationExported = "invitation.exported"
-	EventInvitationImported = "invitation.imported"
-	EventInvitationRotated = "invitation.rotated"
-	EventInvitationAccessed = "invitation.accessed"
-	EventInvitationDenied = "invitation.denied"
-	EventInvitationApproved = "invitation.approved"
-	EventInvitationRevoked = "invitation.revoked"
-	EventInvitationExpired = "invitation.expired"
-	EventInvitationLocked = "invitation.locked"
-	EventInvitationUnlocked = "invitation.unlocked"
-	EventInvitationVerified = "invitation.verified"
-	EventInvitationFailed = "invitation.failed"
+	EventInvitationCreated   = "invitation.created"
+	EventInvitationUpdated   = "invitation.updated"
+	EventInvitationDeleted   = "invitation.deleted"
+	EventInvitationArchived  = "invitation.archived"
+	EventInvitationRestored  = "invitation.restored"
+	EventInvitationShared    = "invitation.shared"
+	EventInvitationUnshared  = "invitation.unshared"
+	EventInvitationExported  = "invitation.exported"
+	EventInvitationImported  = "invitation.imported"
+	EventInvitationRotated   = "invitation.rotated"
+	EventInvitationAccessed  = "invitation.accessed"
+	EventInvitationDenied    = "invitation.denied"
+	EventInvitationApproved  = "invitation.approved"
+	EventInvitationRevoked   = "invitation.revoked"
+	EventInvitationExpired   = "invitation.expired"
+	EventInvitationLocked    = "invitation.locked"
+	EventInvitationUnlocked  = "invitation.unlocked"
+	EventInvitationVerified  = "invitation.verified"
+	EventInvitationFailed    = "invitation.failed"
 	EventInvitationSucceeded = "invitation.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownInvitationEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewInvitationCreatedEvent builds a domain event.
 func NewInvitationCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

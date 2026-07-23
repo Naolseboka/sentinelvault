@@ -18,15 +18,15 @@ var permRank = map[string]int{PermViewer: 1, PermEditor: 2, PermAdmin: 3, PermOw
 
 // Entry is an ACL grant on a resource.
 type Entry struct {
-	ID           string
-	OrgID        string
-	ResourceType string
-	ResourceID   string
-	PrincipalID  string
-	Permission   string
-	ExpiresAt    *time.Time
+	ID            string
+	OrgID         string
+	ResourceType  string
+	ResourceID    string
+	PrincipalID   string
+	Permission    string
+	ExpiresAt     *time.Time
 	InheritedFrom string
-	CreatedAt    time.Time
+	CreatedAt     time.Time
 }
 
 // Store holds ACL entries.

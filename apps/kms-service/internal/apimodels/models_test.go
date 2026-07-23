@@ -20,4 +20,5 @@ func TestCryptoKeyModelsJSON(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
 // maintenance note 20

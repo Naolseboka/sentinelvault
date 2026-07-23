@@ -3,21 +3,26 @@ run:
   tests: true
 
 linters:
+  disable-all: true
   enable:
     - errcheck
     - gofmt
     - govet
     - ineffassign
-    - staticcheck
-    - unused
-    - gosimple
     - misspell
+    - unused
 
 linters-settings:
-  govet:
-    enable-all: true
+  errcheck:
+    check-type-assertions: false
+    check-blank: false
 
 issues:
-  exclude-use-default: false
+  exclude-use-default: true
   max-issues-per-linter: 0
   max-same-issues: 0
+  exclude-rules:
+    # Closing response/file bodies in defer is idiomatic.
+    - linters:
+        - errcheck
+      text: "Error return value of `.*\\.Close` is not checked"

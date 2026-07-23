@@ -27,4 +27,5 @@ func indexOf(s, sub string) int {
 	}
 	return -1
 }
+
 // maintenance note 56

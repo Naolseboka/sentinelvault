@@ -9,23 +9,23 @@ import (
 
 // Actions for risk-service.
 const (
-	ActionCreate = "risk-service.create"
-	ActionRead = "risk-service.read"
-	ActionUpdate = "risk-service.update"
-	ActionDelete = "risk-service.delete"
-	ActionList = "risk-service.list"
-	ActionExport = "risk-service.export"
-	ActionImport = "risk-service.import"
-	ActionShare = "risk-service.share"
-	ActionRotate = "risk-service.rotate"
-	ActionApprove = "risk-service.approve"
-	ActionDeny = "risk-service.deny"
-	ActionRevoke = "risk-service.revoke"
-	ActionRestore = "risk-service.restore"
-	ActionArchive = "risk-service.archive"
-	ActionAdmin = "risk-service.admin"
-	ActionConfigure = "risk-service.configure"
-	ActionExecute = "risk-service.execute"
+	ActionCreate      = "risk-service.create"
+	ActionRead        = "risk-service.read"
+	ActionUpdate      = "risk-service.update"
+	ActionDelete      = "risk-service.delete"
+	ActionList        = "risk-service.list"
+	ActionExport      = "risk-service.export"
+	ActionImport      = "risk-service.import"
+	ActionShare       = "risk-service.share"
+	ActionRotate      = "risk-service.rotate"
+	ActionApprove     = "risk-service.approve"
+	ActionDeny        = "risk-service.deny"
+	ActionRevoke      = "risk-service.revoke"
+	ActionRestore     = "risk-service.restore"
+	ActionArchive     = "risk-service.archive"
+	ActionAdmin       = "risk-service.admin"
+	ActionConfigure   = "risk-service.configure"
+	ActionExecute     = "risk-service.execute"
 	ActionImpersonate = "risk-service.impersonate"
 )
 
@@ -120,4 +120,5 @@ func permissionForAction(action string) string {
 func AllActions() []string {
 	return []string{"risk-service.create", "risk-service.read", "risk-service.update", "risk-service.delete", "risk-service.list", "risk-service.export", "risk-service.import", "risk-service.share", "risk-service.rotate", "risk-service.approve", "risk-service.deny", "risk-service.revoke", "risk-service.restore", "risk-service.archive", "risk-service.admin", "risk-service.configure", "risk-service.execute", "risk-service.impersonate"}
 }
+
 // maintenance note 72

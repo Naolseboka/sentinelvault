@@ -55,4 +55,5 @@ func ExportDatabaseCredentialJSON(rows []DatabaseCredentialExportRow, includeSec
 	}
 	return json.Marshal(out)
 }
+
 // maintenance note 22

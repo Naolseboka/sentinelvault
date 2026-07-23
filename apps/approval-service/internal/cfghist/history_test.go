@@ -13,4 +13,5 @@ func TestApprovalCfgHist(t *testing.T) {
 		t.Fatal(got, ok)
 	}
 }
+
 // maintenance note 34

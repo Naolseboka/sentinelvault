@@ -30,4 +30,5 @@ func TestPGPKeyValidatorMissing(t *testing.T) {
 		t.Fatal("expected error")
 	}
 }
+
 // maintenance note 89

@@ -21,4 +21,5 @@ func TestNotificationGuard(t *testing.T) {
 		t.Fatal("actions")
 	}
 }
+
 // maintenance note 43

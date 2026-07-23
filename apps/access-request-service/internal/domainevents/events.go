@@ -8,25 +8,25 @@ import (
 
 // Event types for access-request-service.
 const (
-	EventAccessRequestCreated = "accessrequest.created"
-	EventAccessRequestUpdated = "accessrequest.updated"
-	EventAccessRequestDeleted = "accessrequest.deleted"
-	EventAccessRequestArchived = "accessrequest.archived"
-	EventAccessRequestRestored = "accessrequest.restored"
-	EventAccessRequestShared = "accessrequest.shared"
-	EventAccessRequestUnshared = "accessrequest.unshared"
-	EventAccessRequestExported = "accessrequest.exported"
-	EventAccessRequestImported = "accessrequest.imported"
-	EventAccessRequestRotated = "accessrequest.rotated"
-	EventAccessRequestAccessed = "accessrequest.accessed"
-	EventAccessRequestDenied = "accessrequest.denied"
-	EventAccessRequestApproved = "accessrequest.approved"
-	EventAccessRequestRevoked = "accessrequest.revoked"
-	EventAccessRequestExpired = "accessrequest.expired"
-	EventAccessRequestLocked = "accessrequest.locked"
-	EventAccessRequestUnlocked = "accessrequest.unlocked"
-	EventAccessRequestVerified = "accessrequest.verified"
-	EventAccessRequestFailed = "accessrequest.failed"
+	EventAccessRequestCreated   = "accessrequest.created"
+	EventAccessRequestUpdated   = "accessrequest.updated"
+	EventAccessRequestDeleted   = "accessrequest.deleted"
+	EventAccessRequestArchived  = "accessrequest.archived"
+	EventAccessRequestRestored  = "accessrequest.restored"
+	EventAccessRequestShared    = "accessrequest.shared"
+	EventAccessRequestUnshared  = "accessrequest.unshared"
+	EventAccessRequestExported  = "accessrequest.exported"
+	EventAccessRequestImported  = "accessrequest.imported"
+	EventAccessRequestRotated   = "accessrequest.rotated"
+	EventAccessRequestAccessed  = "accessrequest.accessed"
+	EventAccessRequestDenied    = "accessrequest.denied"
+	EventAccessRequestApproved  = "accessrequest.approved"
+	EventAccessRequestRevoked   = "accessrequest.revoked"
+	EventAccessRequestExpired   = "accessrequest.expired"
+	EventAccessRequestLocked    = "accessrequest.locked"
+	EventAccessRequestUnlocked  = "accessrequest.unlocked"
+	EventAccessRequestVerified  = "accessrequest.verified"
+	EventAccessRequestFailed    = "accessrequest.failed"
 	EventAccessRequestSucceeded = "accessrequest.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownAccessRequestEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewAccessRequestCreatedEvent builds a domain event.
 func NewAccessRequestCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

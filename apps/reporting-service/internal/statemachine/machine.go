@@ -7,55 +7,55 @@ import (
 )
 
 const (
-	StateInit = "init"
-	StateDraft = "draft"
-	StatePending = "pending"
-	StateValidating = "validating"
-	StateApproved = "approved"
-	StateDenied = "denied"
-	StateActive = "active"
-	StateInactive = "inactive"
-	StateSuspended = "suspended"
-	StateLocked = "locked"
-	StateRotating = "rotating"
-	StatePropagating = "propagating"
-	StateCompleted = "completed"
-	StateFailed = "failed"
-	StateArchived = "archived"
-	StateDeleted = "deleted"
-	StateRestoring = "restoring"
-	StateExported = "exported"
-	StateImported = "imported"
-	StateShared = "shared"
-	StateExpired = "expired"
-	StateRevoked = "revoked"
+	StateInit         = "init"
+	StateDraft        = "draft"
+	StatePending      = "pending"
+	StateValidating   = "validating"
+	StateApproved     = "approved"
+	StateDenied       = "denied"
+	StateActive       = "active"
+	StateInactive     = "inactive"
+	StateSuspended    = "suspended"
+	StateLocked       = "locked"
+	StateRotating     = "rotating"
+	StatePropagating  = "propagating"
+	StateCompleted    = "completed"
+	StateFailed       = "failed"
+	StateArchived     = "archived"
+	StateDeleted      = "deleted"
+	StateRestoring    = "restoring"
+	StateExported     = "exported"
+	StateImported     = "imported"
+	StateShared       = "shared"
+	StateExpired      = "expired"
+	StateRevoked      = "revoked"
 	StateCompensating = "compensating"
 )
 
 var allowedReporting = map[string]map[string]struct{}{
-	StateActive: { StateApproved: {}, StateDenied: {}, StateExpired: {}, StateImported: {}, StateInit: {}, StatePending: {}, StateRestoring: {}, StateRotating: {} },
-	StateApproved: { StateArchived: {}, StateCompensating: {}, StateLocked: {} },
-	StateArchived: { StateApproved: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {}, StateValidating: {} },
-	StateCompensating: { StateDenied: {}, StateExported: {}, StateInactive: {}, StatePending: {}, StateRevoked: {}, StateShared: {}, StateValidating: {} },
-	StateCompleted: { StateApproved: {}, StateArchived: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {} },
-	StateDeleted: { StateImported: {}, StateInit: {}, StateRestoring: {}, StateRotating: {} },
-	StateDenied: { StateDraft: {}, StateSuspended: {} },
-	StateDraft: { StateArchived: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {}, StateValidating: {} },
-	StateExpired: { StateCompleted: {}, StateInit: {}, StateRotating: {} },
-	StateExported: { StateApproved: {}, StateArchived: {}, StateDenied: {}, StateFailed: {}, StateRestoring: {}, StateRevoked: {} },
-	StateFailed: { StateCompleted: {}, StateDraft: {}, StateExpired: {}, StateInit: {} },
-	StateImported: { StateCompensating: {}, StateLocked: {} },
-	StateInactive: { StateImported: {}, StateRestoring: {} },
-	StateInit: { StateApproved: {}, StateArchived: {}, StateDenied: {}, StateExported: {}, StateRevoked: {}, StateShared: {}, StateValidating: {} },
-	StateLocked: { StateCompleted: {}, StateExpired: {}, StateInit: {}, StatePending: {}, StateSuspended: {} },
-	StatePending: { StateDeleted: {}, StatePropagating: {}, StateShared: {} },
-	StatePropagating: { StateCompleted: {}, StateExpired: {}, StateImported: {}, StateInit: {}, StateRestoring: {}, StateRotating: {} },
-	StateRestoring: { StateDeleted: {}, StateExported: {}, StateInactive: {}, StatePropagating: {} },
-	StateRevoked: { StateCompensating: {}, StateLocked: {} },
-	StateRotating: { StateDraft: {}, StateExpired: {}, StateExported: {}, StateInactive: {}, StatePending: {}, StateSuspended: {} },
-	StateShared: { StateActive: {}, StateDeleted: {}, StateInactive: {}, StatePropagating: {} },
-	StateSuspended: { StateArchived: {}, StateDenied: {}, StateInactive: {}, StateRevoked: {}, StateShared: {}, StateValidating: {} },
-	StateValidating: { StateApproved: {}, StateCompleted: {}, StateExpired: {}, StateInit: {}, StatePending: {}, StateRotating: {}, StateSuspended: {} },
+	StateActive:       {StateApproved: {}, StateDenied: {}, StateExpired: {}, StateImported: {}, StateInit: {}, StatePending: {}, StateRestoring: {}, StateRotating: {}},
+	StateApproved:     {StateArchived: {}, StateCompensating: {}, StateLocked: {}},
+	StateArchived:     {StateApproved: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {}, StateValidating: {}},
+	StateCompensating: {StateDenied: {}, StateExported: {}, StateInactive: {}, StatePending: {}, StateRevoked: {}, StateShared: {}, StateValidating: {}},
+	StateCompleted:    {StateApproved: {}, StateArchived: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {}},
+	StateDeleted:      {StateImported: {}, StateInit: {}, StateRestoring: {}, StateRotating: {}},
+	StateDenied:       {StateDraft: {}, StateSuspended: {}},
+	StateDraft:        {StateArchived: {}, StateDenied: {}, StateLocked: {}, StateRevoked: {}, StateShared: {}, StateValidating: {}},
+	StateExpired:      {StateCompleted: {}, StateInit: {}, StateRotating: {}},
+	StateExported:     {StateApproved: {}, StateArchived: {}, StateDenied: {}, StateFailed: {}, StateRestoring: {}, StateRevoked: {}},
+	StateFailed:       {StateCompleted: {}, StateDraft: {}, StateExpired: {}, StateInit: {}},
+	StateImported:     {StateCompensating: {}, StateLocked: {}},
+	StateInactive:     {StateImported: {}, StateRestoring: {}},
+	StateInit:         {StateApproved: {}, StateArchived: {}, StateDenied: {}, StateExported: {}, StateRevoked: {}, StateShared: {}, StateValidating: {}},
+	StateLocked:       {StateCompleted: {}, StateExpired: {}, StateInit: {}, StatePending: {}, StateSuspended: {}},
+	StatePending:      {StateDeleted: {}, StatePropagating: {}, StateShared: {}},
+	StatePropagating:  {StateCompleted: {}, StateExpired: {}, StateImported: {}, StateInit: {}, StateRestoring: {}, StateRotating: {}},
+	StateRestoring:    {StateDeleted: {}, StateExported: {}, StateInactive: {}, StatePropagating: {}},
+	StateRevoked:      {StateCompensating: {}, StateLocked: {}},
+	StateRotating:     {StateDraft: {}, StateExpired: {}, StateExported: {}, StateInactive: {}, StatePending: {}, StateSuspended: {}},
+	StateShared:       {StateActive: {}, StateDeleted: {}, StateInactive: {}, StatePropagating: {}},
+	StateSuspended:    {StateArchived: {}, StateDenied: {}, StateInactive: {}, StateRevoked: {}, StateShared: {}, StateValidating: {}},
+	StateValidating:   {StateApproved: {}, StateCompleted: {}, StateExpired: {}, StateInit: {}, StatePending: {}, StateRotating: {}, StateSuspended: {}},
 }
 
 // CanTransition reports whether from->to is allowed for reporting-service.

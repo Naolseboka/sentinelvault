@@ -21,9 +21,9 @@ type Client struct {
 // New creates a scim-service client.
 func New(baseURL, token string) *Client {
 	return &Client{
-		BaseURL: stringsTrimSlash(baseURL),
+		BaseURL:    stringsTrimSlash(baseURL),
 		HTTPClient: &http.Client{Timeout: 30 * time.Second},
-		Token: token,
+		Token:      token,
 	}
 }
 
@@ -47,10 +47,10 @@ type SCIMUser struct {
 
 // ListResult wraps paginated data.
 type ListResult struct {
-	Data       []SCIMUser `json:"data"`
-	Total      int64      `json:"total"`
-	Offset     int        `json:"offset"`
-	Limit      int        `json:"limit"`
+	Data   []SCIMUser `json:"data"`
+	Total  int64      `json:"total"`
+	Offset int        `json:"offset"`
+	Limit  int        `json:"limit"`
 }
 
 func (c *Client) do(ctx context.Context, method, path string, in any, out any) error {
@@ -119,4 +119,5 @@ func (c *Client) List(ctx context.Context, orgID string, offset, limit int) (*Li
 func (c *Client) Delete(ctx context.Context, id string) error {
 	return c.do(ctx, http.MethodDelete, "/v1/scims/"+url.PathEscape(id), nil, nil)
 }
+
 // maintenance note 44

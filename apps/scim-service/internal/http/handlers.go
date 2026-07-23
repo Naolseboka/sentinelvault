@@ -64,9 +64,9 @@ func (h *Handler) getUser(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) listUsers(w http.ResponseWriter, r *http.Request) {
 	users := h.service.ListUsers(r.Context(), r.URL.Query().Get("org_id"))
 	httpx.WriteJSON(w, http.StatusOK, map[string]any{
-		"schemas": []string{"urn:ietf:params:scim:api:messages:2.0:ListResponse"},
+		"schemas":      []string{"urn:ietf:params:scim:api:messages:2.0:ListResponse"},
 		"totalResults": len(users),
-		"Resources": users,
+		"Resources":    users,
 	})
 }
 
@@ -78,4 +78,5 @@ func (h *Handler) deactivateUser(w http.ResponseWriter, r *http.Request) {
 	}
 	httpx.WriteJSON(w, http.StatusOK, user)
 }
+
 // maintenance note 52

@@ -6,12 +6,12 @@ import (
 )
 
 type Policy struct {
-	MinLength int
-	RequireUpper bool
-	RequireLower bool
-	RequireDigit bool
-	RequireSpecial bool
-	MaxLength int
+	MinLength          int
+	RequireUpper       bool
+	RequireLower       bool
+	RequireDigit       bool
+	RequireSpecial     bool
+	MaxLength          int
 	DisallowWhitespace bool
 }
 

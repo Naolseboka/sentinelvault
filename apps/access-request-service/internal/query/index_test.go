@@ -15,11 +15,11 @@ func TestAccessRequestIndexSearch(t *testing.T) {
 	if err != nil || total != 1 || len(res) != 1 {
 		t.Fatalf("res=%v total=%d err=%v", res, total, err)
 	}
-	res, total, err = idx.Search(AccessRequestQuery{OrgID: "o1", NameContains: "bet", Limit: 10})
+	_, total, err = idx.Search(AccessRequestQuery{OrgID: "o1", NameContains: "bet", Limit: 10})
 	if err != nil || total != 1 {
 		t.Fatalf("name filter total=%d err=%v", total, err)
 	}
-	res, total, err = idx.Search(AccessRequestQuery{OrgID: "o1", LabelKey: "env", LabelValue: "prod", Limit: 10})
+	_, total, err = idx.Search(AccessRequestQuery{OrgID: "o1", LabelKey: "env", LabelValue: "prod", Limit: 10})
 	if err != nil || total != 1 {
 		t.Fatalf("label total=%d", total)
 	}

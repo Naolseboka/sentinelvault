@@ -8,25 +8,25 @@ import (
 
 // Event types for behavior-service.
 const (
-	EventSignalCreated = "behavior.created"
-	EventSignalUpdated = "behavior.updated"
-	EventSignalDeleted = "behavior.deleted"
-	EventSignalArchived = "behavior.archived"
-	EventSignalRestored = "behavior.restored"
-	EventSignalShared = "behavior.shared"
-	EventSignalUnshared = "behavior.unshared"
-	EventSignalExported = "behavior.exported"
-	EventSignalImported = "behavior.imported"
-	EventSignalRotated = "behavior.rotated"
-	EventSignalAccessed = "behavior.accessed"
-	EventSignalDenied = "behavior.denied"
-	EventSignalApproved = "behavior.approved"
-	EventSignalRevoked = "behavior.revoked"
-	EventSignalExpired = "behavior.expired"
-	EventSignalLocked = "behavior.locked"
-	EventSignalUnlocked = "behavior.unlocked"
-	EventSignalVerified = "behavior.verified"
-	EventSignalFailed = "behavior.failed"
+	EventSignalCreated   = "behavior.created"
+	EventSignalUpdated   = "behavior.updated"
+	EventSignalDeleted   = "behavior.deleted"
+	EventSignalArchived  = "behavior.archived"
+	EventSignalRestored  = "behavior.restored"
+	EventSignalShared    = "behavior.shared"
+	EventSignalUnshared  = "behavior.unshared"
+	EventSignalExported  = "behavior.exported"
+	EventSignalImported  = "behavior.imported"
+	EventSignalRotated   = "behavior.rotated"
+	EventSignalAccessed  = "behavior.accessed"
+	EventSignalDenied    = "behavior.denied"
+	EventSignalApproved  = "behavior.approved"
+	EventSignalRevoked   = "behavior.revoked"
+	EventSignalExpired   = "behavior.expired"
+	EventSignalLocked    = "behavior.locked"
+	EventSignalUnlocked  = "behavior.unlocked"
+	EventSignalVerified  = "behavior.verified"
+	EventSignalFailed    = "behavior.failed"
 	EventSignalSucceeded = "behavior.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownSignalEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewSignalCreatedEvent builds a domain event.
 func NewSignalCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

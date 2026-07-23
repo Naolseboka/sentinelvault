@@ -9,12 +9,12 @@ import (
 
 // ItemRotatedPayload is the webhook body for item.rotated.
 type ItemRotatedPayload struct {
-	Event     string            `json:"event"`
-	OrgID     string            `json:"org_id"`
-	ActorID   string            `json:"actor_id"`
-	ResourceID string           `json:"resource_id"`
-	OccurredAt time.Time        `json:"occurred_at"`
-	Metadata  map[string]string `json:"metadata,omitempty"`
+	Event      string            `json:"event"`
+	OrgID      string            `json:"org_id"`
+	ActorID    string            `json:"actor_id"`
+	ResourceID string            `json:"resource_id"`
+	OccurredAt time.Time         `json:"occurred_at"`
+	Metadata   map[string]string `json:"metadata,omitempty"`
 }
 
 func NewItemRotatedPayload(orgID, actorID, resourceID string, meta map[string]string) (*ItemRotatedPayload, error) {

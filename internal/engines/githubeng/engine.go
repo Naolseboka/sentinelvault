@@ -12,13 +12,13 @@ import (
 
 // Role for GitHub App installation tokens.
 type Role struct {
-	ID             string        `json:"id"`
-	OrgID          string        `json:"org_id"`
-	Name           string        `json:"name"`
-	InstallationID string        `json:"installation_id"`
-	Repositories   []string      `json:"repositories"`
+	ID             string            `json:"id"`
+	OrgID          string            `json:"org_id"`
+	Name           string            `json:"name"`
+	InstallationID string            `json:"installation_id"`
+	Repositories   []string          `json:"repositories"`
 	Permissions    map[string]string `json:"permissions"`
-	DefaultTTL     time.Duration `json:"default_ttl"`
+	DefaultTTL     time.Duration     `json:"default_ttl"`
 }
 
 // Token is a GitHub installation access token.
@@ -32,9 +32,9 @@ type Token struct {
 // Engine issues GitHub installation tokens (simulated).
 type Engine struct {
 	policies map[string]*PolicyDocument
-	mu     sync.Mutex
-	roles  map[string]*Role
-	tokens map[string]*Token
+	mu       sync.Mutex
+	roles    map[string]*Role
+	tokens   map[string]*Token
 }
 
 // NewEngine creates a GitHub secrets engine.

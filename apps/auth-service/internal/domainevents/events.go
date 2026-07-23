@@ -8,25 +8,25 @@ import (
 
 // Event types for auth-service.
 const (
-	EventCredentialCreated = "auth.created"
-	EventCredentialUpdated = "auth.updated"
-	EventCredentialDeleted = "auth.deleted"
-	EventCredentialArchived = "auth.archived"
-	EventCredentialRestored = "auth.restored"
-	EventCredentialShared = "auth.shared"
-	EventCredentialUnshared = "auth.unshared"
-	EventCredentialExported = "auth.exported"
-	EventCredentialImported = "auth.imported"
-	EventCredentialRotated = "auth.rotated"
-	EventCredentialAccessed = "auth.accessed"
-	EventCredentialDenied = "auth.denied"
-	EventCredentialApproved = "auth.approved"
-	EventCredentialRevoked = "auth.revoked"
-	EventCredentialExpired = "auth.expired"
-	EventCredentialLocked = "auth.locked"
-	EventCredentialUnlocked = "auth.unlocked"
-	EventCredentialVerified = "auth.verified"
-	EventCredentialFailed = "auth.failed"
+	EventCredentialCreated   = "auth.created"
+	EventCredentialUpdated   = "auth.updated"
+	EventCredentialDeleted   = "auth.deleted"
+	EventCredentialArchived  = "auth.archived"
+	EventCredentialRestored  = "auth.restored"
+	EventCredentialShared    = "auth.shared"
+	EventCredentialUnshared  = "auth.unshared"
+	EventCredentialExported  = "auth.exported"
+	EventCredentialImported  = "auth.imported"
+	EventCredentialRotated   = "auth.rotated"
+	EventCredentialAccessed  = "auth.accessed"
+	EventCredentialDenied    = "auth.denied"
+	EventCredentialApproved  = "auth.approved"
+	EventCredentialRevoked   = "auth.revoked"
+	EventCredentialExpired   = "auth.expired"
+	EventCredentialLocked    = "auth.locked"
+	EventCredentialUnlocked  = "auth.unlocked"
+	EventCredentialVerified  = "auth.verified"
+	EventCredentialFailed    = "auth.failed"
 	EventCredentialSucceeded = "auth.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownCredentialEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewCredentialCreatedEvent builds a domain event.
 func NewCredentialCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

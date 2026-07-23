@@ -8,4 +8,5 @@ func Window00(now time.Time) (time.Time, time.Time) {
 	start := end.Add(-time.Duration(1) * time.Hour)
 	return start, end
 }
+
 // maintenance note 42

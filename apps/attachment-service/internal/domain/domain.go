@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/common"
+	encdomain "github.com/sentinelvault/sentinelvault/internal/encryption"
 	"github.com/sentinelvault/sentinelvault/internal/vault"
 )
 

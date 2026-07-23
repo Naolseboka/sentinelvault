@@ -21,4 +21,5 @@ func TestRoleBindingQuota(t *testing.T) {
 		t.Fatal("expected export quota")
 	}
 }
+
 // maintenance note 66

@@ -20,7 +20,9 @@ func (c ControlA_5_25) ID() string { return "ISO27001-A.5.25" }
 func (c ControlA_5_25) Title() string { return "Incident assessment" }
 
 // Description returns the control description.
-func (c ControlA_5_25) Description() string { return "Assessment and decision on information security events" }
+func (c ControlA_5_25) Description() string {
+	return "Assessment and decision on information security events"
+}
 
 // Evidence is collected proof for this control.
 type EvidenceA_5_25 struct {

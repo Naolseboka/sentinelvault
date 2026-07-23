@@ -8,25 +8,25 @@ import (
 
 // Event types for compliance-service.
 const (
-	EventEvidenceCreated = "compliance.created"
-	EventEvidenceUpdated = "compliance.updated"
-	EventEvidenceDeleted = "compliance.deleted"
-	EventEvidenceArchived = "compliance.archived"
-	EventEvidenceRestored = "compliance.restored"
-	EventEvidenceShared = "compliance.shared"
-	EventEvidenceUnshared = "compliance.unshared"
-	EventEvidenceExported = "compliance.exported"
-	EventEvidenceImported = "compliance.imported"
-	EventEvidenceRotated = "compliance.rotated"
-	EventEvidenceAccessed = "compliance.accessed"
-	EventEvidenceDenied = "compliance.denied"
-	EventEvidenceApproved = "compliance.approved"
-	EventEvidenceRevoked = "compliance.revoked"
-	EventEvidenceExpired = "compliance.expired"
-	EventEvidenceLocked = "compliance.locked"
-	EventEvidenceUnlocked = "compliance.unlocked"
-	EventEvidenceVerified = "compliance.verified"
-	EventEvidenceFailed = "compliance.failed"
+	EventEvidenceCreated   = "compliance.created"
+	EventEvidenceUpdated   = "compliance.updated"
+	EventEvidenceDeleted   = "compliance.deleted"
+	EventEvidenceArchived  = "compliance.archived"
+	EventEvidenceRestored  = "compliance.restored"
+	EventEvidenceShared    = "compliance.shared"
+	EventEvidenceUnshared  = "compliance.unshared"
+	EventEvidenceExported  = "compliance.exported"
+	EventEvidenceImported  = "compliance.imported"
+	EventEvidenceRotated   = "compliance.rotated"
+	EventEvidenceAccessed  = "compliance.accessed"
+	EventEvidenceDenied    = "compliance.denied"
+	EventEvidenceApproved  = "compliance.approved"
+	EventEvidenceRevoked   = "compliance.revoked"
+	EventEvidenceExpired   = "compliance.expired"
+	EventEvidenceLocked    = "compliance.locked"
+	EventEvidenceUnlocked  = "compliance.unlocked"
+	EventEvidenceVerified  = "compliance.verified"
+	EventEvidenceFailed    = "compliance.failed"
 	EventEvidenceSucceeded = "compliance.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownEvidenceEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewEvidenceCreatedEvent builds a domain event.
 func NewEvidenceCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {
@@ -360,4 +359,5 @@ func ValidateEvent(e Event) error {
 	}
 	return nil
 }
+
 // maintenance note 32

@@ -8,25 +8,25 @@ import (
 
 // Event types for delegation-service.
 const (
-	EventDelegationCreated = "delegation.created"
-	EventDelegationUpdated = "delegation.updated"
-	EventDelegationDeleted = "delegation.deleted"
-	EventDelegationArchived = "delegation.archived"
-	EventDelegationRestored = "delegation.restored"
-	EventDelegationShared = "delegation.shared"
-	EventDelegationUnshared = "delegation.unshared"
-	EventDelegationExported = "delegation.exported"
-	EventDelegationImported = "delegation.imported"
-	EventDelegationRotated = "delegation.rotated"
-	EventDelegationAccessed = "delegation.accessed"
-	EventDelegationDenied = "delegation.denied"
-	EventDelegationApproved = "delegation.approved"
-	EventDelegationRevoked = "delegation.revoked"
-	EventDelegationExpired = "delegation.expired"
-	EventDelegationLocked = "delegation.locked"
-	EventDelegationUnlocked = "delegation.unlocked"
-	EventDelegationVerified = "delegation.verified"
-	EventDelegationFailed = "delegation.failed"
+	EventDelegationCreated   = "delegation.created"
+	EventDelegationUpdated   = "delegation.updated"
+	EventDelegationDeleted   = "delegation.deleted"
+	EventDelegationArchived  = "delegation.archived"
+	EventDelegationRestored  = "delegation.restored"
+	EventDelegationShared    = "delegation.shared"
+	EventDelegationUnshared  = "delegation.unshared"
+	EventDelegationExported  = "delegation.exported"
+	EventDelegationImported  = "delegation.imported"
+	EventDelegationRotated   = "delegation.rotated"
+	EventDelegationAccessed  = "delegation.accessed"
+	EventDelegationDenied    = "delegation.denied"
+	EventDelegationApproved  = "delegation.approved"
+	EventDelegationRevoked   = "delegation.revoked"
+	EventDelegationExpired   = "delegation.expired"
+	EventDelegationLocked    = "delegation.locked"
+	EventDelegationUnlocked  = "delegation.unlocked"
+	EventDelegationVerified  = "delegation.verified"
+	EventDelegationFailed    = "delegation.failed"
 	EventDelegationSucceeded = "delegation.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownDelegationEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewDelegationCreatedEvent builds a domain event.
 func NewDelegationCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

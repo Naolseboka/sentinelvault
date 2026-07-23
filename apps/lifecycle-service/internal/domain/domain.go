@@ -9,10 +9,10 @@ import (
 )
 
 const (
-	StateInvited     = "invited"
-	StateActive      = "active"
-	StateSuspended   = "suspended"
-	StateOffboarded  = "offboarded"
+	StateInvited    = "invited"
+	StateActive     = "active"
+	StateSuspended  = "suspended"
+	StateOffboarded = "offboarded"
 )
 
 // LifecycleState tracks user lifecycle in an org.

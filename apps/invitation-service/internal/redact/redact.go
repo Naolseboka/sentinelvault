@@ -78,4 +78,5 @@ func StringMap(in map[string]string) map[string]string {
 	}
 	return out
 }
+
 // maintenance note 59

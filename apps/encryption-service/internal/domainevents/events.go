@@ -8,25 +8,25 @@ import (
 
 // Event types for encryption-service.
 const (
-	EventEncryptOpCreated = "encryption.created"
-	EventEncryptOpUpdated = "encryption.updated"
-	EventEncryptOpDeleted = "encryption.deleted"
-	EventEncryptOpArchived = "encryption.archived"
-	EventEncryptOpRestored = "encryption.restored"
-	EventEncryptOpShared = "encryption.shared"
-	EventEncryptOpUnshared = "encryption.unshared"
-	EventEncryptOpExported = "encryption.exported"
-	EventEncryptOpImported = "encryption.imported"
-	EventEncryptOpRotated = "encryption.rotated"
-	EventEncryptOpAccessed = "encryption.accessed"
-	EventEncryptOpDenied = "encryption.denied"
-	EventEncryptOpApproved = "encryption.approved"
-	EventEncryptOpRevoked = "encryption.revoked"
-	EventEncryptOpExpired = "encryption.expired"
-	EventEncryptOpLocked = "encryption.locked"
-	EventEncryptOpUnlocked = "encryption.unlocked"
-	EventEncryptOpVerified = "encryption.verified"
-	EventEncryptOpFailed = "encryption.failed"
+	EventEncryptOpCreated   = "encryption.created"
+	EventEncryptOpUpdated   = "encryption.updated"
+	EventEncryptOpDeleted   = "encryption.deleted"
+	EventEncryptOpArchived  = "encryption.archived"
+	EventEncryptOpRestored  = "encryption.restored"
+	EventEncryptOpShared    = "encryption.shared"
+	EventEncryptOpUnshared  = "encryption.unshared"
+	EventEncryptOpExported  = "encryption.exported"
+	EventEncryptOpImported  = "encryption.imported"
+	EventEncryptOpRotated   = "encryption.rotated"
+	EventEncryptOpAccessed  = "encryption.accessed"
+	EventEncryptOpDenied    = "encryption.denied"
+	EventEncryptOpApproved  = "encryption.approved"
+	EventEncryptOpRevoked   = "encryption.revoked"
+	EventEncryptOpExpired   = "encryption.expired"
+	EventEncryptOpLocked    = "encryption.locked"
+	EventEncryptOpUnlocked  = "encryption.unlocked"
+	EventEncryptOpVerified  = "encryption.verified"
+	EventEncryptOpFailed    = "encryption.failed"
 	EventEncryptOpSucceeded = "encryption.succeeded"
 )
 
@@ -88,7 +88,6 @@ func IsKnownEncryptOpEvent(t string) bool {
 		return false
 	}
 }
-
 
 // NewEncryptOpCreatedEvent builds a domain event.
 func NewEncryptOpCreatedEvent(orgID, actorID, resourceID string, meta map[string]string) Event {

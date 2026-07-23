@@ -7,35 +7,35 @@ import (
 
 // Filter defines query filters for emergency-access-service.
 type Filter struct {
-	Id string `json:"id"`
-	OrgId string `json:"org_id"`
-	Name string `json:"name"`
-	Status string `json:"status"`
-	OwnerId string `json:"owner_id"`
-	CollectionId string `json:"collection_id"`
-	FolderId string `json:"folder_id"`
-	Tag string `json:"tag"`
-	Label string `json:"label"`
-	CreatedBefore string `json:"created_before"`
-	CreatedAfter string `json:"created_after"`
-	UpdatedBefore string `json:"updated_before"`
-	UpdatedAfter string `json:"updated_after"`
-	Risk string `json:"risk"`
-	Trust string `json:"trust"`
+	Id             string `json:"id"`
+	OrgId          string `json:"org_id"`
+	Name           string `json:"name"`
+	Status         string `json:"status"`
+	OwnerId        string `json:"owner_id"`
+	CollectionId   string `json:"collection_id"`
+	FolderId       string `json:"folder_id"`
+	Tag            string `json:"tag"`
+	Label          string `json:"label"`
+	CreatedBefore  string `json:"created_before"`
+	CreatedAfter   string `json:"created_after"`
+	UpdatedBefore  string `json:"updated_before"`
+	UpdatedAfter   string `json:"updated_after"`
+	Risk           string `json:"risk"`
+	Trust          string `json:"trust"`
 	Classification string `json:"classification"`
-	ActorId string `json:"actor_id"`
-	ResourceType string `json:"resource_type"`
-	ResourceId string `json:"resource_id"`
-	Severity string `json:"severity"`
-	Channel string `json:"channel"`
-	Mode string `json:"mode"` // exact|prefix|contains
-	Limit int `json:"limit"`
-	Offset int `json:"offset"`
+	ActorId        string `json:"actor_id"`
+	ResourceType   string `json:"resource_type"`
+	ResourceId     string `json:"resource_id"`
+	Severity       string `json:"severity"`
+	Channel        string `json:"channel"`
+	Mode           string `json:"mode"` // exact|prefix|contains
+	Limit          int    `json:"limit"`
+	Offset         int    `json:"offset"`
 }
 
 // Item is a generic filterable record.
 type Item struct {
-	Fields map[string]string
+	Fields    map[string]string
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }
